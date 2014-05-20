@@ -1,0 +1,44 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/simple-code-contributions.rst:3
+msgid "Projects for beginner CKAN developers"
+msgstr ""
+
+#: ../../contributing/simple-code-contributions.rst:5
+msgid ""
+"The `'Good for Contribution' "
+"<https://github.com/ckan/ckan/issues?labels=Good+for+Contribution&state=open>`_"
+" label on Github lists issues which are feasible for people who aren't "
+"intimately familiar with CKAN's internals. Many of them are things which "
+"would be extremely helpful if they got done, but the core team never seems "
+"to get around to them. They're all busy wrestling with the problems that do "
+"require familiarity with the internals. We hope this will make it easier for"
+" more people to assist the CKAN project, by giving new developers places to "
+"jump in."
+msgstr ""
+
+#: ../../contributing/simple-code-contributions.rst:13
+msgid ""
+"These issues vary from simple text changes to more complicated code changes "
+"that require more knowledge of Python and CKAN. Do not despair if any "
+"individual task seems daunting; there's probably an easier one. If you have "
+"no programming skills, we can still use your help with documentation or "
+"translation."
+msgstr ""
+
+#: ../../contributing/simple-code-contributions.rst:19
+msgid ""
+"If you wish to take up an issue make sure to keep in touch with the team on "
+"the Github issue, the mailing list or IRC."
+msgstr ""

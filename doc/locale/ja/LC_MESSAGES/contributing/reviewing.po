@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/reviewing.rst:3
+msgid "Reviewing and merging a pull request"
+msgstr ""
+
+#: ../../contributing/reviewing.rst:11
+msgid "Merging a pull request"
+msgstr ""
+
+#: ../../contributing/reviewing.rst:13
+msgid ""
+"If you're reviewing a pull request for CKAN, when merging a branch into "
+"master:"
+msgstr ""
+
+#: ../../contributing/reviewing.rst:15
+msgid "Use the ``--no-ff`` option in the ``git merge`` command"
+msgstr ""

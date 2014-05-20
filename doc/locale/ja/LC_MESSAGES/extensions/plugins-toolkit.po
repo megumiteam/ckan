@@ -1,0 +1,27 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../extensions/plugins-toolkit.rst:3
+msgid "Plugins toolkit reference"
+msgstr ""
+
+#: ../../extensions/plugins-toolkit.rst:5
+msgid ""
+"As well as using the variables made available to them by implementing plugin"
+" interfaces, plugins will likely want to be able to use parts of the CKAN "
+"core library. To allow this, CKAN provides a stable set of classes and "
+"functions that plugins can use safe in the knowledge that this interface "
+"will remain stable, backward-compatible and with clear deprecation "
+"guidelines when new versions of CKAN are released. This interface is "
+"available in CKAN's *plugins toolkit*."
+msgstr ""

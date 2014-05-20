@@ -1,0 +1,121 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/javascript-module-objects-and-methods.rst:3
+msgid "Objects and methods available to |javascript| modules"
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:5
+msgid ""
+"CKAN makes a few helpful objects and methods available for every JavaScript "
+"module to use, including:"
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:8
+msgid ""
+"``this.el``, the HTML element that this instance of the object was "
+"initialized for. A jQuery element. See :ref:`options and el`."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:11
+msgid ""
+"``this.options``, an object containing any options that were passed to the "
+"module via ``data-module-*`` attributes in the template. See :ref:`options "
+"and el`."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:15
+msgid ""
+":js:data:`this.$()`, a jQuery find function that is scoped to the HTML "
+"element that the JavaScript module was applied to. For example, "
+"``this.$('a')`` will return all of the ``<a>`` elements inside the module's "
+"HTML element, *not* all of the ``<a>`` elements on the entire page."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:20
+msgid "This is a shortcut for ``this.el.find()``."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:22
+msgid ""
+"jQuery provides many useful features in an easy-to-use API, including "
+"document traversal and manipulation, event handling, and animation. See "
+"`jQuery's own docs <http://jquery.com/>`_ for details."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:26
+msgid ""
+":js:data:`this.sandbox`, an object containing useful functions for all "
+"modules to use, including:"
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:29
+msgid ":js:data:`this.sandbox.client`, an API client for calling the API"
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:31
+msgid ":ref:`Internationalization functions <javascript i18n>`"
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:33
+msgid ""
+":js:data:`this.sandbox.jQuery`, a jQuery find function that is not bound to "
+"the module's HTML element. ``this.sandbox.jQuery('a')`` will return all the "
+"``<a>`` elements on the entire page. Using :js:data:`this.sandbox.jQuery` is"
+" discouraged, try to stick to :js:data:`this.$` because it keeps "
+"|javascript| modules more independent."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:39
+msgid "See :doc:`javascript-sandbox`."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:41
+msgid "A collection of :doc:`jQuery plugins <jquery-plugins>`."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:43
+msgid ""
+":ref:`Pubsub functions <pubsub>` that modules can use to communicate with "
+"each other, if they really need to."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:46
+msgid ""
+"Bootstrap's JavaScript features, see the `Bootstrap docs "
+"<http://getbootstrap.com/2.3.2/javascript.html>`_ for details."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:50
+msgid ""
+"The standard |javascript| ``window`` object. Using ``window`` in CKAN "
+"|javascript| modules is discouraged, because it goes against the idea of a "
+"module being independent of global context. However, there are some "
+"circumstances where a module may need to use ``window`` (for example if a "
+"vendor plugin that the module uses needs it)."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:56
+msgid ""
+"``this.i18n``, a helper function for getting localized strings from "
+"``this.options``. English strings marked for translation can be added to the"
+" module's ``this.options`` object, and ``this.i18n()`` can be called to "
+"retrieve the localized version of a string according to the current user's "
+"language. See :ref:`javascript i18n`."
+msgstr ""
+
+#: ../../theming/javascript-module-objects-and-methods.rst:62
+msgid ""
+"``this.remove()``, a method that tears down the module and removes it from "
+"the page (this usually called by CKAN, not by the module itself)."
+msgstr ""

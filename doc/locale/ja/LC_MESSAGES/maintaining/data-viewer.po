@@ -1,0 +1,397 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/data-viewer.rst:3
+msgid "Data Viewer"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:5
+msgid ""
+"The CKAN resource page can contain a preview of the resource's data. This "
+"works by either:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:8
+msgid ""
+"Embedding the data into the page, either directly or by loading the data in "
+"an iframe."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:10
+msgid ""
+"Using a custom widget (such as `Recline <http://okfnlabs.org/recline>`_) to "
+"view the data."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:13
+msgid ""
+"Generally, the decision as to which action to take is determined by the type"
+" of resource being viewed. In general, images will be directly embedded, "
+"unstructured or plain text files will be loaded in an iframe, and more "
+"complex data types will need to use a custom widget."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:19
+msgid ""
+"The data preview functionality that is provided by CKAN is described in the "
+"following sections:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:22
+msgid ":ref:`image-preview`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:23
+msgid ":ref:`data-explorer`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:24
+msgid ":ref:`text-preview`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:25
+msgid ":ref:`pdf-preview`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:26
+msgid ":ref:`resource-proxy`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:27
+msgid ":ref:`embed-previews`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:29
+msgid ""
+"These sections list the resource formats that each extension can preview and"
+" provide instructions for how to enable each extension. It is also possible "
+"for developers to create new extensions that can preview different types of "
+"resources. For more information on this topic see `Writing Extensions "
+"<extensions/index>`_."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:40
+msgid "Viewing images and text files"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:42
+msgid ""
+"**Configuration required:** None. Images and text files (that match one of "
+"the file types given below) will be previewed automatically by default."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:46
+msgid "**Resource formats:** images, plain text (details below)."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:48
+msgid ""
+"By default, the following types of resources will be embedded directly into "
+"the resource read page:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:51
+msgid "``png``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:52
+msgid "``jpg``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:53
+msgid "``jpeg``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:54
+msgid "``gif``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:56
+msgid ""
+"The types of resources that are embedded directly can be specified in the "
+"CKAN config file. See :ref:`ckan.preview.direct` for more information."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:59
+msgid ""
+"The following types of resources will be loaded in an iframe if there is no "
+"extension that can preview these types:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:62
+msgid "``plain``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:63
+msgid "``txt``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:64
+msgid "``html``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:65
+msgid "``htm``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:66
+msgid "``xml``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:67
+msgid "``rdf+xml``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:68
+msgid "``owl+xml``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:69
+msgid "``n3``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:70
+msgid "``n-triples``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:71
+msgid "``turtle``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:72
+msgid "``atom``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:73
+msgid "``rss``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:75
+msgid ""
+"The types of resources that are loaded in an iframe can be specified in the "
+"CKAN config file. See :ref:`ckan.preview.loadable` for more information."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:78
+msgid ""
+"Note that these documents will be directly linked by the browser, so the way"
+" in which they are shown may vary. If you want to ensure for instance that "
+"XML based documents are correctly previewed, have a look at `Viewing "
+"highlighted XML, JSON and plain text data`_."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:86
+msgid "Viewing structured data: the Data Explorer"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:88
+msgid "the ``recline_preview`` extension is new in CKAN 2.0."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:91
+msgid ""
+"**Configuration required:** The ``recline_preview`` extension must be added "
+"to ``ckan.plugins`` in your CKAN configuration file. This extension is part "
+"of CKAN and so does not need to be installed separately."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:95
+msgid "**Resource formats:** DataStore, ``csv``, ``xls``."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:97
+msgid ""
+"Structured data can be previewed using the `Recline "
+"<http://okfnlabs.org/recline>`_ Data Explorer. The Data Explorer provides a "
+"rich, queryable view of the data, and allows the data to be filtered, "
+"graphed and mapped."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:102
+msgid "To be viewed, the data must either be:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:104
+msgid ""
+"In the CKAN `DataStore <datastore.html>`_. This is the recommended way to "
+"preview structured data."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:107
+msgid "Or:"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:109
+msgid ""
+"In ``csv`` or ``xls`` format. In this case, CKAN will first have to try to "
+"convert the file into a more structured format by using the `Dataproxy "
+"<https://github.com/okfn/dataproxy>`_. This is an automatic process that "
+"does not require any additional configuration. However, as the resource must"
+" be downloaded by the Dataproxy service and then analysed before it is "
+"viewed, this option is generally slower and less reliable than viewing data "
+"that is in the DataStore."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:123
+msgid "Viewing highlighted XML, JSON and plain text data"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:125
+msgid ""
+"**Configuration required:** The ``text_preview`` extension must be added to "
+"``ckan.plugins`` in your CKAN configuration file. This extension is part of "
+"CKAN and does not need to be installed separately."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:130
+msgid "**Resource formats:**"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:132
+msgid "``json``, ``gjson``, ``geojson``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:133
+msgid "(can be configured by setting ``ckan.preview.json_formats``)"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:134
+msgid "``jsonp``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:135
+msgid "(can be configured  by setting ``ckan.preview.jsonp_formats``)"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:136
+msgid "``xml``, ``rdf``, ``rdf+xml``, ``owl+xml``, ``atom``, ``rss``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:137
+msgid "(can be configured  by setting ``ckan.preview.xml_formats``)"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:139
+msgid "``text/plain``, ``txt``, ``plain``"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:139
+msgid "(can be configured  by setting ``ckan.preview.text_formats``)"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:141
+msgid ""
+"The ``text_preview`` extension provides previews of many file types that "
+"have been added to a CKAN instance.  To view the data the resource format "
+"must be set to one of the resource formats from above (case insensitive)."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:147 ../../maintaining/data-viewer.rst:171
+msgid ":ref:`The resourceproxy extension <resource-proxy>`"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:149
+msgid ""
+"If you want to preview linked-to text files (and not only files that have "
+"been uploaded to CKAN) you need to enable the ``resource_proxy`` extension "
+"as well."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:157
+msgid "Viewing PDF documents"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:159
+msgid ""
+"**Configuration required:** The ``pdf_preview`` extension must be added to "
+"``ckan.plugins`` in your CKAN configuration file.  This extension is part of"
+" CKAN and does not need to be installed separately."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:163
+msgid "**Resource formats:** ``pdf``, ``x-pdf``, ``acrobat``, ``vnd.pdf``."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:165
+msgid ""
+"The ``pdf_preview`` extension provides previews of any ``pdf`` documents "
+"that have been added to a CKAN instance.  This extension uses Mozilla's "
+"`pdf.js <http://mozilla.github.io/pdf.js>`_ library."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:173
+msgid ""
+"If you want to preview linked-to PDF files (and not only files that have "
+"been uploaded to CKAN) you need to enable the ``resource_proxy`` extension "
+"as well."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:181
+msgid "Viewing remote resources: the resource proxy"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:183
+msgid ""
+"**Configuration required:** The ``resource_proxy`` extension must be added "
+"to ``ckan.plugins`` in your CKAN configuration file. This extension is part "
+"of CKAN and so does not need to be installed separately."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:187
+msgid ""
+"This extension must be enabled if you wish to preview resources that are on "
+"a different domain. That means if this extension is not enabled, e.g. PDF, "
+"or JSON files that are on ``www.example.com`` while CKAN is on "
+"``www.ckan.org`` cannot be previewed by any extension."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:192
+msgid ""
+"Previewing is prevented by the `same origin policy "
+"<http://en.wikipedia.org/wiki/Same_origin_policy>`_ which prevents files "
+"from different domains (different *origins*) from being loaded into "
+"browsers. This extension gets around the same origin policy by pretending "
+"that all files are served from the same domain (same *origin*) that CKAN is "
+"on (e.g. ``www.ckan.org``)."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:199
+msgid ""
+"If you are writing a custom preview extension that requires resources to be "
+"proxied, you need to replace the URL that is used to load the file. This can"
+" be done using the function "
+":func:`ckanext.resourceproxy.plugin.get_proxified_resource_url`. To find out"
+" whether the resource proxy is enabled, check "
+"``ckan.resource_proxy_enabled`` from the config. You can find a complete "
+"example in the `CKAN source "
+"<https://github.com/ckan/ckan/blob/793c2607199f2204307c12f83925257cd8eadc5e/ckanext/jsonpreview/plugin.py>`_."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:209
+msgid "Embedding previews in other web pages"
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:211
+msgid ""
+"The URL that is used to obtain the contents of the resource preview has "
+"changed from ``/dataset/{name}/resource/{resource_id}/embed`` to "
+"``/dataset/{name}/resource/{resource_id}/preview``."
+msgstr ""
+
+#: ../../maintaining/data-viewer.rst:216
+msgid ""
+"For each resource, the preview content can be viewed at ``/dataset/{dataset "
+"id}/resource/{resource id}/preview``. The preview content can therefore be "
+"embedded in other web pages by loading the contents of this URL in an "
+"iframe."
+msgstr ""

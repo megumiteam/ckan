@@ -1,0 +1,294 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/authorization.rst:3
+msgid "Organizations and authorization"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:5
+msgid "Previous versions of CKAN used a different authorization system."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:8
+msgid ""
+"CKAN's authorization system controls which users are allowed to carry out "
+"which actions on the site. All actions that users can carry out on a CKAN "
+"site are controlled by the authorization system. For example, the "
+"authorization system controls who can register new user accounts, delete "
+"user accounts, or create, edit and delete datasets, groups and "
+"organizations."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:14
+msgid "Authorization in CKAN can be controlled in three ways:"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:16
+#: ../../maintaining/authorization.rst:32
+msgid "Organizations"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:17
+msgid "Configuration file options"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:18
+#: ../../maintaining/authorization.rst:85
+msgid "Extensions"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:20
+msgid "The following sections explain each of the three methods in turn."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:24
+msgid ""
+"An **organization admin** in CKAN is an administrator of a particular "
+"organization within the site, with control over that organization and its "
+"members and datasets. A **sysadmin** is an administrator of the site itself."
+" Sysadmins can always do everything, including adding, editing and deleting "
+"datasets, organizations and groups, regardless of the organization roles and"
+" configuration options described below."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:35
+msgid ""
+"Organizations are the primary way to control who can see, create and update "
+"datasets in CKAN. Each dataset can belong to a single organization, and each"
+" organization controls access to its datasets."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:39
+msgid ""
+"Datasets can be marked as public or private.  Public datasets are visible to"
+" everyone. Private datasets can only be seen by logged-in users who are "
+"members of the dataset's organization.  Private datasets are not shown in "
+"general dataset searches but are shown in dataset searches within the "
+"organization."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:44
+msgid ""
+"When a user joins an organization, an organization admin gives them one of "
+"three roles: member, editor or admin."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:47
+msgid "An organization **admin** can:"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:49
+#: ../../maintaining/authorization.rst:63
+msgid "View the organization's private datasets"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:50
+#: ../../maintaining/authorization.rst:64
+msgid "Add new datasets to the organization"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:51
+#: ../../maintaining/authorization.rst:65
+msgid "Edit or delete any of the organization's datasets"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:52
+msgid "Make  datasets public or private."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:53
+msgid ""
+"Add users to the organization, and choose whether to make the new user a "
+"member, editor or admin"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:55
+msgid ""
+"Change the role of any user in the organization, including other admin users"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:56
+msgid "Remove members, editors or other admins from the organization"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:57
+msgid ""
+"Edit the organization itself (for example: change the organization's title, "
+"description or image)"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:59
+msgid "Delete the organization"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:61
+msgid "An **editor** can:"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:67
+msgid "A **member** can:"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:69
+msgid "View the organization's private datasets."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:71
+msgid ""
+"When a user creates a new organization, they automatically become the first "
+"admin of that organization."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:75
+msgid "Configuration File Options"
+msgstr ""
+
+#: ../../maintaining/authorization.rst:77
+msgid ""
+"The following configuration file options can be used to customize CKAN's "
+"authorization behavior:"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:6
+msgid "ckan.auth.anon_create_dataset"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:8
+#: ../../maintaining/configuration.rst:22
+#: ../../maintaining/configuration.rst:36
+#: ../../maintaining/configuration.rst:52
+#: ../../maintaining/configuration.rst:66
+#: ../../maintaining/configuration.rst:80
+#: ../../maintaining/configuration.rst:94
+#: ../../maintaining/configuration.rst:108
+#: ../../maintaining/configuration.rst:122
+#: ../../maintaining/configuration.rst:136
+msgid "Example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:12
+#: ../../maintaining/configuration.rst:112
+msgid "Default value: ``False``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:14
+msgid "Allow users to create datasets without registering and logging in."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:20
+msgid "ckan.auth.create_unowned_dataset"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:26
+#: ../../maintaining/configuration.rst:40
+#: ../../maintaining/configuration.rst:56
+#: ../../maintaining/configuration.rst:70
+#: ../../maintaining/configuration.rst:84
+#: ../../maintaining/configuration.rst:98
+#: ../../maintaining/configuration.rst:126
+msgid "Default value: ``True``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:29
+msgid "Allow the creation of datasets not owned by any organization."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:34
+msgid "ckan.auth.create_dataset_if_not_in_organization"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:43
+msgid ""
+"Allow users who are not members of any organization to create datasets, "
+"default: true. ``create_unowned_dataset`` must also be True, otherwise "
+"setting ``create_dataset_if_not_in_organization`` to True is meaningless."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:50
+msgid "ckan.auth.user_create_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:59
+msgid "Allow users to create groups."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:64
+msgid "ckan.auth.user_create_organizations"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:73
+msgid "Allow users to create organizations."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:78
+msgid "ckan.auth.user_delete_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:87
+msgid "Allow users to delete groups."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:92
+msgid "ckan.auth.user_delete_organizations"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:101
+msgid "Allow users to delete organizations."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:106
+msgid "ckan.auth.create_user_via_api"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:115
+msgid "Allow new user accounts to be created via the API."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:120
+msgid "ckan.auth.create_user_via_web"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:129
+msgid "Allow new user accounts to be created via the Web."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:134
+msgid "ckan.auth.roles_that_cascade_to_sub_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:140
+msgid "Default value: ``admin``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:143
+msgid ""
+"Makes role permissions apply to all the groups down the hierarchy from the "
+"groups that the role is applied to."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:145
+msgid ""
+"e.g. a particular user has the 'admin' role for group 'Department of "
+"Health'. If you set the value of this option to 'admin' then the user will "
+"automatically have the same admin permissions for the child groups of "
+"'Department of Health' such as 'Cancer Research' (and its children too and "
+"so on)."
+msgstr ""
+
+#: ../../maintaining/authorization.rst:87
+msgid ""
+"CKAN extensions can implement custom authorization rules by overriding the "
+"authorization functions that CKAN uses. This is done by implementing the "
+":py:class:`~ckan.plugins.interfaces.IAuthFunctions` plugin interface. To get"
+" started with writing CKAN extensions, see :doc:`/extensions/index`."
+msgstr ""

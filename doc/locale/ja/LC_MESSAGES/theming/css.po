@@ -1,0 +1,120 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/css.rst:3
+msgid "Customizing CKAN's CSS"
+msgstr ""
+
+#: ../../theming/css.rst:7
+msgid ""
+"There's nothing special about CSS in CKAN, once you've got started with "
+"editing CSS in CKAN (by following the tutorial below), then you just use the"
+" usual tools and techniques to explore and hack the CSS. We recommend using "
+"your browser's web development tools to explore and experiment with the CSS,"
+" then using any good text editor to edit your extension's CSS files as "
+"needed. For example:"
+msgstr ""
+
+#: ../../theming/css.rst:15
+msgid ""
+"`Firefox developer tools <https://developer.mozilla.org/en-US/docs/Tools>`_"
+msgstr ""
+
+#: ../../theming/css.rst:15
+msgid "These include a Page Inspector and a Style Editor"
+msgstr ""
+
+#: ../../theming/css.rst:18
+msgid "`Firebug <https://www.getfirebug.com/>`_"
+msgstr ""
+
+#: ../../theming/css.rst:18
+msgid "Another web development toolkit for Firefox"
+msgstr ""
+
+#: ../../theming/css.rst:21
+msgid ""
+"`Chrome developer tools <https://developers.google.com/chrome-developer-"
+"tools/>`_"
+msgstr ""
+
+#: ../../theming/css.rst:21
+msgid "Tools for inspecting and editing CSS in Google Chrome"
+msgstr ""
+
+#: ../../theming/css.rst:23
+msgid ""
+"`Mozilla Developer Network's CSS section <https://developer.mozilla.org/en-"
+"US/docs/Web/CSS>`_"
+msgstr ""
+
+#: ../../theming/css.rst:24
+msgid "A good collection of CSS documentation and tutorials"
+msgstr ""
+
+#: ../../theming/css.rst:26
+msgid ""
+"Extensions can add their own CSS files to modify or extend CKAN's default "
+"CSS. Create an ``example_theme.css`` file in your extension's ``public`` "
+"directory::"
+msgstr ""
+
+#: ../../theming/css.rst:33
+msgid ""
+"Add this CSS into the ``example_theme.css`` file, to change the color of "
+"CKAN's \"account masthead\" (the bar across the top of the site that shows "
+"the logged-in user's account info):"
+msgstr ""
+
+#: ../../theming/css.rst:40
+msgid ""
+"If you restart the development web server  you should be able to open this "
+"file at http://127.0.0.1:5000/example_theme.css in a web browser."
+msgstr ""
+
+#: ../../theming/css.rst:43
+msgid ""
+"To make CKAN use our custom CSS we need to override the ``base.html`` "
+"template, this is the base template which the templates for all CKAN pages "
+"extend, so if we include a CSS file in this base template then the file will"
+" be included in every page of your CKAN site. Create the file::"
+msgstr ""
+
+#: ../../theming/css.rst:52
+msgid "and put this Jinja code in it:"
+msgstr ""
+
+#: ../../theming/css.rst:57
+msgid ""
+"The default ``base.html`` template defines a ``styles`` block which can be "
+"extended to link to custom CSS files (any code in the styles block will "
+"appear in the ``<head>`` of the HTML page)."
+msgstr ""
+
+#: ../../theming/css.rst:61
+msgid ""
+"Restart the development web server and reload the CKAN page in your browser,"
+" and you should see the background color of the account masthead change:"
+msgstr ""
+
+#: ../../theming/css.rst:67
+msgid "This custom color should appear on all pages of your CKAN site."
+msgstr ""
+
+#: ../../theming/css.rst:69
+msgid ""
+"Now that we have CKAN using our CSS file, we can add more CSS rules to the "
+"file and customize CKAN's CSS as much as we want. Let's add a bit more code "
+"to our ``example_theme.css`` file. This CSS implements a partial imitation "
+"of the `datahub.io <http://datahub.io/>`_ theme (circa 2013):"
+msgstr ""

@@ -1,0 +1,85 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/installing/index.rst:3
+msgid "Installing CKAN"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:5
+msgid ""
+"Before you can use CKAN on your own computer, you need to install it. There "
+"are two ways to install CKAN, from package, or from source."
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:8
+msgid ""
+"From package is the quickest and easiest way to install CKAN, but it "
+"requires Ubuntu 12.04 64-bit. **You should install CKAN from package if**:"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:11
+msgid "You want to install CKAN on an Ubuntu 12.04, 64-bit server, *and*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:12
+msgid "You only want to run one CKAN website per server, *and*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:13
+msgid "You want to run CKAN, |solr| and |postgres| on the same server"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:15
+msgid "See :doc:`install-from-package`."
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:17
+msgid "**You should install CKAN from source if**:"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:19
+msgid "You want to install CKAN on a 32-bit computer, *or*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:20
+msgid ""
+"You want to install CKAN on a different version of Ubuntu, not 12.04, *or*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:21
+msgid ""
+"You want to install CKAN on another operating system (eg. RedHat, CentOS, OS"
+" X), *or*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:23
+msgid "You want to run multiple CKAN websites on the same server, *or*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:24
+msgid "You want to run CKAN, |solr| and |postgres| on different servers, *or*"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:25
+msgid "You want to install CKAN for development"
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:27
+msgid "See :doc:`install-from-source`."
+msgstr ""
+
+#: ../../maintaining/installing/index.rst:29
+msgid ""
+"If you've already setup a CKAN website and want to upgrade it to a newer "
+"version of CKAN, see :doc:`/maintaining/upgrading/index`."
+msgstr ""

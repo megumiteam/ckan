@@ -1,0 +1,178 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/tracking.rst:5
+msgid "Page View Tracking"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:7
+msgid ""
+"CKAN can track visits to pages of your site and use this tracking data to:"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:9
+msgid "Sort datasets by popularity"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:10
+msgid "Highlight popular datasets and resources"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:11
+msgid "Show view counts next to datasets and resources"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:12
+msgid "Show a list of the most popular datasets"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:13
+msgid "Export page-view data to a CSV file"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:17
+msgid ""
+"`ckanext-googleanalytics <https://github.com/ckan/ckanext-googleanalytics>`_"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:18
+msgid "A CKAN extension that integrates Google Analytics into CKAN."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:22
+msgid "Enabling Page View Tracking"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:24
+msgid "To enable page view tracking:"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:26
+msgid ""
+"Set :ref:`ckan.tracking_enabled` to true in the ``[app:main]`` section of "
+"your CKAN configuration file (e.g. ``development.ini`` or "
+"``production.ini``)::"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:32
+msgid ""
+"Save the file and restart your web server. CKAN will now record raw page "
+"view tracking data in your CKAN database as pages are viewed."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:35
+msgid "Setup a cron job to update the tracking summary data."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:37
+msgid ""
+"For operations based on the tracking data CKAN uses a summarised version of "
+"the data, not the raw tracking data that is recorded \"live\" as page views "
+"happen. The ``paster tracking update`` and ``paster search-index rebuild`` "
+"commands need to be run periodicially to update this tracking summary data."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:42
+msgid ""
+"You can setup a cron job to run these commands. On most UNIX systems you can"
+" setup a cron job by running ``crontab -e`` in a shell to edit your crontab "
+"file, and adding a line to the file to specify the new job. For more "
+"information run ``man crontab`` in a shell. For example, here is a crontab "
+"line to update the tracking data and rebuild the search index hourly::"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:50
+msgid ""
+"Replace ``/usr/lib/ckan/bin/`` with the path to the ``bin`` directory of the"
+" virtualenv that you've installed CKAN into, and replace "
+"``/etc/ckan/production.ini`` with the path to your CKAN configuration file."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:54
+msgid ""
+"The ``@hourly`` can be replaced with ``@daily``, ``@weekly`` or "
+"``@monthly``."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:59
+msgid "Retrieving Tracking Data"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:61
+msgid ""
+"Tracking summary data for datasets and resources is available in the dataset"
+" and resource dictionaries returned by, for example, the ``package_show()`` "
+"API::"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:70
+msgid ""
+"This can be used, for example, by custom templates to show the number of "
+"views next to datasets and resources.  A dataset or resource's ``recent`` "
+"count is its number of views in the last 14 days, the ``total`` count is all"
+" of its tracked views (including recent ones)."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:75
+msgid ""
+"You can also export tracking data for all datasets to a CSV file using the "
+"``paster tracking export`` command. For details, run ``paster tracking -h``."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:80
+msgid ""
+"Repeatedly visiting the same page will not increase the page's view count! "
+"Page view counting is limited to one view per user per page per day."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:85
+msgid "Sorting Datasets by Popularity"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:87
+msgid ""
+"Once you've enabled page view tracking on your CKAN site, you can view "
+"datasets most-popular-first by selecting ``Popular`` from the ``Order by:`` "
+"dropdown on the dataset search page:"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:93
+msgid "The datasets are sorted by their number of recent views."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:95
+msgid ""
+"You can retrieve datasets most-popular-first from the :doc:`CKAN API "
+"</api/index>` by passing ``'sort': 'views_recent desc'`` to the "
+"``package_search()`` action. This could be used, for example, by a custom "
+"template to show a list of the most popular datasets on the site's front "
+"page."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:102
+msgid ""
+"You can also sort datasets by total views rather than recent views. Pass "
+"``'sort': 'views_total desc'`` to the ``package_search()`` API, or use the "
+"URL ``/dataset?q=&sort=views_total+desc`` in the web interface."
+msgstr ""
+
+#: ../../maintaining/tracking.rst:108
+msgid "Highlighting Popular Datasets and Resources"
+msgstr ""
+
+#: ../../maintaining/tracking.rst:110
+msgid ""
+"Once you've enabled page view tracking on your CKAN site, popular datasets "
+"and resources (those with more than 10 views) will be highlighted with a "
+"\"popular\" badge and a tooltip showing the number of views:"
+msgstr ""

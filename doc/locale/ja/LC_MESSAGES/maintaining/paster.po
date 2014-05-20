@@ -1,0 +1,698 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/paster.rst:3
+msgid "Command Line Interface"
+msgstr ""
+
+#: ../../maintaining/paster.rst:5
+msgid ""
+"Most common CKAN administration tasks can be carried out from the command "
+"line on the server that CKAN is installed on, using the ``paster`` command."
+msgstr ""
+
+#: ../../maintaining/paster.rst:8
+msgid ""
+"If you have trouble running paster commands, see `Troubleshooting Paster "
+"Commands`_ below."
+msgstr ""
+
+#: ../../maintaining/paster.rst:13
+msgid ""
+"Before running a CKAN ``paster`` command, you have to activate your CKAN "
+"virtualenv and change to the ``ckan``  directory, for example:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:21
+msgid ""
+"To run a paster command without activating the virtualenv first, you have to"
+" give the full path the paster script within the virtualenv, for example:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:28
+msgid ""
+"To run a paster command without changing to the ckan directory first, add "
+"the ``--plugin=ckan`` option to the command. For example:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:35
+msgid ""
+"In the example commands below, we assume you're running the commands with "
+"your virtualenv activated and from your ckan directory."
+msgstr ""
+
+#: ../../maintaining/paster.rst:38
+msgid "The general form of a CKAN ``paster`` command is:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:44
+msgid ""
+"The ``--config`` option tells CKAN where to find your config file, which it "
+"reads for example to know which database it should use. As you'll see in the"
+" examples below, this option can be given as ``-c`` for short."
+msgstr ""
+
+#: ../../maintaining/paster.rst:48
+msgid ""
+"``command`` should be replaced with the name of the CKAN command that you "
+"wish to execute. Most commands have their own subcommands and options. For "
+"example, to print out a list of all of your CKAN site's users do:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:56
+msgid ""
+"(Here ``user`` is the name of the CKAN command you're running, and ``list`` "
+"is a subcommand of ``user``.)"
+msgstr ""
+
+#: ../../maintaining/paster.rst:59
+msgid ""
+"For a list of all available commands, simply run ``paster`` on its own with "
+"no command, or see `Paster Commands Reference`_. In this case we don't need "
+"the ``-c`` option, since we're only asking CKAN to print out information "
+"about commands, not to actually do anything with our CKAN site::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:66
+msgid ""
+"Each command has its own help text, which tells you what subcommands and "
+"options it has (if any). To print out a command's help text, run the command"
+" with the ``--help`` option::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:75
+msgid "Troubleshooting Paster Commands"
+msgstr ""
+
+#: ../../maintaining/paster.rst:78
+msgid "Permission Error"
+msgstr ""
+
+#: ../../maintaining/paster.rst:80
+msgid ""
+"If you receive 'Permission Denied' error, try running paster with sudo."
+msgstr ""
+
+#: ../../maintaining/paster.rst:87
+msgid "Virtualenv not activated, or not in ckan dir"
+msgstr ""
+
+#: ../../maintaining/paster.rst:89
+msgid ""
+"Most errors with paster commands can be solved by remembering to **activate "
+"your virtual environment** and **change to the ckan directory** before "
+"running the command:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:98
+msgid ""
+"Error messages such as the following are usually caused by forgetting to do "
+"this:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:101
+msgid ""
+"**Command 'foo' not known** (where *foo* is the name of the command you "
+"tried to run)"
+msgstr ""
+
+#: ../../maintaining/paster.rst:103
+msgid "**The program 'paster' is currently not installed**"
+msgstr ""
+
+#: ../../maintaining/paster.rst:104
+msgid "**Command not found: paster**"
+msgstr ""
+
+#: ../../maintaining/paster.rst:105
+msgid ""
+"**ImportError: No module named fanstatic** (or other ``ImportError``\\ s)"
+msgstr ""
+
+#: ../../maintaining/paster.rst:108
+msgid "Running paster commands provided by extensions"
+msgstr ""
+
+#: ../../maintaining/paster.rst:110
+msgid ""
+"**If you're trying to run a CKAN command provided by an extension** that "
+"you've installed and you're getting an error like **Command 'foo' not "
+"known** even though you've activated your virtualenv and changed to the ckan"
+" directory, this is because you need to run the extension's paster commands "
+"from the extension's source directory not CKAN's source directory. For "
+"example:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:122
+msgid ""
+"This should not be necessary when using the pre-installed extensions that "
+"come with CKAN."
+msgstr ""
+
+#: ../../maintaining/paster.rst:125
+msgid ""
+"Alternatively, you can give the extension's name using the ``--plugin`` "
+"option, for example"
+msgstr ""
+
+#: ../../maintaining/paster.rst:138
+msgid "Wrong config file path"
+msgstr ""
+
+#: ../../maintaining/paster.rst:143
+msgid "AssertionError: Config filename development.ini does not exist"
+msgstr ""
+
+#: ../../maintaining/paster.rst:141
+msgid ""
+"This means you forgot to give the ``--config`` or ``-c`` option to tell CKAN"
+" where to find your config file. (CKAN looks for a config file named "
+"``development.ini`` in your current working directory by default.)"
+msgstr ""
+
+#: ../../maintaining/paster.rst:147
+msgid ""
+"ConfigParser.MissingSectionHeaderError: File contains no section headers"
+msgstr ""
+
+#: ../../maintaining/paster.rst:146
+msgid ""
+"This happens if the config file that you gave with the ``-c`` or "
+"``--config`` option is badly formatted, or if you gave the wrong filename."
+msgstr ""
+
+#: ../../maintaining/paster.rst:152
+msgid "IOError: [Errno 2] No such file or directory: '...'"
+msgstr ""
+
+#: ../../maintaining/paster.rst:150
+msgid ""
+"This means you gave the wrong path to the ``--config`` or ``-c`` option (you"
+" gave a path to a file that doesn't exist)."
+msgstr ""
+
+#: ../../maintaining/paster.rst:156
+msgid "Paster Commands Reference"
+msgstr ""
+
+#: ../../maintaining/paster.rst:158
+msgid "The following paster commands are supported by CKAN:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:161
+msgid "celeryd"
+msgstr ""
+
+#: ../../maintaining/paster.rst:161
+msgid "Control celery daemon."
+msgstr ""
+
+#: ../../maintaining/paster.rst:162
+msgid "check-po-files"
+msgstr ""
+
+#: ../../maintaining/paster.rst:162
+msgid "Check po files for common mistakes"
+msgstr ""
+
+#: ../../maintaining/paster.rst:163
+msgid "color"
+msgstr ""
+
+#: ../../maintaining/paster.rst:163
+msgid "Create or remove a color scheme."
+msgstr ""
+
+#: ../../maintaining/paster.rst:164
+msgid "create-test-data"
+msgstr ""
+
+#: ../../maintaining/paster.rst:164
+msgid "Create test data in the database."
+msgstr ""
+
+#: ../../maintaining/paster.rst:165
+msgid "dataset"
+msgstr ""
+
+#: ../../maintaining/paster.rst:165
+msgid "Manage datasets."
+msgstr ""
+
+#: ../../maintaining/paster.rst:166
+msgid "datastore"
+msgstr ""
+
+#: ../../maintaining/paster.rst:166
+msgid "Perform commands to set up the datastore."
+msgstr ""
+
+#: ../../maintaining/paster.rst:167
+msgid "db"
+msgstr ""
+
+#: ../../maintaining/paster.rst:167
+msgid "Perform various tasks on the database."
+msgstr ""
+
+#: ../../maintaining/paster.rst:168
+msgid "front-end-build"
+msgstr ""
+
+#: ../../maintaining/paster.rst:168
+msgid "Creates and minifies css and JavaScript files"
+msgstr ""
+
+#: ../../maintaining/paster.rst:169
+msgid "less"
+msgstr ""
+
+#: ../../maintaining/paster.rst:169
+msgid "Compile all root less documents into their CSS counterparts"
+msgstr ""
+
+#: ../../maintaining/paster.rst:170
+msgid "minify"
+msgstr ""
+
+#: ../../maintaining/paster.rst:170
+msgid "Create minified versions of the given Javascript and CSS files."
+msgstr ""
+
+#: ../../maintaining/paster.rst:171
+msgid "notify"
+msgstr ""
+
+#: ../../maintaining/paster.rst:171
+msgid "Send out modification notifications."
+msgstr ""
+
+#: ../../maintaining/paster.rst:172
+msgid "plugin-info"
+msgstr ""
+
+#: ../../maintaining/paster.rst:172
+msgid "Provide info on installed plugins."
+msgstr ""
+
+#: ../../maintaining/paster.rst:173
+msgid "profile"
+msgstr ""
+
+#: ../../maintaining/paster.rst:173
+msgid "Code speed profiler"
+msgstr ""
+
+#: ../../maintaining/paster.rst:174
+msgid "ratings"
+msgstr ""
+
+#: ../../maintaining/paster.rst:174
+msgid "Manage the ratings stored in the db"
+msgstr ""
+
+#: ../../maintaining/paster.rst:175
+msgid "rdf-export"
+msgstr ""
+
+#: ../../maintaining/paster.rst:175
+msgid "Export active datasets as RDF."
+msgstr ""
+
+#: ../../maintaining/paster.rst:176
+msgid "search-index"
+msgstr ""
+
+#: ../../maintaining/paster.rst:176
+msgid "Creates a search index for all datasets"
+msgstr ""
+
+#: ../../maintaining/paster.rst:177
+msgid "sysadmin"
+msgstr ""
+
+#: ../../maintaining/paster.rst:177
+msgid "Gives sysadmin rights to a named user."
+msgstr ""
+
+#: ../../maintaining/paster.rst:178
+msgid "tracking"
+msgstr ""
+
+#: ../../maintaining/paster.rst:178
+msgid "Update tracking statistics."
+msgstr ""
+
+#: ../../maintaining/paster.rst:179
+msgid "trans"
+msgstr ""
+
+#: ../../maintaining/paster.rst:179
+msgid "Translation helper functions"
+msgstr ""
+
+#: ../../maintaining/paster.rst:180
+msgid "user"
+msgstr ""
+
+#: ../../maintaining/paster.rst:180
+msgid "Manage users."
+msgstr ""
+
+#: ../../maintaining/paster.rst:185
+msgid "celeryd: Control celery daemon"
+msgstr ""
+
+#: ../../maintaining/paster.rst:187 ../../maintaining/paster.rst:199
+#: ../../maintaining/paster.rst:209 ../../maintaining/paster.rst:227
+#: ../../maintaining/paster.rst:241 ../../maintaining/paster.rst:376
+#: ../../maintaining/paster.rst:386 ../../maintaining/paster.rst:394
+#: ../../maintaining/paster.rst:410 ../../maintaining/paster.rst:428
+#: ../../maintaining/paster.rst:508 ../../maintaining/paster.rst:517
+msgid "Usage::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:197
+msgid "check-po-files: Check po files for common mistakes"
+msgstr ""
+
+#: ../../maintaining/paster.rst:205
+msgid "color: Create or remove a color scheme"
+msgstr ""
+
+#: ../../maintaining/paster.rst:207
+msgid ""
+"After running this command, you'll need to regenerate the css files. See "
+":ref:`less` for details."
+msgstr ""
+
+#: ../../maintaining/paster.rst:219
+msgid "create-test-data: Create test data"
+msgstr ""
+
+#: ../../maintaining/paster.rst:221
+msgid ""
+"As the name suggests, this command lets you load test data when first "
+"setting up CKAN. See :ref:`create-test-data` for details."
+msgstr ""
+
+#: ../../maintaining/paster.rst:225
+msgid "dataset: Manage datasets"
+msgstr ""
+
+#: ../../maintaining/paster.rst:237
+msgid "datastore: Perform commands to set up the datastore"
+msgstr ""
+
+#: ../../maintaining/paster.rst:239
+msgid ""
+"Make sure that the datastore URLs are set properly before you run these "
+"commands."
+msgstr ""
+
+#: ../../maintaining/paster.rst:255
+msgid "db: Manage databases"
+msgstr ""
+
+#: ../../maintaining/paster.rst:257
+msgid "Lets you initialise, upgrade, and dump the CKAN database."
+msgstr ""
+
+#: ../../maintaining/paster.rst:260
+msgid "Initialization"
+msgstr ""
+
+#: ../../maintaining/paster.rst:262
+msgid ""
+"Before you can run CKAN for the first time, you need to run ``db init`` to "
+"initialize your database:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:269
+msgid ""
+"If you forget to do this you'll see this error message in your web browser:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:271
+msgid ""
+"503 Service Unavailable:  This site is currently off-line. Database is not "
+"initialised."
+msgstr ""
+
+#: ../../maintaining/paster.rst:275
+msgid "Cleaning"
+msgstr ""
+
+#: ../../maintaining/paster.rst:277
+msgid ""
+"You can delete everything in the CKAN database, including the tables, to "
+"start from scratch:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:282
+msgid "This will delete all data from your CKAN database!"
+msgstr ""
+
+#: ../../maintaining/paster.rst:288
+msgid ""
+"After cleaning the db you must do a ``db init`` or ``db load`` before CKAN "
+"will work again."
+msgstr ""
+
+#: ../../maintaining/paster.rst:294
+msgid "Dumping and Loading databases to/from a file"
+msgstr ""
+
+#: ../../maintaining/paster.rst:296
+msgid ""
+"You can 'dump' (save) the exact state of the database to a file on disk and "
+"at a later point 'load' (restore) it again."
+msgstr ""
+
+#: ../../maintaining/paster.rst:301
+msgid ""
+"You can also dump the database from one CKAN instance, and then load it into"
+" another CKAN instance on the same or another machine. This will even work "
+"if the CKAN instance you dumped the database from is an older version of "
+"CKAN than the one you load it into, the database will be automatically "
+"upgraded during the load command. (But you cannot load a database from a "
+"newer version of CKAN into an older version of CKAN.)"
+msgstr ""
+
+#: ../../maintaining/paster.rst:308
+msgid "To export a dump of your CKAN database:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:314
+msgid ""
+"To load it in again, you first have to clean the database (this will delete "
+"all data in the database!) and then load the file:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:329
+msgid "Exporting Datasets to JSON or CSV"
+msgstr ""
+
+#: ../../maintaining/paster.rst:331
+msgid ""
+"You can export all of your CKAN site's datasets from your database to a JSON"
+" file using the ``db simple-dump-json`` command:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:338
+msgid ""
+"To export the datasets in CSV format instead, use ``db simple-dump-csv``:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:344
+msgid ""
+"This is useful to create a simple public listing of the datasets, with no "
+"user information. Some simple additions to the Apache config can serve the "
+"dump files to users in a directory listing. To do this, add these lines to "
+"your virtual Apache config file (e.g. |apache_config_file|)::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:359
+msgid ""
+"Don't serve an SQL dump of your database (created using the ``paster db "
+"dump`` command), as those contain private user information such as email "
+"addresses and API keys."
+msgstr ""
+
+#: ../../maintaining/paster.rst:364
+msgid "Exporting User Accounts to CSV"
+msgstr ""
+
+#: ../../maintaining/paster.rst:366
+msgid ""
+"You can export all of your CKAN site's user accounts from your database to a"
+" CSV file using the ``db user-dump-csv`` command:"
+msgstr ""
+
+#: ../../maintaining/paster.rst:374
+msgid "front-end-build: Creates and minifies css and JavaScript files"
+msgstr ""
+
+#: ../../maintaining/paster.rst:384
+msgid "less: Compile all root less documents into their CSS counterparts"
+msgstr ""
+
+#: ../../maintaining/paster.rst:392
+msgid "minify: Create minified versions of the given Javascript and CSS files"
+msgstr ""
+
+#: ../../maintaining/paster.rst:404
+msgid "If the --clean option is provided any minified files will be removed."
+msgstr ""
+
+#: ../../maintaining/paster.rst:408
+msgid "notify: Send out modification notifications"
+msgstr ""
+
+#: ../../maintaining/paster.rst:417
+msgid "plugin-info: Provide info on installed plugins"
+msgstr ""
+
+#: ../../maintaining/paster.rst:419
+msgid ""
+"As the name suggests, this commands shows you the installed plugins, their "
+"description, and which interfaces they implement"
+msgstr ""
+
+#: ../../maintaining/paster.rst:423
+msgid "profile: Code speed profiler"
+msgstr ""
+
+#: ../../maintaining/paster.rst:425
+msgid ""
+"Provide a ckan url and it will make the request and record how long each "
+"function call took in a file that can be read by runsnakerun."
+msgstr ""
+
+#: ../../maintaining/paster.rst:432
+msgid ""
+"The result is saved in profile.data.search. To view the profile in "
+"runsnakerun::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:436
+msgid "You may need to install the cProfile python module."
+msgstr ""
+
+#: ../../maintaining/paster.rst:440
+msgid "ratings: Manage dataset ratings"
+msgstr ""
+
+#: ../../maintaining/paster.rst:442
+msgid ""
+"Manages the ratings stored in the database, and can be used to count "
+"ratings, remove all ratings, or remove only anonymous ratings."
+msgstr ""
+
+#: ../../maintaining/paster.rst:444
+msgid "For example, to remove anonymous ratings from the database::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:450
+msgid "rdf-export: Export datasets as RDF"
+msgstr ""
+
+#: ../../maintaining/paster.rst:452
+msgid ""
+"This command dumps out all currently active datasets as RDF into the "
+"specified folder::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:460
+msgid "search-index: Rebuild search index"
+msgstr ""
+
+#: ../../maintaining/paster.rst:462
+msgid ""
+"Rebuilds the search index. This is useful to prevent search indexes from "
+"getting out of sync with the main database."
+msgstr ""
+
+#: ../../maintaining/paster.rst:464
+msgid "For example::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:468
+msgid ""
+"This default behaviour will clear the index and rebuild it with all "
+"datasets. If you want to rebuild it for only one dataset, you can provide a "
+"dataset name::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:473
+msgid ""
+"Alternatively, you can use the `-o` or `--only-missing` option to only "
+"reindex datasets which are not already indexed::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:478
+msgid ""
+"If you don't want to rebuild the whole index, but just refresh it, use the "
+"`-r` or `--refresh` option. This won't clear the index before starting "
+"rebuilding it::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:483
+msgid ""
+"There is also an option available which works like the refresh option but "
+"tries to use all processes on the computer to reindex faster::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:488
+msgid ""
+"There are other search related commands, mostly useful for debugging "
+"purposes::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:496
+msgid "sysadmin: Give sysadmin rights"
+msgstr ""
+
+#: ../../maintaining/paster.rst:498
+msgid ""
+"Gives sysadmin rights to a named user. This means the user can perform any "
+"action on any object."
+msgstr ""
+
+#: ../../maintaining/paster.rst:500
+msgid "For example, to make a user called 'admin' into a sysadmin::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:506
+msgid "tracking: Update tracking statistics"
+msgstr ""
+
+#: ../../maintaining/paster.rst:515
+msgid "trans: Translation helper functions"
+msgstr ""
+
+#: ../../maintaining/paster.rst:526
+msgid "user: Create and manage users"
+msgstr ""
+
+#: ../../maintaining/paster.rst:528
+msgid "Lets you create, remove, list and manage users."
+msgstr ""
+
+#: ../../maintaining/paster.rst:530
+msgid "For example, to create a new user called 'admin'::"
+msgstr ""
+
+#: ../../maintaining/paster.rst:534
+msgid "To delete the 'admin' user::"
+msgstr ""

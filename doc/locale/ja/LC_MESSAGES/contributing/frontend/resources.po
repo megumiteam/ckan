@@ -1,0 +1,230 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/frontend/resources.rst:3
+msgid "Resources"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:6
+msgid ""
+"Resources are only supported in the new Jinja2 style templates in CKAN 2.0 "
+"and above."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:9
+msgid ""
+"Resources are .css and .js files that may be included in an html page. "
+"Resources are included in the page by using the ``{% resource %}`` tag and "
+"CKAN uses `Fanstatic <http://www.fanstatic.org/en/latest/>`_ to serve these "
+"resources."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:17
+msgid ""
+"Resources are grouped into libraries and the full resource name consists of "
+"``<library name>/<resource name>``. For example:"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:24
+msgid ""
+"It is important to note that these resources will be added to the page as "
+"defined by the resources, not in the location of the ``{% resource %}`` tag."
+" Duplicate resources will not be added and any dependencies will be included"
+" as well as the resources, all in the correct order (see below for details)."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:29
+msgid ""
+"Libraries can be added to CKAN from extensions using a helper function "
+"within the toolkit. See below."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:32
+msgid ""
+"In debug mode resources are served un-minified and unbundled (each resource "
+"is served separately). In non-debug mode the files are served minified and "
+"bundled (where allowed)."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:37
+msgid ""
+".js and .css resources must be supplied as un-minified files.  Minified "
+"files will be created.  It is advised to include a .gitignore file to "
+"prevent minified files being added to the repository."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:42
+msgid "Resources within extensions"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:44
+msgid ""
+"To add a resource within a extension helper function ``add_resource(path, "
+"name)``:"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:51
+msgid ""
+"The first argument, ``path``, is the path to the resource directory relative"
+" to the file calling the function. The second argument, ``name`` is the name"
+" of the library (to be used by templates when they want to include a "
+"resource from the library using the ``{% resource %}`` tag as shown above)."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:56
+msgid ""
+"Resources will be created for the library for any .js and .css files found "
+"in the directory or it's subfolders. The resource name being the name of the"
+" file including any path needed to get to it from the resource directory.  "
+"For greater control of the creation a ``resource.config`` file can be "
+"created and placed in the resource directory (see below for details)."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:63
+msgid "resource.config"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:65
+msgid ""
+"This file is used to define the resources in a directory and is sub folders."
+" Here is an example file.  The general layout of the file and allowed syntax"
+" is the same as for the .ini config file."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:116
+msgid "[main]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:118
+msgid "This can contain the following values"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:120
+msgid "**force_top**"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:122
+msgid ""
+"The resources listed will be placed in the head of the page.  This is only "
+"relevant to .js files which will by default will be added to the bottom of "
+"the page."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:125
+msgid "**dont_bundle**"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:127
+msgid ""
+"Bundeling resources causes them to be served to the browser as a single "
+"resource to prevent multiple requests to the server.  The resources listed "
+"will not be bundled.  By default items will be bundled where possible.  Note"
+" that .css files can only be bundled if they are in the same directory."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:132
+msgid "**order**"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:134
+msgid ""
+"This is used to make sure that resources are created in the order specified."
+"  It should not generally be needed but is available if there are problems."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:139
+msgid "[IE conditional]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:141
+msgid "This allows IE conditionals to be wrapped around resources"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:143
+msgid ""
+"eg ``<!--[if IE lte 8]--><script src=\"my_script.js\"></script><![end "
+"if]-->``"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:145
+msgid ""
+"The condition is supplied followed by a list of resources that need that "
+"condition."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:147
+msgid "**others**"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:149
+msgid ""
+"This is a special condition that means that the resource will also be "
+"available for none IE browsers."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:153
+msgid "[custom render order]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:155
+msgid ""
+"By default resources have a render order this is 10 for .css and 20 for .js "
+"resources.  Sometimes we need to add resources before or after they would be"
+" included an example being the html5shim.js that needs including before .css"
+" resources.  By providing a custom render order for the resource it's "
+"placement can be altered.  Lower numbered resources are rendered earlier.  "
+"Note that resources rendered in the head will still be placed before ones "
+"rendered in the body."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:164
+msgid "[inline scripts]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:166
+msgid ""
+"It is possible to define inline scripts in the resource.config file this can"
+" be helpful in some situations but is probably best avoided if possible."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:170
+msgid "[depends]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:172
+msgid ""
+"Some times one resource depends on another eg many scripts need jquery.js "
+"included in the page before them. External resource libraries will "
+"automatically depend on the core CKAN JavaScript modules so do not need to "
+"specify this."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:178
+msgid "[groups]"
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:180
+msgid ""
+"Groups of resources can be specified this allows the group to be included by"
+" just using it's name rather than having to specify each resource "
+"individuality when requesting them.  The order that items are added to a "
+"group will be used to order the resources when added to the page but other "
+"factors such as dependencies, custom render order and resource type can "
+"affect the final order used."
+msgstr ""
+
+#: ../../contributing/frontend/resources.rst:188
+msgid ""
+"Groups can be referred to in many places in the resource.config file eg. "
+"[depends]"
+msgstr ""

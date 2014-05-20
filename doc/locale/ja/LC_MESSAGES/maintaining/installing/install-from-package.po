@@ -1,0 +1,141 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/installing/install-from-package.rst:5
+msgid "Installing CKAN from package"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:7
+msgid ""
+"This section describes how to install CKAN from package. This is the "
+"quickest and easiest way to install CKAN, but it requires **Ubuntu 12.04 "
+"64-bit**. If you're not using Ubuntu 12.04 64-bit, or if you're installing "
+"CKAN for development, you should follow :doc:`install-from-source` instead."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:12
+msgid ""
+"At the end of the installation process you will end up with two running web "
+"applications, CKAN itself and the DataPusher, a separate service for "
+"automatically importing data to CKAN's :doc:`/maintaining/datastore`."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:21
+msgid "1. Install the CKAN package"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:23
+msgid ""
+"On your Ubuntu 12.04 system, open a terminal and run these commands to "
+"install CKAN:"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:26
+msgid "Update Ubuntu's package index::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:30
+msgid "Install the Ubuntu packages that CKAN requires::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:34
+msgid "Download the CKAN package:"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:40
+msgid "If ``wget`` is not present, you can install it via::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:45
+msgid "Install the CKAN package:"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:51
+msgid ""
+"If you get the following error it means that for some reason the Apache WSGI"
+" module was not enabled::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:60
+msgid "You can enable it by running these commands in a terminal::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:68
+msgid "2. Install PostgreSQL and Solr"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:72
+msgid ""
+"You can install |postgres|, |solr| and CKAN on different servers. Just "
+"change the :ref:`sqlalchemy.url` and :ref:`solr_url` settings in your "
+"|production.ini| file to reference your |postgres| and |solr| servers."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:76
+msgid "Install |postgres| and |solr|, run this command in a terminal::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:80
+msgid "The install will whirr away, then towards the end you'll see this::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:84
+msgid "Follow the instructions in :ref:`setting up solr` to setup |solr|."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:86
+msgid ""
+"Follow the instructions in :ref:`postgres-setup` to setup |postgres|, then "
+"edit the :ref:`sqlalchemy.url` option in your |production.ini| file and set "
+"the correct password, database and database user."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:90
+msgid "Initialize your CKAN database by running this command in a terminal::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:94
+msgid ""
+"Optionally, setup the DataStore and DataPusher by following the instructions"
+" in :doc:`/maintaining/datastore`."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:97
+msgid ""
+"Also optionally, you can enable file uploads by following the instructions "
+"in :doc:`/maintaining/filestore`."
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:102
+msgid "3. Restart Apache and Nginx"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:104
+msgid "Restart Apache and Nginx by running this command in a terminal::"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:111
+msgid "4. You're done!"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:113
+msgid ""
+"Open http://localhost in your web browser. You should see the CKAN front "
+"page, which will look something like this:"
+msgstr ""
+
+#: ../../maintaining/installing/install-from-package.rst:121
+msgid ""
+"You can now move on to :doc:`/maintaining/getting-started` to begin using "
+"and customizing your CKAN site."
+msgstr ""

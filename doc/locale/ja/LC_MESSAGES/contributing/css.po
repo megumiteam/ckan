@@ -1,0 +1,148 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/css.rst:3
+msgid "CSS coding standards"
+msgstr ""
+
+#: ../../contributing/css.rst:6
+msgid ""
+"For CKAN 2.0 we use LESS as a pre-processor for our core CSS. View `Front-"
+"end Documentation <./frontend-development.html#stylesheets>`_ for more "
+"information on this subject."
+msgstr ""
+
+#: ../../contributing/css.rst:12
+msgid "Formatting"
+msgstr ""
+
+#: ../../contributing/css.rst:14
+msgid ""
+"All CSS documents must use **two spaces** for indentation and files should "
+"have no trailing whitespace. Other formatting rules:"
+msgstr ""
+
+#: ../../contributing/css.rst:17
+msgid "Use soft-tabs with a two space indent."
+msgstr ""
+
+#: ../../contributing/css.rst:18
+msgid "Use double quotes."
+msgstr ""
+
+#: ../../contributing/css.rst:19
+msgid "Use shorthand notation where possible."
+msgstr ""
+
+#: ../../contributing/css.rst:20
+msgid "Put spaces after ``:`` in property declarations."
+msgstr ""
+
+#: ../../contributing/css.rst:21
+msgid "Put spaces before ``{`` in rule declarations."
+msgstr ""
+
+#: ../../contributing/css.rst:22
+msgid "Use hex color codes ``#000`` unless using ``rgba()``."
+msgstr ""
+
+#: ../../contributing/css.rst:23
+msgid "Always provide fallback properties for older browsers."
+msgstr ""
+
+#: ../../contributing/css.rst:24
+msgid "Use one line per property declaration."
+msgstr ""
+
+#: ../../contributing/css.rst:25
+msgid "Always follow a rule with one line of whitespace."
+msgstr ""
+
+#: ../../contributing/css.rst:26
+msgid "Always quote ``url()`` and ``@import()`` contents."
+msgstr ""
+
+#: ../../contributing/css.rst:27
+msgid "Do not indent blocks."
+msgstr ""
+
+#: ../../contributing/css.rst:29
+msgid "For example: ::"
+msgstr ""
+
+#: ../../contributing/css.rst:53
+msgid "Naming"
+msgstr ""
+
+#: ../../contributing/css.rst:55
+msgid ""
+"All ids, classes and attributes must be lowercase with hyphens used for "
+"separation. ::"
+msgstr ""
+
+#: ../../contributing/css.rst:68
+msgid "Comments"
+msgstr ""
+
+#: ../../contributing/css.rst:70
+msgid ""
+"Comments should be used liberally to explain anything that may be unclear at"
+" first glance, especially IE workarounds or hacks. ::"
+msgstr ""
+
+#: ../../contributing/css.rst:87
+msgid "Modularity and specificity"
+msgstr ""
+
+#: ../../contributing/css.rst:89
+msgid ""
+"Try keep all selectors loosely grouped into modules where possible and avoid"
+" having too many selectors in one declaration to make them easy to override."
+" ::"
+msgstr ""
+
+#: ../../contributing/css.rst:97
+msgid ""
+"Instead here we would create a dataset \"module\" and styling the item "
+"outside of the container allows you to use it on it's own e.g. on a dataset "
+"page: ::"
+msgstr ""
+
+#: ../../contributing/css.rst:104
+msgid ""
+"In the same vein use classes make the styles more robust, especially where "
+"the HTML may change. For example when styling social links: ::"
+msgstr ""
+
+#: ../../contributing/css.rst:113
+msgid "You may use pseudo selectors to keep the HTML clean: ::"
+msgstr ""
+
+#: ../../contributing/css.rst:127
+msgid ""
+"However this will break any time the HTML changes for example if an item is "
+"added or removed. Instead we can use class names to ensure the icons always "
+"match the elements (Also you'd probably sprite the image :). ::"
+msgstr ""
+
+#: ../../contributing/css.rst:143
+msgid ""
+"Avoid using tag names in selectors as this prevents re-use in other "
+"contexts. ::"
+msgstr ""
+
+#: ../../contributing/css.rst:148
+msgid ""
+"Also ids should not be used in selectors as it makes it far too difficult to"
+" override later in the cascade. ::"
+msgstr ""

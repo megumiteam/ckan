@@ -1,0 +1,105 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:3
+msgid "Upgrading a CKAN 2 package install to a new patch release"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:7
+msgid ""
+"Before upgrading CKAN you should check the compatibility of any custom "
+"themes or extensions you're using, check the changelog, and backup your "
+"database. See :ref:`upgrading`."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:11
+msgid ""
+":ref:`Patch releases <releases>` are distributed in the same package as the "
+"minor release they belong to, so for example CKAN ``2.0``, ``2.0.1``, "
+"``2.0.2``, etc.  will all be installed using the CKAN ``2.0`` package "
+"(``python-ckan_2.0_amd64.deb``):"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:16
+msgid "Download the CKAN package::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:20
+msgid ""
+"You can check the actual CKAN version from a package running the following "
+"command::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:25
+msgid "Look for the ``Version`` field in the output::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:32
+msgid "Install the package with the following command::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:36
+msgid "Your CKAN instance should be upgraded straight away."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:40
+msgid ""
+"If you have changed the |apache| or |nginx| configuration files, you will "
+"get a prompt like the following, asking whether to keep your local changes "
+"or replace the files. You generally would like to keep your local changes "
+"(option ``N``, which is the default), but you can look at the differences "
+"between versions selecting option ``D``::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:57
+msgid ""
+"Your local CKAN configuration file in |config_dir| will not be replaced."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:61
+msgid ""
+"The install process will uninstall any existing CKAN extensions or other "
+"libraries located in the ``src`` directory of the CKAN virtualenv. To enable"
+" them again, the installation process will iterate all folders in the "
+"``src`` directory, reinstall the requirements listed in ``pip-"
+"requirements.txt`` and ``requirements.txt`` files and run ``python setup.py "
+"develop`` for each. If you are using a custom extension which does not use "
+"this requirements file names or is located elsewhere, you will need to "
+"manually reenable it."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:72
+msgid ""
+"When upgrading from 2.0 to 2.0.1 you may see some vdm related warnings when "
+"installing the package::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:77
+msgid ""
+"These are due to vdm not longer being installed from source. You can ignore "
+"them and delete the folder manually if you want."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:80
+msgid "Finally, restart Apache and Nginx:"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:87
+msgid "You're done!"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-patch-release.rst:89
+msgid ""
+"You should now be able to visit your CKAN website in your web browser and "
+"see that it's running the new version of CKAN."
+msgstr ""

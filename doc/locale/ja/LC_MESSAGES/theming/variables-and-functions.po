@@ -1,0 +1,197 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/variables-and-functions.rst:5
+msgid "Variables and functions available to templates"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:7
+msgid ""
+"The following global variables and functions are available to all CKAN "
+"templates in their top-level namespace:"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:12
+msgid ""
+"In addition to the global variables listed below, each template also has "
+"access to variables from a few other sources:"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:15
+msgid ""
+"Any extra variables explicitly passed into a template by the controller that"
+" rendered the template will also be available to that template, in its top-"
+"level namespace. Any variables explicitly added to the template context "
+"variable :py:data:`c` will also be available to the template as attributes "
+"of :py:data:`c`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:21
+msgid ""
+"To see which additional global variables and context attributes are "
+"available to a given template, use CKAN's :ref:`debug footer <debug "
+"footer>`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:25
+msgid ""
+"Any variables explicitly passed into a template snippet in the calling ``{% "
+"snippet %}`` tag will be available to the snippet in its top-level "
+"namespace. To see these variables, use the :ref:`debug footer <debug "
+"footer>`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:30
+msgid ""
+"Jinja2 also makes a number of filters, tests and functions available in each"
+" template's global namespace. For a list of these, see the `Jinja2 docs`_."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:36
+msgid ""
+"The `Pylons template context object <http://pylonsbook.com/en/1.0/exploring-"
+"pylons.html?highlight=template%20context#context-object>`_, a thread-safe "
+"object that the application can store request-specific variables against "
+"without the variables associated with one HTTP request getting confused with"
+" variables from another request."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:41
+msgid "``tmpl_context`` is usually abbreviated to ``c`` (an alias)."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:43
+msgid ""
+"Using ``c`` in CKAN is discouraged, use template helper functions instead. "
+"See :ref:`don't use c`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:46
+msgid "``c`` is not available to snippets."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:50
+msgid "An alias for :py:data:`tmpl_context`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:54
+msgid ""
+"The `Pylons App Globals object <http://pylonsbook.com/en/1.0/exploring-"
+"pylons.html?highlight=template%20context#app-globals-object>`_, an instance "
+"of the :py:class:`ckan.lib.app_globals.Globals` class. The application can "
+"store request-independent variables against the ``app_globals`` object. "
+"Variables stored against ``app_globals`` are shared between all HTTP "
+"requests."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:62
+msgid "An alias for :py:data:`app_globals`."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:66
+msgid ""
+"CKAN's :ref:`template helper functions <template helper functions>`, plus "
+"any :ref:`custom template helper functions <custom template helper "
+"functions>` provided by any extensions."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:73
+msgid ""
+"The `Pylons Request object <http://pylonsbook.com/en/1.0/exploring-"
+"pylons.html?highlight=request#request>`_, contains information about the "
+"HTTP request that is currently being responded to, including the request "
+"headers and body, URL parameters, the requested URL, etc."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:80
+msgid ""
+"The `Pylons Response object <http://pylonsbook.com/en/1.0/exploring-"
+"pylons.html?highlight=request#response>`_, contains information about the "
+"HTTP response that is currently being prepared to be sent back to the user, "
+"including the HTTP status code, headers, cookies, etc."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:87
+msgid ""
+"The `Beaker session object <http://beaker.readthedocs.org/en/latest/>`_, "
+"which contains information stored in the user's currently active session "
+"cookie."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:93
+msgid ""
+"The `pylons.i18n.translation.ugettext(value) "
+"<http://docs.pylonsproject.org/projects/pylons-"
+"webframework/en/latest/modules/i18n_translation.html?highlight=ugettext#pylons.i18n.translation.ugettext>`_"
+" function:"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:95
+msgid ""
+"Mark a string for translation. Returns the localized unicode string of "
+"value."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:98
+#: ../../theming/variables-and-functions.rst:136
+msgid "Mark a string to be localized as follows::"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:104
+msgid ""
+"The `pylons.i18n.translation.gettext_noop(value) "
+"<http://docs.pylonsproject.org/projects/pylons-"
+"webframework/en/latest/modules/i18n_translation.html?highlight=gettext_noop#pylons.i18n.translation.gettext_noop>`_"
+" function:"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:106
+msgid "Mark a string for translation without translating it. Returns value."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:108
+msgid "Used for global strings, e.g.::"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:125
+msgid ""
+"The `pylons.i18n.translation.ungettext(singular, plural, n) "
+"<http://docs.pylonsproject.org/projects/pylons-"
+"webframework/en/latest/modules/i18n_translation.html?highlight=ungettext#pylons.i18n.translation.ungettext>`_"
+" function:"
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:128
+msgid ""
+"Mark a string for translation. Returns the localized unicode string of the "
+"pluralized value."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:131
+msgid ""
+"This does a plural-forms lookup of a message id. singular is used as the "
+"message id for purposes of lookup in the catalog, while n is used to "
+"determine which plural form to use. The returned message is a Unicode "
+"string."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:143
+msgid ""
+"An instance of the `gettext.NullTranslations "
+"<http://docs.python.org/2/library/gettext.html#the-nulltranslations-class>`_"
+" class. This is for internal use only, templates shouldn't need to use this."
+msgstr ""
+
+#: ../../theming/variables-and-functions.rst:149
+msgid "The :py:class:`ckan.model.authz.Action` class."
+msgstr ""

@@ -1,0 +1,633 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../extensions/tutorial.rst:3
+msgid "Writing extensions tutorial"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:5
+msgid ""
+"This tutorial will walk you through the process of creating a simple CKAN "
+"extension, and introduce the core concepts that CKAN extension developers "
+"need to know along the way. As an example, we'll use the "
+":py:mod:`~ckanext.example_iauthfunctions` extension that's packaged with "
+"CKAN. This is a simple CKAN extension that customizes some of CKAN's "
+"authorization rules."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:14
+msgid "Installing CKAN"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:16
+msgid ""
+"Before you can start developing a CKAN extension, you'll need a working "
+"source install of CKAN on your system. If you don't have a CKAN source "
+"install already, follow the instructions in :doc:`/maintaining/installing"
+"/install-from-source` before continuing."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:23
+msgid "Creating a new extension"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:0
+msgid "Extensions"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:27
+msgid ""
+"A CKAN *extension* is a Python package that modifies or extends CKAN. Each "
+"extension contains one or more *plugins* that must be added to your CKAN "
+"config file to activate the extension's features."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:32
+msgid ""
+"You can use the ``paster create`` command to create an \"empty\" extension "
+"from a template. First, activate your CKAN virtual environment:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:39
+msgid ""
+"When you run the ``paster create`` command, your new extension's directory "
+"will be created in the current working directory by default (you can "
+"override this with the ``-o`` option), so change to the directory that you "
+"want your extension to be created in. Usually you'll want to track your "
+"extension code using a version control system such as ``git``, so you "
+"wouldn't want to create your extension in the ``ckan`` source directory "
+"because that directory already contains the CKAN git repo. Let's use the "
+"parent directory instead:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:51
+msgid "Now run the ``paster create`` command to create your extension::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:57
+msgid ""
+"The last argument to the ``paster create`` command (``ckanext-"
+"iauthfunctions`` in this example) is the name for your next extension. CKAN "
+"extension names *have* to begin with ``ckanext-``."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:61
+msgid ""
+"The command will ask you to answer a few questions. The answers you give "
+"will end up in your extension's ``setup.py`` file (where you can edit them "
+"later if you want)."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:65
+msgid ""
+"Once this command has completed, your new CKAN extension's project directory"
+" will have been created and will contain a few directories and files to get "
+"you started::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:77
+msgid ""
+"``ckanext_iauthfunctions.egg_info`` is a directory containing automatically "
+"generated metadata about your project. It's used by Python's packaging and "
+"distribution tools. In general, you don't need to edit or look at anything "
+"in this directory, and you should not add it to version control."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:82
+msgid ""
+"``setup.py`` is the setup script for your project. As you'll see later, you "
+"use this script to install your project into a virtual environment. It "
+"contains several settings that you'll update as you develop your project."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:86
+msgid ""
+"``ckanext/iauthfunctions`` is the Python package directory where we'll add "
+"the source code files for our extension."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:91
+msgid "Creating a plugin class"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:0
+msgid "Plugins"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:95
+msgid ""
+"Each CKAN extension contains one or more plugins that provide the "
+"extension's features."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:99
+msgid ""
+"Now create the file ``ckanext-"
+"iauthfunctions/ckanext/iauthfunctions/plugin.py`` with the following "
+"contents:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:104
+msgid ""
+"Our plugin is a normal Python class, named "
+":py:class:`~ckanext.example_iauthfunctions.plugin_v1.ExampleIAuthFunctionsPlugin`"
+" in this example, that inherits from CKAN's "
+":py:class:`~ckan.plugins.core.SingletonPlugin` class."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:111
+msgid ""
+"Every CKAN plugin class should inherit from "
+":py:class:`~ckan.plugins.core.SingletonPlugin`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:118
+msgid "Adding the plugin to ``setup.py``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:120
+msgid ""
+"Now let's add our class to the ``entry_points`` in ``setup.py``.  This "
+"identifies the plugin class to CKAN once the extension is installed in "
+"CKAN's virtualenv, and associates a plugin name with the class.  Edit "
+"``ckanext-iauthfunctions/setup.py`` and add a line to the ``entry_points`` "
+"section like this::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:133
+msgid "Installing the extension"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:135
+msgid ""
+"When you :doc:`install CKAN </maintaining/installing/index>`, you create a "
+"Python `virtual environment <http://www.virtualenv.org>`_ in a directory on "
+"your system (|virtualenv| by default) and install the CKAN Python package "
+"and the other packages that CKAN depends on into this virtual environment.  "
+"Before we can use our plugin, we must install our extension into our CKAN "
+"virtual environment."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:142
+msgid ""
+"Make sure your virtualenv is activated, change to the extension's directory,"
+" and run ``python setup.py develop``:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:153
+msgid "Enabling the plugin"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:155
+msgid ""
+"An extension's plugins must be added to the :ref:`ckan.plugins` setting in "
+"your CKAN config file so that CKAN will call the plugins' methods.  The name"
+" that you gave to your plugin class in the :ref:`left-hand-side of the "
+"assignment in the setup.py file <setup.py>` (``example_iauthfunctions`` in "
+"this example) is the name you'll use for your plugin in CKAN's config file::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:163
+msgid ""
+"You should now be able to start CKAN in the development web server and have "
+"it start up without any problems:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:172
+msgid ""
+"If your plugin is in the :ref:`ckan.plugins` setting and CKAN starts without"
+" crashing, then your plugin is installed and CKAN can find it. Of course, "
+"your plugin doesn't *do* anything yet."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:178 ../../extensions/tutorial.rst:495
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:181
+msgid "``PluginNotFoundException``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:183
+msgid ""
+"If CKAN crashes with a :py:exc:`~ckan.plugins.core.PluginNotFoundException` "
+"like this::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:188
+msgid "then:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:190
+msgid ""
+"Check that the name you've used for your plugin in your CKAN config file is "
+"the same as the name you've used in your extension's ``setup.py`` file"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:193
+msgid ""
+"Check that you've run ``python setup.py develop`` in your extension's "
+"directory, with your CKAN virtual environment activated. Every time you add "
+"a new plugin to your extension's ``setup.py`` file, you need to run ``python"
+" setup.py develop`` again before you can use the new plugin."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:199
+msgid "``ImportError``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:201
+msgid ""
+"If you get an ``ImportError`` from CKAN relating to your plugin, it's "
+"probably because the path to your plugin class in your ``setup.py`` file is "
+"wrong."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:206
+msgid ""
+"Implementing the :py:class:`~ckan.plugins.interfaces.IAuthFunctions` plugin "
+"interface"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:0
+msgid "Plugin interfaces"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:210
+msgid ""
+"CKAN provides a number of :doc:`plugin interfaces <plugin-interfaces>` that "
+"plugins must implement to hook into CKAN and modify or extend it. Each "
+"plugin interface defines a number of methods that a plugin that implements "
+"the interface must provide. CKAN will call your plugin's implementations of "
+"these methods, to allow your plugin to do its stuff."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:217
+msgid ""
+"To modify CKAN's authorization behavior, we'll implement the "
+":py:class:`~ckan.plugins.interfaces.IAuthFunctions` plugin interface.  This "
+"interface defines just one method, that takes no parameters and returns a "
+"dictionary:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:0
+msgid "Action functions and authorization functions"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:228
+msgid ""
+"At this point, it's necessary to take a short diversion to explain how "
+"authorization works in CKAN."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:231
+msgid ""
+"Every action that can be carried out using the CKAN web interface or API is "
+"implemented by an *action function* in one of the four files "
+"``ckan/logic/action/{create,delete,get,update}.py``."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:235
+msgid ""
+"For example, when creating a dataset either using the web interface or using"
+" the :func:`~ckan.logic.action.create.package_create` API call, "
+":func:`ckan.logic.action.create.package_create` is called. There's also "
+":func:`ckan.logic.action.get.package_show`, "
+":func:`ckan.logic.action.update.package_update`, and "
+":func:`ckan.logic.action.delete.package_delete`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:242
+msgid ""
+"For a full list of the action functions available in CKAN, see the :ref"
+":`api-reference`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:245
+msgid ""
+"Each action function has a corresponding authorization function in one of "
+"the four files ``ckan/logic/auth/{create,delete,get,update}.py``, CKAN calls"
+" this authorization function to decide whether the user is authorized to "
+"carry out the requested action. For example, when creating a new package "
+"using the web interface or API, "
+":func:`ckan.logic.auth.create.package_create` is called."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:252
+msgid ""
+"The :py:class:`~ckan.plugins.interfaces.IAuthFunctions` plugin interface "
+"allows CKAN plugins to hook into this authorization system to add their own "
+"authorization functions or override the default authorization functions. In "
+"this way, plugins have complete control to customize CKAN's auth."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:257
+msgid ""
+"Whenever a user tries to create a new group via the web interface or the "
+"API, CKAN calls the :func:`~ckan.logic.auth.create.group_create` "
+"authorization function to decide whether to allow the action. Let's override"
+" this function and simply prevent anyone from creating new groups. Edit your"
+" ``plugin.py`` file so that it looks like this:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:265
+msgid ""
+"Our "
+":py:class:`~ckanext.example_iauthfunctions.plugin_v2.ExampleIAuthFunctionsPlugin`"
+" class now calls :func:`~ckan.plugins.core.implements` to tell CKAN that it "
+"implements the :class:`~ckan.plugins.interfaces.IAuthFunctions` interface, "
+"and provides an implementation of the interface's "
+":func:`~ckan.plugins.interfaces.IAuthFunctions.get_auth_functions` method "
+"that overrides the default :func:`~ckan.logic.auth.create.group_create` "
+"function with a custom one. This custom function simply returns "
+"``{'success': False}`` to refuse to let anyone create a new group."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:274
+msgid ""
+"If you now restart CKAN and reload the ``/group`` page, as long as you're "
+"not a sysadmin user you should see the ``Add Group`` button disappear. The "
+"CKAN web interface automatically hides buttons that the user is not "
+"authorized to use. Visiting ``/group/new``  directly will redirect you to "
+"the login page. If you try to call "
+":func:`~ckan.logic.action.create.group_create` via the API, you'll receive "
+"an ``Authorization Error`` from CKAN::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:302
+msgid ""
+"If you're logged in as a sysadmin user however, you'll still be able to "
+"create new groups. Sysadmin users can always carry out any action, they "
+"bypass the authorization functions."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:308
+msgid "Using the plugins toolkit"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:310
+msgid ""
+"Let's make our custom authorization function a little smarter, and allow "
+"only users who are members of a particular group named ``curators`` to "
+"create new groups."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:314
+msgid ""
+"First run CKAN, login and then create a new group called ``curators``.  Then"
+" edit ``plugin.py`` so that it looks like this:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:319
+msgid ""
+"This version of ``plugin.py`` will crash if the user is not logged in or if "
+"the site doesn't have a group called ``curators``. You'll want to create a "
+"``curators`` group in your CKAN before editing your plugin to look like "
+"this. See :ref:`exception handling` below."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:328
+msgid "``context``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:330
+msgid ""
+"The ``context`` parameter of our "
+":py:func:`~ckanext.example_iauthfunctions.plugin_v3.group_create()` function"
+" is a dictionary that CKAN passes to all authorization and action functions "
+"containing some computed variables. Our function gets the name of the "
+"logged-in user from ``context``:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:342
+msgid "``data_dict``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:344
+msgid ""
+"The ``data_dict`` parameter of our "
+":py:func:`~ckanext.example_iauthfunctions.plugin_v3.group_create()` function"
+" is another dictionary that CKAN passes to all authorization and action "
+"functions. ``data_dict`` contains any data posted by the user to CKAN, eg. "
+"any fields they've completed in a web form they're submitting or any "
+"``JSON`` fields they've posted to the API. If we inspect the contents of the"
+" ``data_dict`` passed to our ``group_create()`` authorization function, "
+"we'll see that it contains the details of the group the user wants to "
+"create::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:361
+msgid "The plugins toolkit"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:363
+msgid ""
+"CKAN's :doc:`plugins toolkit <plugins-toolkit>` is a Python module "
+"containing core CKAN functions, classes and exceptions for use by CKAN "
+"extensions."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:366
+msgid ""
+"The toolkit's :func:`~ckan.plugins.toolkit.get_action` function returns a "
+"CKAN action function. The action functions available to extensions are the "
+"same functions that CKAN uses internally to carry out actions when users "
+"make requests to the web interface or API. Our code uses "
+":func:`~ckan.plugins.toolkit.get_action` to get the "
+":func:`~ckan.logic.action.get.member_list` action function, which it uses to"
+" get a list of the members of the ``curators`` group:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:378
+msgid ""
+"Calling :func:`~ckan.logic.action.get.member_list` in this way is equivalent"
+" to posting the same data dict to the ``/api/3/action/member_list`` API "
+"endpoint. For other action functions available from "
+":func:`~ckan.plugins.toolkit.get_action`, see :ref:`api-reference`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:383
+msgid ""
+"The toolkit's :func:`~ckan.plugins.toolkit.get_converter` function returns "
+"converter functions from :mod:`ckan.logic.converters` for plugins to use.  "
+"This is the same set of converter functions that CKAN's action functions use"
+" to convert user-provided data. Our code uses "
+":func:`~ckan.plugins.toolkit.get_converter` to get the "
+":func:`~ckan.logic.converters.convert_user_name_or_id_to_id()` converter "
+"function, which it uses to convert the name of the logged-in user to their "
+"user ``id``:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:396
+msgid ""
+"Finally, we can test whether the logged-in user is a member of the "
+"``curators`` group, and allow or refuse the action:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:407
+msgid "Exception handling"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:409
+msgid ""
+"There are two bugs in our ``plugin.py`` file that need to be fixed using "
+"exception handling. First, the class will crash if the site does not have a "
+"group named ``curators``."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:415
+msgid ""
+"If you've already created a ``curators`` group and want to test what happens"
+" when the site has no ``curators`` group, you can use CKAN's command line "
+"interface to :ref:`clean and reinitialize your database <paster db>`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:419
+msgid ""
+"Try visiting the ``/group`` page in CKAN with our ``example_iauthfunctions``"
+" plugin activated in your CKAN config file and with no ``curators`` group in"
+" your site. If you have ``debug = false`` in your CKAN config file, you'll "
+"see something like this in your browser::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:430
+msgid ""
+"If you have ``debug = true`` in your CKAN config file, then you'll see a "
+"traceback page with details about the crash."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:433
+msgid ""
+"You'll also get a ``500 Server Error`` if you try to create a group using "
+"the ``group_create`` API action."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:436
+msgid ""
+"To handle the situation where the site has no ``curators`` group without "
+"crashing, we'll have to handle the exception that CKAN's "
+":func:`~ckan.logic.action.get.member_list` function raises when it's asked "
+"to list the members of a group that doesn't exist. Replace the "
+"``member_list`` line in your ``plugin.py`` file with these lines:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:446
+msgid ""
+"With these ``try`` and ``except`` clauses added, we should be able to load "
+"the ``/group`` page and add groups, even if there isn't already a group "
+"called ``curators``."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:450
+msgid ""
+"Second, ``plugin.py`` will crash if a user who is not logged-in tries to "
+"create a group. If you logout of CKAN, and then visit ``/group/new`` you'll "
+"see another ``500 Server Error``. You'll also get this error if you post to "
+"the :func:`~ckan.logic.action.create.group_create` API action without "
+":ref:`providing an API key <api authentication>`."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:456
+msgid ""
+"When the user isn't logged in, ``context['user']`` contains the user's IP "
+"address instead of a user name::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:462
+msgid ""
+"When we pass this IP address as the user name to "
+":func:`~ckan.logic.converters.convert_user_name_or_id_to_id`, the converter "
+"function will raise an exception because no user with that user name exists."
+" We need to handle that exception as well, replace the "
+"``convert_user_name_or_id_to_id`` line in your ``plugin.py`` file with these"
+" lines:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:475
+msgid "We're done!"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:477
+msgid "Here's our final, working ``plugin.py`` module in full:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:481
+msgid ""
+"In working through this tutorial, you've covered all the key concepts needed"
+" for writing CKAN extensions, including:"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:484
+msgid "Creating an extension"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:485
+msgid "Creating a plugin within your extension"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:486
+msgid ""
+"Adding your plugin to your extension's ``setup.py`` file, and installing "
+"your extension"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:488
+msgid ""
+"Making your plugin implement one of CKAN's :doc:`plugin interfaces <plugin-"
+"interfaces>`"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:490
+msgid "Using the :doc:`plugins toolkit <plugins-toolkit>`"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:491
+msgid "Handling exceptions"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:498
+msgid "``AttributeError``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:500
+msgid "If you get an ``AttributeError`` like this one::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:504
+msgid ""
+"it means that your plugin class does not implement one of the plugin "
+"interface's methods. A plugin must implement every method of every plugin "
+"interface that it implements."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:510
+msgid ""
+"Other ``AttributeError``\\ s can happen if your method returns the wrong "
+"type of value, check the documentation for each plugin interface method to "
+"see what your method should return."
+msgstr ""
+
+#: ../../extensions/tutorial.rst:515
+msgid "``TypeError``"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:517
+msgid "If you get a ``TypeError`` like this one::"
+msgstr ""
+
+#: ../../extensions/tutorial.rst:521
+msgid ""
+"it means that one of your plugin methods has the wrong number of parameters."
+" A plugin has to implement each method in a plugin interface with the same "
+"parameters as in the interface."
+msgstr ""

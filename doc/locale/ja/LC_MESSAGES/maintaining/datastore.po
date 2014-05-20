@@ -1,0 +1,752 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/datastore.rst:3
+msgid "DataStore extension"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:6
+msgid ""
+"The CKAN DataStore extension provides an *ad hoc* database for storage of "
+"structured data from CKAN resources. Data can be pulled out of resource "
+"files and stored in the DataStore."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:10
+msgid "When a resource is added to the DataStore, you get:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:12
+msgid ""
+"Automatic data previews on the resource's page, using the :ref:`Data "
+"Explorer extension <data-explorer>`"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:13
+msgid ""
+"`The DataStore API`_: search, filter and update the data, without having to "
+"download and upload the entire data file"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:16
+msgid ""
+"The DataStore is integrated into the :doc:`CKAN API </api/index>` and "
+"authorization system."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:19
+msgid ""
+"The DataStore is generally used alongside the `DataPusher "
+"<http://docs.ckan.org/projects/datapusher>`_, which will automatically "
+"upload data to the DataStore from suitable files, whether uploaded to CKAN's"
+" FileStore or externally linked."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:30
+msgid "Relationship to FileStore"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:32
+msgid ""
+"The DataStore is distinct but complementary to the FileStore (see "
+":doc:`filestore`). In contrast to the FileStore which provides 'blob' "
+"storage of whole files with no way to access or query parts of that file, "
+"the DataStore is like a database in which individual data elements are "
+"accessible and queryable. To illustrate this distinction, consider storing a"
+" spreadsheet file like a CSV or Excel document. In the FileStore this file "
+"would be stored directly. To access it you would download the file as a "
+"whole. By contrast, if the spreadsheet data is stored in the DataStore, one "
+"would be able to access individual spreadsheet rows via a simple web API, as"
+" well as being able to make queries over the spreadsheet contents."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:45
+msgid "Setting up the DataStore"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:49
+msgid ""
+"The DataStore requires PostgreSQL 9.0 or later. It is possible to use the "
+"DataStore on versions prior to 9.0 (for example 8.4). However, the "
+":meth:`~ckanext.datastore.logic.action.datastore_search_sql` will not be "
+"available and the set-up is slightly different. Make sure, you read :ref"
+":`legacy-mode` for more details."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:56
+msgid "1. Enable the plugin"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:58
+msgid "Add the ``datastore`` plugin to your CKAN config file::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:63
+msgid "2. Set-up the database"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:65
+msgid ""
+"Make sure that you follow the steps in `Set Permissions`_ below correctly. "
+"Wrong settings could lead to serious security issues."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:67
+msgid ""
+"The DataStore requires a separate PostgreSQL database to save the DataStore "
+"resources to."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:69
+msgid "List existing databases::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:73
+msgid ""
+"Check that the encoding of databases is ``UTF8``, if not "
+"internationalisation may be a problem. Since changing the encoding of "
+"PostgreSQL may mean deleting existing databases, it is suggested that this "
+"is fixed before continuing with the datastore setup."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:76
+msgid "Create users and databases"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:80
+msgid ""
+"If your CKAN database and DataStore databases are on different servers, then"
+" you need to create a new database user on the server where the DataStore "
+"database will be created. As in :doc:`installing/install-from-source` we'll "
+"name the database user |database_user|:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:89
+msgid ""
+"Create a database_user called |datastore_user|. This user will be given "
+"read-only access to your DataStore database in the `Set Permissions`_ step "
+"below:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:97
+msgid ""
+"Create the database (owned by |database_user|), which we'll call "
+"|datastore|:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:105
+msgid "Set URLs"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:107
+msgid ""
+"Now, uncomment the :ref:`ckan.datastore.write_url` and "
+":ref:`ckan.datastore.read_url` lines in your CKAN config file and edit them "
+"if necessary, for example:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:116
+msgid ""
+"Replace ``pass`` with the passwords you created for your |database_user| and"
+" |datastore_user| database users."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:120
+msgid "Set permissions"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:122
+msgid ""
+"See :ref:`legacy-mode` if these steps continue to fail or seem too "
+"complicated for your set-up. However, keep in mind that the legacy mode is "
+"limited in its capabilities."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:124
+msgid ""
+"Once the DataStore database and the users are created, the permissions on "
+"the DataStore and CKAN database have to be set. Since there are different "
+"set-ups, there are different ways of setting the permissions. Only **one** "
+"of the options should be used."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:127
+msgid "Option 1: Paster command"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:129
+msgid ""
+"This option is preferred if CKAN and PostgreSQL are on the same server."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:131
+msgid ""
+"To set the permissions, use the following paster command after you've set "
+"the database URLs."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:133
+msgid ""
+"If you did a package install, the easiest way is to use the ``ckan`` command"
+" wrapper:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:139
+msgid ""
+"If you did a source install, make sure to have your virtualenv activated and"
+" run the command from the CKAN source directory:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:146
+msgid ""
+"The ``postgres`` in this command should be the name of a postgres user with "
+"permission to create new tables and users, grant permissions, etc. Typically"
+" this user is called \"postgres\". See ``paster datastore set-permissions "
+"-h``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:152
+msgid "Option 2: Command line tool"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:154
+msgid ""
+"This option should be used if the CKAN server is different from the database"
+" server."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:156
+msgid ""
+"Copy the content from the ``datastore/bin/`` directory to the database "
+"server. Then run the command line tool ``datastore_setup.py`` to set the "
+"permissions on the database. To see all available options, run::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:160
+msgid ""
+"Once you are confident that you know the right names, set the permissions "
+"(assuming that the CKAN database is called |database| and the CKAN "
+"|postgres| user is called |database_user|):"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:170
+msgid "Option 3: SQL script"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:172
+msgid ""
+"This option is for more complex set-ups and requires understanding of SQL "
+"and |postgres|."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:174
+msgid ""
+"Copy the ``set_permissions.sql`` file to the server that the database runs "
+"on. Make sure you set all variables in the file correctly and comment out "
+"the parts that are not needed for you set-up. Then, run the script::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:180
+msgid "3. Test the set-up"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:182
+msgid ""
+"The DataStore is now set-up. To test the set-up, (re)start CKAN and run the "
+"following command to list all DataStore resources::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:187
+msgid "This should return a JSON page without errors."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:189
+msgid ""
+"To test the whether the set-up allows writing, you can create a new "
+"DataStore resource. To do so, run the following command::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:194
+msgid ""
+"Replace ``{YOUR-API-KEY}`` with a valid API key and ``{RESOURCE-ID}`` with "
+"the id of an existing CKAN resource."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:197
+msgid ""
+"A table named after the resource id should have been created on your "
+"DataStore database. Visiting this URL should return a response from the "
+"DataStore with the records inserted above::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:203
+msgid "You can now delete the DataStore table with::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:207
+msgid "To find out more about the DataStore API, see `The DataStore API`_."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:213
+msgid "Legacy mode: use the DataStore with old PostgreSQL versions"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:215
+msgid ""
+"The legacy mode can also be used to simplify the set-up since it does not "
+"require you to set the permissions or create a separate user."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:217
+msgid ""
+"The DataStore can be used with a PostgreSQL version prior to 9.0 in *legacy "
+"mode*. Due to the lack of some functionality, the "
+":meth:`~ckanext.datastore.logic.action.datastore_search_sql` and "
+"consequently the :ref:`datastore_search_htsql` cannot be used. To enable the"
+" legacy mode, remove the declaration of the ``ckan.datastore.read_url``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:219
+msgid ""
+"The set-up for legacy mode is analogous to the normal set-up as described "
+"above with a few changes and consists of the following steps:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:221
+msgid "Enable the plugin"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:222
+msgid ""
+"The legacy mode is enabled by **not** setting the "
+"``ckan.datastore.read_url``"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:223
+msgid "Set-Up the database"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:225
+msgid "Create a separate database"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:226
+msgid ""
+"Create a write user on the DataStore database (optional since the CKAN user "
+"can be used)"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:228
+msgid "Test the set-up"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:230
+msgid ""
+"There is no need for a read-only user or special permissions. Therefore the "
+"legacy mode can be used for simple set-ups as well."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:235
+msgid "DataPusher: Automatically Add Data to the DataStore"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:237
+msgid ""
+"Often, one wants data that is added to CKAN (whether it is linked to or "
+"uploaded to the :doc:`FileStore <filestore>`) to be automatically added to "
+"the DataStore. This requires some processing, to extract the data from your "
+"files and to add it to the DataStore in the format the DataStore can handle."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:242
+msgid ""
+"This task of automatically parsing and then adding data to the DataStore is "
+"performed by the `DataPusher`_, a service that runs asynchronously and can "
+"be installed alongside CKAN."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:246
+msgid ""
+"To install this please look at the docs here: "
+"http://docs.ckan.org/projects/datapusher"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:251
+msgid "The DataStore API"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:253
+msgid ""
+"The CKAN DataStore offers an API for reading, searching and filtering data "
+"without the need to download the entire file first. The DataStore is an ad "
+"hoc database which means that it is a collection of tables with unknown "
+"relationships. This allows you to search in one DataStore resource (a "
+"*table* in the database) as well as queries across DataStore resources."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:259
+msgid ""
+"Data can be written incrementally to the DataStore through the API. New data"
+" can be inserted, existing data can be updated or deleted. You can also add "
+"a new column to an existing table even if the DataStore resource already "
+"contains some data."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:263
+msgid ""
+"You will notice that we tried to keep the layer between the underlying "
+"PostgreSQL database and the API as thin as possible to allow you to use the "
+"features you would expect from a powerful database management system."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:267
+msgid ""
+"A DataStore resource can not be created on its own. It is always required to"
+" have an associated CKAN resource. If data is stored in the DataStore, it "
+"will automatically be previewed by the :ref:`recline preview extension "
+"<data-explorer>`."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:273
+msgid "Making a DataStore API request"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:275
+msgid ""
+"Making a DataStore API request is the same as making an Action API request: "
+"you post a JSON dictionary in an HTTP POST request to an API URL, and the "
+"API also returns its response in a JSON dictionary. See the "
+":doc:`/api/index` for details."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:281
+msgid "API reference"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:283
+msgid ""
+"Lists can always be expressed in different ways. It is possible to use "
+"lists, comma separated strings or single items. These are valid lists: "
+"``['foo', 'bar']``, ``'foo, bar'``, ``\"foo\", \"bar\"`` and ``'foo'``. "
+"Additionally, there are several ways to define a boolean value. ``True``, "
+"``on`` and ``1`` are all vaid boolean values."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:285
+msgid ""
+"The table structure of the DataStore is explained in :ref:`db_internals`."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:294
+msgid "Download resource as CSV"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:296
+msgid ""
+"A DataStore resource can be downloaded in the `CSV`_ file format from "
+"``{CKAN-URL}/datastore/dump/{RESOURCE-ID}``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:304
+msgid "Fields"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:306
+msgid ""
+"Fields define the column names and the type of the data in a column. A field"
+" is defined as follows::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:313
+msgid ""
+"Field **types are optional** and will be guessed by the DataStore from the "
+"provided data. However, setting the types ensures that future inserts will "
+"not fail because of wrong types. See :ref:`valid-types` for details on which"
+" types are valid."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:315 ../../maintaining/datastore.rst:340
+msgid "Example::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:331
+msgid "Records"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:333
+msgid ""
+"A record is the data to be inserted in a DataStore resource and is defined "
+"as follows::"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:355
+msgid "Field types"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:357
+msgid ""
+"The DataStore supports all types supported by PostgreSQL as well as a few "
+"additions. A list of the PostgreSQL types can be found in the `type section "
+"of the documentation`_. Below you can find a list of the most common data "
+"types. The ``json`` type has been added as a storage for nested data."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:359
+msgid ""
+"In addition to the listed types below, you can also use array types. They "
+"are defines by prepending a ``_`` or appending ``[]`` or ``[n]`` where n "
+"denotes the length of the array. An arbitrarily long array of integers would"
+" be defined as ``int[]``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:364
+msgid "text"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:365
+msgid "Arbitrary text data, e.g. ``Here's some text``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:367
+msgid "json"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:367
+msgid ""
+"Arbitrary nested json data, e.g ``{\"foo\": 42, \"bar\": [1, 2, 3]}``. "
+"Please note that this type is a custom type that is wrapped by the "
+"DataStore."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:369
+msgid "date"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:370
+msgid "Date without time, e.g ``2012-5-25``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:371
+msgid "time"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:372
+msgid "Time without date, e.g ``12:42``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:373
+msgid "timestamp"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:374
+msgid "Date and time, e.g ``2012-10-01T02:43Z``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:375
+msgid "int"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:376
+msgid "Integer numbers, e.g ``42``, ``7``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:377
+msgid "float"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:378
+msgid "Floats, e.g. ``1.61803``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:381
+msgid "bool"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:380
+msgid "Boolean values, e.g. ``true``, ``0``"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:383
+msgid ""
+"You can find more information about the formatting of dates in the "
+"`date/time types section of the PostgreSQL documentation`_."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:390
+msgid "Resource aliases"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:392
+msgid ""
+"A resource in the DataStore can have multiple aliases that are easier to "
+"remember than the resource id. Aliases can be created and edited with the "
+":meth:`~ckanext.datastore.logic.action.datastore_create` API endpoint. All "
+"aliases can be found in a special view called ``_table_metadata``. See "
+":ref:`db_internals` for full reference."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:397
+msgid "HTSQL support"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:400
+msgid ""
+"The `ckanext-htsql <https://github.com/okfn/ckanext-htsql>`_ extension adds "
+"an API action that allows a user to search data in a resource using the "
+"`HTSQL <http://htsql.org/doc/>`_ query expression language. Please refer to "
+"the extension documentation to know more."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:406
+msgid "Comparison of different querying methods"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:408
+msgid ""
+"The DataStore supports querying with multiple API endpoints. They are "
+"similar but support different features. The following list gives an overview"
+" of the different methods."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:411
+msgid ":meth:`~ckanext.datastore.logic.action.datastore_search`"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:411
+msgid ":meth:`~ckanext.datastore.logic.action.datastore_search_sql`"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:411
+msgid ":ref:`HTSQL<datastore_search_htsql>`"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:413
+msgid "**Ease of use**"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:413
+msgid "Easy"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:413
+msgid "Complex"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:413 ../../maintaining/datastore.rst:414
+msgid "Medium"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:414
+msgid "**Flexibility**"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:414
+msgid "Low"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:414
+msgid "High"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:415
+msgid "**Query language**"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:415
+msgid "Custom (JSON)"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:415
+msgid "SQL"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:415
+msgid "HTSQL"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:416
+msgid "**Join resources**"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:416 ../../maintaining/datastore.rst:416
+msgid "No"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:416
+msgid "Yes"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:423
+msgid "Internal structure of the database"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:425
+msgid ""
+"The DataStore is a thin layer on top of a PostgreSQL database. Each "
+"DataStore resource belongs to a CKAN resource. The name of a table in the "
+"DataStore is always the resource id of the CKAN resource for the data."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:427
+msgid ""
+"As explained in :ref:`resource-aliases`, a resource can have mnemonic "
+"aliases which are stored as views in the database."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:429
+msgid ""
+"All aliases (views) and resources (tables respectively relations) of the "
+"DataStore can be found in a special view called ``_table_metadata``. To "
+"access the list, open ``http://{YOUR-CKAN-"
+"INSTALLATION}/api/3/action/datastore_search?resource_id=_table_metadata``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:431
+msgid "``_table_metadata`` has the following fields:"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:433
+msgid "_id"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:434
+msgid "Unique key of the relation in ``_table_metadata``."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:435
+msgid "alias_of"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:436
+msgid ""
+"Name of a relation that this alias point to. This field is ``null`` iff the "
+"name is not an alias."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:437
+msgid "name"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:438
+msgid ""
+"Contains the name of the alias if alias_of is not null. Otherwise, this is "
+"the resource id of the CKAN resource for the DataStore resource."
+msgstr ""
+
+#: ../../maintaining/datastore.rst:439
+msgid "oid"
+msgstr ""
+
+#: ../../maintaining/datastore.rst:440
+msgid "The PostgreSQL object ID of the table that belongs to name."
+msgstr ""

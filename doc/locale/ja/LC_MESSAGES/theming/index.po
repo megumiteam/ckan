@@ -1,0 +1,87 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/index.rst:3
+msgid "Theming guide"
+msgstr ""
+
+#: ../../theming/index.rst:5
+msgid ""
+"The CKAN frontend was completely rewritten for CKAN 2.0, so most of the "
+"tutorials below don't apply to earlier versions of CKAN."
+msgstr ""
+
+#: ../../theming/index.rst:9
+msgid ""
+"The following sections will teach you how to customize the content and "
+"appearance of CKAN pages by developing your own CKAN themes."
+msgstr ""
+
+#: ../../theming/index.rst:17
+msgid ":doc:`/maintaining/getting-started`"
+msgstr ""
+
+#: ../../theming/index.rst:15
+msgid ""
+"If you just want to do some simple customizations such as changing the title"
+" of your CKAN site, or making some small CSS customizations, "
+":doc:`/maintaining/getting-started` documents some simple configuration "
+"settings you can use."
+msgstr ""
+
+#: ../../theming/index.rst:22
+msgid ""
+"Before you can start developing a CKAN theme, you’ll need a working source "
+"install of CKAN on your system. If you don't have a CKAN source install "
+"already, follow the instructions in :doc:`/maintaining/installing/install-"
+"from-source` before continuing."
+msgstr ""
+
+#: ../../theming/index.rst:30
+msgid ""
+"CKAN theme development is a technical topic, for web developers. The "
+"tutorials below assume basic knowledge of:"
+msgstr ""
+
+#: ../../theming/index.rst:33
+msgid "`The Python programming language <http://www.python.org/>`_"
+msgstr ""
+
+#: ../../theming/index.rst:34
+msgid "`HTML <https://developer.mozilla.org/en-US/docs/Web/HTML>`_"
+msgstr ""
+
+#: ../../theming/index.rst:35
+msgid "`CSS <https://developer.mozilla.org/en-US/docs/Web/CSS>`_"
+msgstr ""
+
+#: ../../theming/index.rst:36
+msgid ""
+"`JavaScript <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_"
+msgstr ""
+
+#: ../../theming/index.rst:38
+msgid "We also recommend familiarizing yourself with:"
+msgstr ""
+
+#: ../../theming/index.rst:40
+msgid "`Jinja2 templates <http://jinja.pocoo.org/docs/templates/>`_"
+msgstr ""
+
+#: ../../theming/index.rst:41
+msgid "`Bootstrap <http://getbootstrap.com/2.3.2/>`_"
+msgstr ""
+
+#: ../../theming/index.rst:42
+msgid "`jQuery <http://jquery.com/>`_"
+msgstr ""

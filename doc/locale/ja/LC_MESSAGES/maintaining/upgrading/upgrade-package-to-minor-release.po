@@ -1,0 +1,120 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:3
+msgid "Upgrading a CKAN 2 package install to a new minor release"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:7
+msgid ""
+"Before upgrading CKAN you should check the compatibility of any custom "
+"themes or extensions you're using, check the changelog, and backup your "
+"database. See :ref:`upgrading`."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:11
+msgid ""
+"Each :ref:`minor release <releases>` is distributed in its own package, so "
+"for example CKAN ``2.0.X`` and ``2.1.X`` will be installed using the "
+"``python-ckan_2.0_amd64.deb`` and ``python-ckan_2.1_amd64.deb`` packages "
+"respectively."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:16
+msgid ""
+"Download the CKAN package for the new minor release you want to upgrade to "
+"(replace the version number with the relevant one)::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:21
+msgid "Install the package with the following command::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:27
+msgid ""
+"If you have changed the |apache| or |nginx| configuration files, you will "
+"get a prompt like the following, asking whether to keep your local changes "
+"or replace the files. You generally would like to keep your local changes "
+"(option ``N``, which is the default), but you can look at the differences "
+"between versions by selecting option ``D``::"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:44
+msgid ""
+"Your local CKAN configuration file in |config_dir| will not be replaced."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:48
+msgid ""
+"The install process will uninstall any existing CKAN extensions or other "
+"libraries located in the ``src`` directory of the CKAN virtualenv. To enable"
+" them again, the installation process will iterate over all folders in the "
+"``src`` directory, reinstall the requirements listed in ``pip-"
+"requirements.txt`` and ``requirements.txt`` files and run ``python setup.py "
+"develop`` for each. If you are using a custom extension which does not use "
+"this requirements file name or is located elsewhere, you will need to "
+"manually reinstall it."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:57
+msgid ""
+"If there have been changes in the database schema (check the "
+":doc:`/changelog` to find out) you need to update your CKAN database's "
+"schema using the ``db upgrade`` command."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:63
+msgid ""
+"To avoid problems during the database upgrade, comment out any plugins that "
+"you have enabled in your ini file. You can uncomment them again when the "
+"upgrade finishes."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:67
+msgid "For example:"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:73
+msgid "See :ref:`paster db` for details of the ``db upgrade`` command."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:76
+msgid ""
+"If there have been changes in the Solr schema (check the :doc:`/changelog` "
+"to find out) you need to restart Jetty for the changes to take effect:"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:83
+msgid ""
+"If you have any CKAN extensions installed from source, you may need to "
+"checkout newer versions of the extensions that work with the new CKAN "
+"version. Refer to the documentation for each extension. We recommend "
+"disabling all extensions on your ini file and re-enable them one by one to "
+"make sure they are working fine."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:89
+msgid ""
+"Rebuild your search index by running the ``ckan search-index rebuild`` "
+"command:"
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:96
+msgid ""
+"See :ref:`rebuild search index` for details of the ``ckan search-index "
+"rebuild`` command."
+msgstr ""
+
+#: ../../maintaining/upgrading/upgrade-package-to-minor-release.rst:99
+msgid "Finally, restart Apache and Nginx:"
+msgstr ""

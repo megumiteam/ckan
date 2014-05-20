@@ -1,0 +1,1533 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/configuration.rst:3
+msgid "Config File Options"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:5
+msgid ""
+"You can set many important options in the CKAN config file. By default, the "
+"configuration file is located at ``/etc/ckan/development.ini`` or "
+"``/etc/ckan/production.ini``. This section documents all of the config file "
+"settings, for reference."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:14
+msgid ""
+"After editing your config file, you need to restart your webserver for the "
+"changes to take effect."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:17
+msgid ""
+"Unless otherwise noted, all configuration options should be set inside the "
+"``[app:main]`` section of the config file (i.e. after the ``[app:main]`` "
+"line)::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:37
+msgid ""
+"If the same option is set more than once in your config file, the last "
+"setting given in the file will override the others."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:42
+msgid "General Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:47
+msgid "debug"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:49
+#: ../../maintaining/configuration.rst:71
+#: ../../maintaining/configuration.rst:86
+#: ../../maintaining/configuration.rst:100
+#: ../../maintaining/configuration.rst:120
+#: ../../maintaining/configuration.rst:138
+#: ../../maintaining/configuration.rst:151
+#: ../../maintaining/configuration.rst:164
+#: ../../maintaining/configuration.rst:181
+#: ../../maintaining/configuration.rst:194
+#: ../../maintaining/configuration.rst:207
+#: ../../maintaining/configuration.rst:231
+#: ../../maintaining/configuration.rst:245
+#: ../../maintaining/configuration.rst:259
+#: ../../maintaining/configuration.rst:275
+#: ../../maintaining/configuration.rst:289
+#: ../../maintaining/configuration.rst:303
+#: ../../maintaining/configuration.rst:317
+#: ../../maintaining/configuration.rst:331
+#: ../../maintaining/configuration.rst:345
+#: ../../maintaining/configuration.rst:359
+#: ../../maintaining/configuration.rst:381
+#: ../../maintaining/configuration.rst:396
+#: ../../maintaining/configuration.rst:409
+#: ../../maintaining/configuration.rst:426
+#: ../../maintaining/configuration.rst:443
+#: ../../maintaining/configuration.rst:456
+#: ../../maintaining/configuration.rst:470
+#: ../../maintaining/configuration.rst:483
+#: ../../maintaining/configuration.rst:494
+#: ../../maintaining/configuration.rst:511
+#: ../../maintaining/configuration.rst:555
+#: ../../maintaining/configuration.rst:570
+#: ../../maintaining/configuration.rst:589
+#: ../../maintaining/configuration.rst:602
+#: ../../maintaining/configuration.rst:615
+#: ../../maintaining/configuration.rst:628
+#: ../../maintaining/configuration.rst:641
+#: ../../maintaining/configuration.rst:681
+#: ../../maintaining/configuration.rst:694
+#: ../../maintaining/configuration.rst:707
+#: ../../maintaining/configuration.rst:722
+#: ../../maintaining/configuration.rst:735
+#: ../../maintaining/configuration.rst:765
+#: ../../maintaining/configuration.rst:779
+#: ../../maintaining/configuration.rst:842
+#: ../../maintaining/configuration.rst:857
+#: ../../maintaining/configuration.rst:872
+#: ../../maintaining/configuration.rst:885
+#: ../../maintaining/configuration.rst:910
+#: ../../maintaining/configuration.rst:951
+#: ../../maintaining/configuration.rst:964
+#: ../../maintaining/configuration.rst:977
+#: ../../maintaining/configuration.rst:996
+#: ../../maintaining/configuration.rst:1008
+#: ../../maintaining/configuration.rst:1020
+#: ../../maintaining/configuration.rst:1031
+#: ../../maintaining/configuration.rst:1047
+#: ../../maintaining/configuration.rst:1068
+#: ../../maintaining/configuration.rst:1084
+#: ../../maintaining/configuration.rst:1102
+#: ../../maintaining/configuration.rst:1115
+#: ../../maintaining/configuration.rst:1129
+#: ../../maintaining/configuration.rst:1143
+#: ../../maintaining/configuration.rst:1157
+#: ../../maintaining/configuration.rst:1177
+#: ../../maintaining/configuration.rst:1190
+#: ../../maintaining/configuration.rst:1203
+#: ../../maintaining/configuration.rst:1216
+#: ../../maintaining/configuration.rst:1235
+#: ../../maintaining/configuration.rst:1250
+#: ../../maintaining/configuration.rst:1263
+#: ../../maintaining/configuration.rst:1276
+#: ../../maintaining/configuration.rst:1289
+#: ../../maintaining/configuration.rst:1302
+#: ../../maintaining/configuration.rst:1319
+#: ../../maintaining/configuration.rst:1400
+#: ../../maintaining/configuration.rst:1413
+#: ../../maintaining/configuration.rst:1426
+#: ../../maintaining/configuration.rst:1439
+#: ../../maintaining/configuration.rst:1452
+#: ../../maintaining/configuration.rst:1466
+#: ../../maintaining/configuration.rst:1479
+msgid "Example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:53
+#: ../../maintaining/configuration.rst:168
+#: ../../maintaining/configuration.rst:211
+#: ../../maintaining/configuration.rst:235
+#: ../../maintaining/configuration.rst:335
+#: ../../maintaining/configuration.rst:559
+#: ../../maintaining/configuration.rst:711
+#: ../../maintaining/configuration.rst:889
+msgid "Default value: ``False``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:55
+msgid ""
+"This enables Pylons' interactive debugging tool, makes Fanstatic serve "
+"unminified JS and CSS files, and enables CKAN templates' debugging features."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:58
+msgid ""
+"This option should be set to ``False`` for a public site. With debug mode "
+"enabled, a visitor to your site could execute malicious commands."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:64
+msgid "Database Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:69
+msgid "sqlalchemy.url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:75
+msgid "This defines the database that CKAN is to use. The format is::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:84
+msgid "ckan.datastore.write_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:90
+msgid ""
+"The database connection to use for writing to the datastore (this can be "
+"ignored if you're not using the :doc:`datastore`). Note that the database "
+"used should not be the same as the normal CKAN database. The format is the "
+"same as in :ref:`sqlalchemy.url`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:98
+msgid "ckan.datastore.read_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:104
+msgid ""
+"The database connection to use for reading from the datastore (this can be "
+"ignored if you're not using the :doc:`datastore`). The database used must be"
+" the same used in :ref:`ckan.datastore.write_url`, but the user should be "
+"one with read permissions only. The format is the same as in "
+":ref:`sqlalchemy.url`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:113
+msgid "Site Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:118
+msgid "ckan.site_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:124
+#: ../../maintaining/configuration.rst:606
+#: ../../maintaining/configuration.rst:619
+#: ../../maintaining/configuration.rst:632
+msgid "Default value:  (none)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:126
+msgid ""
+"The URL of your CKAN site. Many CKAN features that need an absolute URL to "
+"your site use this setting."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:131
+msgid "This setting should not have a trailing / on the end."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:136
+msgid "apikey_header_name"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:142
+msgid "Default value: ``X-CKAN-API-Key`` & ``Authorization``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:144
+msgid ""
+"This allows another http header to be used to provide the CKAN API key. This"
+" is useful if network infrastructure blocks the Authorization header and ``X"
+"-CKAN-API-Key`` is not suitable."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:149
+msgid "ckan.cache_expires"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:155
+msgid "Default value: 0"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:157
+msgid "This sets ``Cache-Control`` header's max-age value."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:162
+msgid "ckan.page_cache_enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:170
+msgid "This enables CKAN's built-in page caching."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:174
+msgid "Page caching is an experimental feature."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:179
+msgid "ckan.cache_enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:185
+#: ../../maintaining/configuration.rst:498
+#: ../../maintaining/configuration.rst:1404
+#: ../../maintaining/configuration.rst:1417
+#: ../../maintaining/configuration.rst:1430
+#: ../../maintaining/configuration.rst:1443
+#: ../../maintaining/configuration.rst:1456
+#: ../../maintaining/configuration.rst:1470
+#: ../../maintaining/configuration.rst:1483
+msgid "Default value: ``None``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:187
+msgid "Controls if we're caching CKAN's static files, if it's serving them."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:192
+msgid "ckan.static_max_age"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:198
+msgid "Default value: ``3600``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:200
+msgid ""
+"Controls CKAN static files' cache max age, if we're serving and caching "
+"them."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:205
+msgid "ckan.tracking_enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:213
+msgid ""
+"This controls if CKAN will track the site usage. For more info, read "
+":ref:`tracking`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:219
+msgid "Authorization Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:221
+msgid ""
+"More information about how authorization works in CKAN can be found the "
+":doc:`authorization` section."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:229
+msgid "ckan.auth.anon_create_dataset"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:237
+msgid "Allow users to create datasets without registering and logging in."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:243
+msgid "ckan.auth.create_unowned_dataset"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:249
+#: ../../maintaining/configuration.rst:263
+#: ../../maintaining/configuration.rst:279
+#: ../../maintaining/configuration.rst:293
+#: ../../maintaining/configuration.rst:307
+#: ../../maintaining/configuration.rst:321
+#: ../../maintaining/configuration.rst:349
+msgid "Default value: ``True``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:252
+msgid "Allow the creation of datasets not owned by any organization."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:257
+msgid "ckan.auth.create_dataset_if_not_in_organization"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:266
+msgid ""
+"Allow users who are not members of any organization to create datasets, "
+"default: true. ``create_unowned_dataset`` must also be True, otherwise "
+"setting ``create_dataset_if_not_in_organization`` to True is meaningless."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:273
+msgid "ckan.auth.user_create_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:282
+msgid "Allow users to create groups."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:287
+msgid "ckan.auth.user_create_organizations"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:296
+msgid "Allow users to create organizations."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:301
+msgid "ckan.auth.user_delete_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:310
+msgid "Allow users to delete groups."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:315
+msgid "ckan.auth.user_delete_organizations"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:324
+msgid "Allow users to delete organizations."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:329
+msgid "ckan.auth.create_user_via_api"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:338
+msgid "Allow new user accounts to be created via the API."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:343
+msgid "ckan.auth.create_user_via_web"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:352
+msgid "Allow new user accounts to be created via the Web."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:357
+msgid "ckan.auth.roles_that_cascade_to_sub_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:363
+msgid "Default value: ``admin``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:366
+msgid ""
+"Makes role permissions apply to all the groups down the hierarchy from the "
+"groups that the role is applied to."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:368
+msgid ""
+"e.g. a particular user has the 'admin' role for group 'Department of "
+"Health'. If you set the value of this option to 'admin' then the user will "
+"automatically have the same admin permissions for the child groups of "
+"'Department of Health' such as 'Cancer Research' (and its children too and "
+"so on)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:374
+msgid "Search Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:379
+msgid "ckan.site_id"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:385
+msgid ""
+"CKAN uses Solr to index and search packages. The search index is linked to "
+"the value of the ``ckan.site_id``, so if you have more than one CKAN "
+"instance using the same `solr_url`_, they will each have a separate search "
+"index as long as their ``ckan.site_id`` values are different. If you are "
+"only running a single CKAN instance then this can be ignored."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:389
+msgid "Note, if you change this value, you need to rebuild the search index."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:394
+msgid "ckan.simple_search"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:400
+#: ../../maintaining/configuration.rst:460
+msgid "Default value:  ``false``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:402
+msgid ""
+"Switching this on tells CKAN search functionality to just query the "
+"database, (rather than using Solr). In this setup, search is crude and "
+"limited, e.g. no full-text search, no faceting, etc. However, this might be "
+"very useful for getting up and running quickly with CKAN."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:407
+msgid "solr_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:413
+msgid "Default value:  ``http://127.0.0.1:8983/solr``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:415
+msgid ""
+"This configures the Solr server used for search. The Solr schema found at "
+"that URL must be one of the ones in ``ckan/config/solr`` (generally the most"
+" recent one). A check of the schema version number occurs when CKAN starts."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:417
+msgid ""
+"Optionally, ``solr_user`` and ``solr_password`` can also be configured to "
+"specify HTTP Basic authentication details for all Solr requests."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:419
+msgid "If you change this value, you need to rebuild the search index."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:424
+msgid "ckan.search.automatic_indexing"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:430
+msgid "Default value: ``true``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:432
+msgid ""
+"Make all changes immediately available via the search after editing or "
+"creating a dataset. Default is true. If for some reason you need the "
+"indexing to occur asynchronously, set this option to false."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:436
+msgid ""
+"This is equivalent to explicitly load the ``synchronous_search`` plugin."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:441
+msgid "ckan.search.solr_commit"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:447
+msgid "Default value:  ``true``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:449
+msgid ""
+"Make ckan commit changes solr after every dataset update change. Turn this "
+"to false if on solr 4.0 and you have automatic (soft)commits enabled to "
+"improve dataset update/create speed (however there may be a slight delay "
+"before dataset gets seen in results)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:454
+msgid "ckan.search.show_all_types"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:462
+msgid ""
+"Controls whether the default search page (``/dataset``) should show only "
+"standard datasets or also custom dataset types."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:468
+msgid "search.facets.limit"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:474
+msgid "Default value:  ``50``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:476
+msgid "Sets the default number of searched facets returned in a query."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:481
+msgid "search.facets.default"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:487
+msgid "Default number of facets shown in search results.  Default 10."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:492
+msgid "ckan.extra_resource_fields"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:500
+msgid "List of the extra resource fields that would be used when searching."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:504
+msgid "Plugins Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:509
+msgid "ckan.plugins"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:515
+msgid "Default value: ``stats text_preview recline_preview``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:517
+msgid "Specify which CKAN plugins are to be enabled."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:519
+msgid ""
+"If you specify a plugin but have not installed the code,  CKAN will not "
+"start."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:521
+msgid ""
+"Format as a space-separated list of the plugin names. The plugin name is the"
+" key in the ``[ckan.plugins]`` section of the extension's ``setup.py``. For "
+"more information on plugins and extensions, see :doc:`/extensions/index`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:525
+msgid ""
+"The order of the plugin names in the configuration file influences the order"
+" that CKAN will load the plugins in. As long as each plugin class is "
+"implemented in a separate Python module (i.e. in a separate Python source "
+"code file), the plugins will be loaded in the order given in the "
+"configuration file."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:531
+msgid ""
+"When multiple plugins are implemented in the same Python module, CKAN will "
+"process the plugins in the order that they're given in the config file, but "
+"as soon as it reaches one plugin from a given Python module, CKAN will load "
+"all plugins from that Python module, in the order that the plugin classes "
+"are defined in the module."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:537
+msgid ""
+"For simplicity, we recommend implementing each plugin class in its own "
+"Python module."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:540
+msgid ""
+"Plugin loading order can be important, for example for plugins that add "
+"custom template files: templates found in template directories added earlier"
+" will override templates in template directories added later."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:553
+msgid "ckan.datastore.enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:561
+msgid "Controls if the Data API link will appear in Dataset's Resource page."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:563
+msgid "This setting only applies to the legacy templates."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:568
+msgid "ckanext.stats.cache_enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:574
+#: ../../maintaining/configuration.rst:1106
+msgid "Default value:  ``True``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:576
+msgid "This controls if we'll use the 1 day cache for stats."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:580
+msgid "Front-End Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:587
+msgid "ckan.site_title"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:593
+msgid "Default value:  ``CKAN``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:595
+msgid ""
+"This sets the name of the site, as displayed in the CKAN web interface."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:600
+msgid "ckan.site_description"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:608
+msgid ""
+"This is for a description, or tag line for the site, as displayed in the "
+"header of the CKAN web interface."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:613
+msgid "ckan.site_intro_text"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:621
+msgid ""
+"This is for an introductory text used in the default template's index page."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:626
+msgid "ckan.site_logo"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:634
+msgid "This sets the logo used in the title bar."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:639
+msgid "ckan.site_about"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:645
+msgid "Default value::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:667
+msgid "Format tips:"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:669
+msgid "multiline strings can be used by indenting following lines"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:671
+msgid "the format is Markdown"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:673
+msgid ""
+"Whilst the default text is translated into many languages (switchable in the"
+" page footer), the text in this configuration option will not be "
+"translatable. For this reason, it's better to overload the snippet in "
+"``home/snippets/about_text.html``. For more information, see "
+":doc:`/theming/index`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:679
+msgid "ckan.main_css"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:685
+msgid "Default value: ``/base/css/main.css``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:687
+msgid ""
+"With this option, instead of using the default `main.css`, you can use your "
+"own."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:692
+msgid "ckan.favicon"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:698
+msgid "Default value: ``/images/icons/ckan.ico``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:700
+msgid ""
+"This sets the site's `favicon`. This icon is usually displayed by the "
+"browser in the tab heading and bookmark."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:705
+msgid "ckan.legacy_templates"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:713
+msgid "This controls if the legacy genshi templates are used."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:715
+#: ../../maintaining/configuration.rst:920
+#: ../../maintaining/configuration.rst:944
+msgid "This is only for legacy code, and shouldn't be used anymore."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:720
+msgid "ckan.datasets_per_page"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:726
+msgid "Default value:  ``20``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:728
+msgid ""
+"This controls the pagination of the dataset search results page. This is the"
+" maximum number of datasets viewed per page of results."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:733
+msgid "package_hide_extras"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:739
+msgid "Default value:  (empty)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:741
+msgid ""
+"This sets a space-separated list of extra field key values which will not be"
+" shown on the dataset read page."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:743
+msgid ""
+"While this is useful to e.g. create internal notes, it is not a security "
+"measure. The keys will still be available via the API and in revision diffs."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:748
+msgid "ckan.dataset.show_apps_ideas"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:750
+msgid "ckan.dataset.show_apps_ideas::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:754
+msgid "Default value:  true"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:756
+msgid ""
+"When set to false, or no, this setting will hide the 'Apps, Ideas, etc' tab "
+"on the package read page. If the value is not set, or is set to true or yes,"
+" then the tab will shown."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:758
+msgid "This only applies to the legacy Genshi-based templates"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:763
+msgid "ckan.preview.direct"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:769
+msgid "Default value: ``png jpg jpeg gif``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:771
+msgid ""
+"Defines the resource formats which should be embedded directly in an ``img``"
+" tag when previewing them."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:777
+msgid "ckan.preview.loadable"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:783
+msgid ""
+"Default value: ``html htm rdf+xml owl+xml xml n3 n-triples turtle plain atom"
+" rss txt``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:785
+msgid ""
+"Defines the resource formats which should be loaded directly in an "
+"``iframe`` tag when previewing them if no :doc:`data-viewer` can preview it."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:791
+msgid "ckan.dumps_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:793
+msgid ""
+"If there is a page which allows you to download a dump of the entire "
+"catalogue then specify the URL here, so that it can be advertised in the web"
+" interface. For example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:799
+msgid "For more information on using dumpfiles, see :ref:`paster db`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:804
+msgid "ckan.dumps_format"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:806
+msgid ""
+"If there is a page which allows you to download a dump of the entire "
+"catalogue then specify the format here, so that it can be advertised in the "
+"web interface. ``dumps_format`` is just a string for display. Example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:815
+msgid "ckan.recaptcha.publickey"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:817
+msgid "The public key for your Recaptcha account, for example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:821
+msgid ""
+"To get a Recaptcha account, sign up at: http://www.google.com/recaptcha"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:826
+msgid "ckan.recaptcha.privatekey"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:828
+msgid "The private key for your Recaptcha account, for example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:832
+msgid ""
+"Setting both :ref:`ckan.recaptcha.publickey` and "
+":ref:`ckan.recaptcha.privatekey` adds captcha to the user registration form."
+" This has been effective at preventing bots registering users and creating "
+"spam packages."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:840
+msgid "ckan.featured_groups"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:846
+#: ../../maintaining/configuration.rst:861
+msgid "Default Value: (empty)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:848
+msgid ""
+"Defines a list of group names or group ids. This setting is used to display "
+"groups and datasets from each group on the home page in the default "
+"templates (2 groups and 2 datasets for each group are displayed)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:855
+msgid "ckan.featured_orgs"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:863
+msgid ""
+"Defines a list of organization names or ids. This setting is used to display"
+" organization and datasets from each group on the home page in the default "
+"templates (2 groups and 2 datasets for each group are displayed)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:870
+msgid "ckan.gravatar_default"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:876
+msgid "Default value: ``identicon``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:878
+msgid "This controls the default gravatar avatar, in case the user has none."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:883
+msgid "ckan.debug_supress_header"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:891
+msgid ""
+"This configs if the debug information showing the controller and action "
+"receiving the request being is shown in the header."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:894
+msgid "This info only shows if debug is set to True."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:899
+msgid "Theming Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:906
+msgid "ckan.template_head_end"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:908
+msgid ""
+"HTML content to be inserted just before ``</head>`` tag (e.g. extra "
+"stylesheet)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:914
+msgid ""
+"You can also have multiline strings. Just indent following lines. e.g.::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:925
+msgid "ckan.template_footer_end"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:927
+msgid ""
+"HTML content to be inserted just before ``</body>`` tag (e.g. Google "
+"Analytics code)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:929
+msgid "you can have multiline strings (just indent following lines)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:931
+msgid "Example (showing insertion of Google Analytics code)::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:949
+msgid "ckan.template_title_deliminater"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:955
+msgid "Default value:  ``-``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:957
+msgid ""
+"This sets the delimiter between the site's subtitle (if there's one) and its"
+" title, in HTML's ``<title>``."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:962
+msgid "extra_template_paths"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:968
+msgid ""
+"To customise the display of CKAN you can supply replacements for the Genshi "
+"template files. Use this option to specify where CKAN should look for "
+"additional templates, before reverting to the ``ckan/templates`` folder. You"
+" can supply more than one folder, separating the paths with a comma (,)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:970
+#: ../../maintaining/configuration.rst:983
+msgid "For more information on theming, see :doc:`/theming/index`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:975
+msgid "extra_public_paths"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:981
+msgid ""
+"To customise the display of CKAN you can supply replacements for static "
+"files such as HTML, CSS, script and PNG files. Use this option to specify "
+"where CKAN should look for additional files, before reverting to the "
+"``ckan/public`` folder. You can supply more than one folder, separating the "
+"paths with a comma (,)."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:988
+msgid "Storage Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:993
+msgid "ckan.storage_path"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:996
+msgid "ckan.storage_path = /var/lib/ckan"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:998
+#: ../../maintaining/configuration.rst:1035
+#: ../../maintaining/configuration.rst:1051
+msgid "Default value:  ``None``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1000
+msgid "This defines the location of where CKAN will store all uploaded data."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1005
+msgid "ckan.max_resource_size"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1008
+msgid "ckan.max_resource_size = 100"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1010
+msgid "Default value: ``10``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1012
+msgid "The maximum in megabytes a resources upload can be."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1017
+msgid "ckan.max_image_size"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1020
+msgid "ckan.max_image_size = 10"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1022
+msgid "Default value: ``2``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1024
+msgid "The maximum in megabytes an image upload can be."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1029
+msgid "ofs.impl"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1037
+msgid ""
+"Defines the storage backend used by CKAN: ``pairtree`` for local storage, "
+"``s3`` for Amazon S3 Cloud Storage or ``google`` for Google Cloud Storage. "
+"Note that each of these must be accompanied by the relevant settings for "
+"each backend described below."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1039
+msgid ""
+"Deprecated, only available option is now pairtree.  This must be used "
+"nonetheless if upgrading for CKAN 2.1 in order to keep access to your old "
+"pairtree files."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1045
+msgid "ofs.storage_dir"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1053
+msgid ""
+"Only used with the local storage backend. Use this to specify where uploaded"
+" files should be stored, and also to turn on the handling of file storage. "
+"The folder should exist, and will automatically be turned into a valid "
+"pairtree repository if it is not already."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1055
+msgid ""
+"Deprecated, please use ckan.storage_path.  This must be used nonetheless if "
+"upgrading for CKAN 2.1 in order to keep access to your old pairtree files."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1061
+msgid "DataPusher Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1066
+msgid "ckan.datapusher.formats"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1072
+msgid ""
+"Default value: ``csv xls xlsx tsv application/csv application/vnd.ms-excel "
+"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1074
+msgid ""
+"File formats that will be pushed to the DataStore by the DataPusher. When "
+"adding or editing a resource which links to a file in one of these formats, "
+"the DataPusher will automatically try to import its contents to the "
+"DataStore."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1082
+msgid "ckan.datapusher.url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1088
+msgid ""
+"DataPusher endpoint to use when enabling the ``datapusher`` extension. If "
+"you installed CKAN via :doc:`/maintaining/installing/install-from-package`, "
+"the DataPusher was installed for you running on port 8800. If you want to "
+"manually install the DataPusher, follow the installation `instructions "
+"<http://docs.ckan.org/projects/datapusher>`_."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1095
+msgid "Activity Streams Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1100
+msgid "ckan.activity_streams_enabled"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1108
+msgid ""
+"Turns on and off the activity streams used to track changes on datasets, "
+"groups, users, etc"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1113
+msgid "ckan.activity_streams_email_notifications"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1119
+msgid "Default value:  ``False``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1121
+msgid ""
+"Turns on and off the activity streams' email notifications. You'd also need "
+"to setup a cron job to send the emails. For more information, visit :ref"
+":`email-notifications`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1127
+msgid "ckan.activity_list_limit"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1133
+#: ../../maintaining/configuration.rst:1147
+msgid "Default value: ``infinite``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1135
+msgid ""
+"This controls the number of activities to show in the Activity Stream. By "
+"default, it shows everything."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1141
+msgid "ckan.email_notifications_since"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1149
+msgid ""
+"Email notifications for events older than this time delta will not be sent. "
+"Accepted formats: '2 days', '14 days', '4:35:00' (hours, minutes, seconds), "
+"'7 days, 3:23:34', etc."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1155
+msgid "ckan.hide_activity_from_users"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1161
+msgid ""
+"Hides activity from the specified users from activity stream. If "
+"unspecified, it'll use :ref:`ckan.site_id` to hide activity by the site "
+"user. The site user is a sysadmin user on every ckan user with a username "
+"that's equal to :ref:`ckan.site_id`. This user is used by ckan for "
+"performing actions from the command-line."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1170
+msgid "Feeds Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1175
+msgid "ckan.feeds.author_name"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1181
+#: ../../maintaining/configuration.rst:1194
+#: ../../maintaining/configuration.rst:1207
+#: ../../maintaining/configuration.rst:1220
+msgid "Default value: ``(none)``"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1183
+msgid ""
+"This controls the feed author's name. If unspecified, it'll use "
+":ref:`ckan.site_id`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1188
+msgid "ckan.feeds.author_link"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1196
+msgid ""
+"This controls the feed author's link. If unspecified, it'll use "
+":ref:`ckan.site_url`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1201
+msgid "ckan.feeds.authority_name"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1209
+msgid ""
+"The domain name or email address of the default publisher of the feeds and "
+"elements. If unspecified, it'll use :ref:`ckan.site_url`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1214
+msgid "ckan.feeds.date"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1222
+msgid ""
+"A string representing the default date on which the authority_name is owned "
+"by the publisher of the feed."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1228
+msgid "Internationalisation Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1233
+msgid "ckan.locale_default"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1239
+msgid "Default value:  ``en`` (English)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1241
+msgid ""
+"Use this to specify the locale (language of the text) displayed in the CKAN "
+"Web UI. This requires a suitable `mo` file installed for the locale in the "
+"ckan/i18n. For more information on internationalization, see "
+":doc:`/contributing/i18n`. If you don't specify a default locale, then it "
+"will default to the first locale offered, which is by default English (alter"
+" that with `ckan.locales_offered` and `ckan.locales_filtered_out`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1248
+msgid "ckan.locales_offered"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1254
+#: ../../maintaining/configuration.rst:1267
+#: ../../maintaining/configuration.rst:1280
+#: ../../maintaining/configuration.rst:1293
+#: ../../maintaining/configuration.rst:1306
+msgid "Default value: (none)"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1256
+msgid ""
+"By default, all locales found in the ``ckan/i18n`` directory will be offered"
+" to the user. To only offer a subset of these, list them under this option. "
+"The ordering of the locales is preserved when offered to the user."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1261
+msgid "ckan.locales_filtered_out"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1269
+msgid ""
+"If you want to not offer particular locales to the user, then list them here"
+" to have them removed from the options."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1274
+msgid "ckan.locale_order"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1282
+msgid ""
+"If you want to specify the ordering of all or some of the locales as they "
+"are offered to the user, then specify them here in the required order. Any "
+"locales that are available but not specified in this option, will still be "
+"offered at the end of the list."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1287
+msgid "ckan.i18n_directory"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1295
+msgid ""
+"By default, the locales are searched for in the ``ckan/i18n`` directory. Use"
+" this option if you want to use another folder."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1300
+msgid "ckan.root_path"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1308
+msgid ""
+"By default, the URLs are formatted as ``/some/url``, when using the default "
+"locale, or ``/de/some/url`` when using the \"de\" locale, for example. This "
+"lets you change this. You can use any path that you want, adding "
+"``{{LANG}}`` where you want the locale code to go."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1316
+msgid "ckan.resource_formats"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1319
+msgid "ckan.resource_formats = /path/to/resource_formats"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1321
+msgid "Default value: ckan/config/resource_formats.json"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1323
+msgid ""
+"The purpose of this file is to supply a thorough list of resource formats "
+"and to make sure the formats are normalized when saved to the database and "
+"presented."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1327
+msgid "The format of the file is a JSON object with following format::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1331
+msgid ""
+"Please look in ckan/config/resource_formats.json for full details and and as"
+" an example."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1336
+msgid "Form Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1341
+msgid "package_new_return_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1343
+msgid ""
+"The URL to redirect the user to after they've submitted a new package form, "
+"example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1348
+msgid ""
+"This is useful for integrating CKAN's new dataset form into a third-party "
+"interface, see :doc:`form-integration`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1351
+msgid ""
+"The ``<NAME>`` string is replaced with the name of the dataset created."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1356
+msgid "package_edit_return_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1358
+msgid ""
+"The URL to redirect the user to after they've submitted an edit package "
+"form, example::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1363
+msgid ""
+"This is useful for integrating CKAN's edit dataset form into a third-party "
+"interface, see :doc:`form-integration`."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1366
+msgid ""
+"The ``<NAME>`` string is replaced with the name of the dataset that was "
+"edited."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1371
+msgid "licenses_group_url"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1373
+msgid ""
+"A url pointing to a JSON file containing a list of license objects. This "
+"list determines the licenses offered by the system to users, for example "
+"when creating or editing a dataset."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1377
+msgid ""
+"This is entirely optional - by default, the system will use an internal "
+"cached version of the CKAN list of licenses available from the "
+"http://licenses.opendefinition.org/licenses/groups/ckan.json."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1381
+msgid ""
+"More details about the license objects - including the license format and "
+"some example license lists - can be found at the `Open Licenses Service "
+"<http://licenses.opendefinition.org/>`_."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1385
+msgid "Examples::"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1393
+msgid "Email Settings"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1398
+msgid "smtp.server"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1406
+msgid "The SMTP server to connect to when sending emails with optional port."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1411
+msgid "smtp.starttls"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1419
+msgid "Whether or not to use STARTTLS when connecting to the SMTP server."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1424
+msgid "smtp.user"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1432
+msgid "The username used to authenticate with the SMTP server."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1437
+msgid "smtp.password"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1445
+msgid "The password used to authenticate with the SMTP server."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1450
+msgid "smtp.mail_from"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1458
+msgid ""
+"The email address that emails sent by CKAN will come from. Note that, if "
+"left blank, the SMTP server may insert its own."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1464
+msgid "email_to"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1472
+msgid "This controls where the error messages will be sent to."
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1477
+msgid "error_email_from"
+msgstr ""
+
+#: ../../maintaining/configuration.rst:1485
+msgid "This controls from which email the error messages will come from."
+msgstr ""

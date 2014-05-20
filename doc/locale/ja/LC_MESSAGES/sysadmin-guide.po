@@ -1,0 +1,254 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sysadmin-guide.rst:3
+msgid "Sysadmin guide"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:5
+msgid ""
+"This guide covers the administration features of CKAN 2.0, such as managing "
+"users and datasets. These features are available via the web user interface "
+"to a user with sysadmin rights. The guide assumes familiarity with the :doc"
+":`user-guide`."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:10
+msgid ""
+"Certain administration tasks are not available through the web UI but need "
+"access to the server where CKAN is installed. These include the range of "
+"configuration options using the site's \"config\" file, documented in "
+":doc:`/maintaining/configuration`, and those available via "
+":doc:`/maintaining/paster`."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:18
+msgid ""
+"A sysadmin user can access and edit any organizations, view and change user "
+"details, and permanently delete datasets. You should carefully consider who "
+"has access to a sysadmin account on your CKAN system."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:24
+msgid "Creating a sysadmin account"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:26
+msgid ""
+"Normally, a sysadmin account is created as part of the process of setting up"
+" CKAN. If one does not already exist, you will need to create a sysadmin "
+"user, or give sysadmin rights to an existing user. To do this requires "
+"access to the server; see :ref:`create-admin-user` for details.  If another "
+"organization is hosting CKAN, you will need to ask them to create a sysadmin"
+" user."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:32
+msgid ""
+"Adding more sysadmin accounts is done in the same way. It cannot be done via"
+" the web UI."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:39
+msgid "Customizing look and feel"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:41
+msgid ""
+"Some simple customizations to customize the 'look and feel' of your CKAN "
+"site are available via the UI, at ``http://<my-ckan-url>/ckan-"
+"admin/config/``."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:46
+msgid "Here you can edit the following:"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:52
+msgid "Site title"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:49
+msgid ""
+"This title is used in the HTML <title> of pages served by CKAN (which may be"
+" displayed on your browser's title bar). For example if your site title is "
+"\"CKAN Demo\", the home page is called \"Welcome - CKAN Demo\". The site "
+"title is also used in a few other places, e.g. in the alt-text of the main "
+"site logo."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:55
+msgid "Style"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:55
+msgid "Choose one of five colour schemes for the default theme."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:59
+msgid "Site tag line"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:58
+msgid ""
+"This is not used in CKAN's current default themes, but may be used in "
+"future."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:62
+msgid "Site tag logo"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:62
+msgid "A URL for the site logo, used at the head of every page of CKAN."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:67
+msgid "About"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:65
+msgid ""
+"Text that appears on the \"about\" page, ``http://<my-ckan-url>/about``. You"
+" can use `Markdown`_ here. If it is left empty, a standard text describing "
+"CKAN will appear."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:72
+msgid "Intro text"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:72
+msgid "This text appears prominently on the home page of your site."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:76
+msgid "Custom CSS"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:75
+msgid ""
+"For simple style changes, you can add CSS code here which will be added to "
+"the ``<head>`` of every page."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:80
+msgid "Managing organizations and datasets"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:82
+msgid ""
+"A sysadmin user has full access to user accounts, organizations and "
+"datasets. For example, you have access to every organization as if you were "
+"a member of that organization. Thus most management operations are done in "
+"exactly the same way as in the normal web interface."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:87
+msgid ""
+"For example, to add or delete users to an organization, change a user's role"
+" in the organization, delete the organization or edit its description, etc, "
+"visit the organization's home page. You will see the 'Admin' button as if "
+"you were a member of the organization. You can use this to perform all "
+"organization admin functions. For details, see the :doc:`user-guide`."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:93
+msgid ""
+"Similarly, to edit, update or delete a dataset, go to the dataset page and "
+"use the 'Edit' button. As an admin user you can see all datasets including "
+"those that are private to an organization. They will show up when doing a "
+"dataset search."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:99
+msgid "Moving a dataset between organizations"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:101
+msgid ""
+"To move a dataset between organizations, visit the dataset's Edit page. "
+"Choose the appropriate entry from the \"organization\" drop-down list, and "
+"press \"Save\"."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:108
+msgid "Permanently deleting datasets"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:110
+msgid ""
+"A dataset which has been deleted is not permanently removed from CKAN; it is"
+" simply marked as 'deleted' and will no longer show up in search, etc. The "
+"dataset's URL cannot be re-used for a new dataset."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:114
+msgid "To permanently delete (\"purge\") a dataset:"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:116
+msgid "Navigate to the dataset's \"Edit\" page, and delete it."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:117
+msgid "Visit ``http://<my-ckan-url>/ckan-admin/trash/``."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:119
+msgid ""
+"This page shows all deleted datasets and allows you to delete them "
+"permanently."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:123
+msgid "This operation cannot be reversed!"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:127
+msgid ""
+"At present, it is not possible to purge organizations or groups using the "
+"web UI. This can only be done with access to the server, by directly "
+"deleting them from CKAN's database."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:133
+msgid "Managing users"
+msgstr ""
+
+#: ../../sysadmin-guide.rst:135
+msgid ""
+"To find a user's profile, go to ``http://<my-ckan-url>/user/``. You can "
+"search for users in the search box provided."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:138
+msgid ""
+"You can search by any part of the user profile, including their e-mail "
+"address. This is useful if, for example, a user has forgotten their user ID."
+" For non-sysadmin users, the search on this page will only match public "
+"parts of the profile, so they cannot search by e-mail address."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:143
+msgid ""
+"On their user profile, you will see a \"Manage\" button. CKAN displays the "
+"user settings page. You can delete the user or change any of its settings, "
+"including their username, name and password."
+msgstr ""
+
+#: ../../sysadmin-guide.rst:149
+msgid ""
+"Previous versions of CKAN didn't allow you to delete users through the web "
+"interface."
+msgstr ""

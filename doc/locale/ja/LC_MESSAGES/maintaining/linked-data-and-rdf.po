@@ -1,0 +1,106 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/linked-data-and-rdf.rst:3
+msgid "Linked Data and RDF"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:5
+msgid ""
+"CKAN has extensive support for linked data and RDF. In particular, there is "
+"complete and functional mapping of the CKAN dataset schema to linked data "
+"formats."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:11
+msgid "Enabling and Configuring Linked Data Support"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:13
+msgid ""
+"In CKAN <= 1.6 please install the RDF extension: https://github.com/okfn"
+"/ckanext-rdf"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:15
+msgid "In CKAN >= 1.7, basic RDF support will be available directly in core."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:18
+msgid "Configuration"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:20
+msgid ""
+"When using the built-in RDF support (CKAN >= 1.7) there is no configuration "
+"required.  By default requests for RDF data will return the RDF generated "
+"from the built-in 'packages/read.rdf' template, which can be overridden "
+"using the extra-templates directive."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:23
+msgid "Accessing Linked Data"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:25
+msgid ""
+"To access linked data versions just access the :doc:`/api/index` in the "
+"usual way but set the Accept header to the format you would like to be "
+"returned. For example::"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:32
+msgid ""
+"An alternative method of retrieving the data is to add .rdf to the name of "
+"the dataset to download::"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:39
+msgid "Schema Mapping"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:41
+msgid ""
+"There are various vocabularies that can be used for describing datasets:"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:43
+msgid ""
+"Dublin core: these are the most well-known and basic. Dublin core terms "
+"includes the class *dct:Dataset*."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:44
+msgid "DCAT_ - vocabulary for catalogues of datasets"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:45
+msgid ""
+"VoID_ - vocabulary of interlinked datasets. Specifically designed for "
+"describing *rdf* datasets. Perfect except for the fact that it is focused on"
+" RDF"
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:46
+msgid ""
+"SCOVO_: this is more oriented to statistical datasets but has a "
+"*scovo:Dataset* class."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:48
+msgid "At the present CKAN uses mostly DCAT and Dublin Core."
+msgstr ""
+
+#: ../../maintaining/linked-data-and-rdf.rst:54
+msgid "An example schema might look like::"
+msgstr ""

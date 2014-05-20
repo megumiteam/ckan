@@ -1,0 +1,318 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/test.rst:3
+msgid "Testing CKAN"
+msgstr ""
+
+#: ../../contributing/test.rst:5
+msgid ""
+"If you're a CKAN developer, if you're developing an extension for CKAN, or "
+"if you're just installing CKAN from source, you should make sure that CKAN's"
+" tests pass for your copy of CKAN. This section explains how to run CKAN's "
+"tests."
+msgstr ""
+
+#: ../../contributing/test.rst:12
+msgid "Install additional dependencies"
+msgstr ""
+
+#: ../../contributing/test.rst:14
+msgid ""
+"Some additional dependencies are needed to run the tests. Make sure you've "
+"created a config file at |development.ini|, then activate your virtual "
+"environment:"
+msgstr ""
+
+#: ../../contributing/test.rst:22
+msgid ""
+"Install nose and other test-specific CKAN dependencies into your virtual "
+"environment:"
+msgstr ""
+
+#: ../../contributing/test.rst:25
+msgid ""
+"In CKAN 2.0 and earlier the requirements file was called ``pip-requirements-"
+"test.txt``, not ``dev-requirements.txt`` as below."
+msgstr ""
+
+#: ../../contributing/test.rst:36
+msgid "Set up the test databases"
+msgstr ""
+
+#: ../../contributing/test.rst:38
+msgid ""
+"Previously |postgres| tests used the databases defined in your "
+"``development.ini`` file, instead of using their own test databases."
+msgstr ""
+
+#: ../../contributing/test.rst:42
+msgid "Create test databases:"
+msgstr ""
+
+#: ../../contributing/test.rst:50
+msgid ""
+"This database connection is specified in the ``test-core.ini`` file by the "
+"``sqlalchemy.url`` parameter."
+msgstr ""
+
+#: ../../contributing/test.rst:56
+msgid "Run the tests"
+msgstr ""
+
+#: ../../contributing/test.rst:58
+msgid ""
+"To run CKAN's tests using PostgreSQL as the database, you have to give the "
+"``--with-pylons=test-core.ini`` option on the command line. This command "
+"will run the tests for CKAN core and for the core extensions::"
+msgstr ""
+
+#: ../../contributing/test.rst:64
+msgid ""
+"The speed of the PostgreSQL tests can be improved by running PostgreSQL in "
+"memory and turning off durability, as described `in the PostgreSQL "
+"documentation <http://www.postgresql.org/docs/9.0/static/non-"
+"durability.html>`_."
+msgstr ""
+
+#: ../../contributing/test.rst:68
+msgid ""
+"By default the tests will keep the database between test runs. If you wish "
+"to drop and reinitialize the database before the run you can use the "
+"``reset-db`` option::"
+msgstr ""
+
+#: ../../contributing/test.rst:80
+msgid "Migration testing"
+msgstr ""
+
+#: ../../contributing/test.rst:82
+msgid ""
+"If you're a CKAN developer or extension developer and your new code requires"
+" a change to CKAN's model, you'll need to write a migration script. To "
+"ensure that the migration script itself gets tested, you should run the "
+"tests with the ``--ckan-migration`` option, for example::"
+msgstr ""
+
+#: ../../contributing/test.rst:89
+msgid ""
+"By default tests are run using the model defined in ``ckan/model``. With the"
+" ``--ckan-migration`` option the tests will run using a database that has "
+"been created by running the migration scripts in ``ckan/migration``, which "
+"is how the database is created and upgraded in production."
+msgstr ""
+
+#: ../../contributing/test.rst:96
+msgid ""
+"A common error when wanting to run tests against a particular database is to"
+" change ``sqlalchemy.url`` in ``test.ini`` or ``test-core.ini``. The problem"
+" is that these are versioned files and people have checked in these by "
+"mistake, creating problems for other developers."
+msgstr ""
+
+#: ../../contributing/test.rst:103
+msgid "Common error messages"
+msgstr ""
+
+#: ../../contributing/test.rst:106
+msgid "ConfigError"
+msgstr ""
+
+#: ../../contributing/test.rst:115
+msgid ""
+"``nose.config.ConfigError: Error reading config file 'setup.cfg': no such "
+"option 'with-pylons'``"
+msgstr ""
+
+#: ../../contributing/test.rst:109
+msgid "This error can result when you run nosetests for two reasons:"
+msgstr ""
+
+#: ../../contributing/test.rst:111
+msgid ""
+"Pylons nose plugin failed to run. If this is the case, then within a couple "
+"of lines of running `nosetests` you'll see this warning: `Unable to load "
+"plugin pylons` followed by an error message. Fix the error here first`."
+msgstr ""
+
+#: ../../contributing/test.rst:113
+msgid ""
+"The Python module 'Pylons' is not installed into you Python environment. "
+"Confirm this with::"
+msgstr ""
+
+#: ../../contributing/test.rst:118
+msgid "OperationalError"
+msgstr ""
+
+#: ../../contributing/test.rst:121
+msgid ""
+"``OperationalError: (OperationalError) no such function: plainto_tsquery "
+"...``"
+msgstr ""
+
+#: ../../contributing/test.rst:121
+msgid ""
+"This error usually results from running a test which involves search "
+"functionality, which requires using a PostgreSQL database, but another (such"
+" as SQLite) is configured. The particular test is either missing a "
+"`@search_related` decorator or there is a mixup with the test configuration "
+"files leading to the wrong database being used."
+msgstr ""
+
+#: ../../contributing/test.rst:124
+msgid "nosetests"
+msgstr ""
+
+#: ../../contributing/test.rst:151
+msgid "``nosetests: error: no such option: --ckan``"
+msgstr ""
+
+#: ../../contributing/test.rst:127
+msgid ""
+"Nose is either unable to find ckan/ckan_nose_plugin.py in the python "
+"environment it is running in, or there is an error loading it. If there is "
+"an error, this will surface it::"
+msgstr ""
+
+#: ../../contributing/test.rst:131
+msgid "There are a few things to try to remedy this:"
+msgstr ""
+
+#: ../../contributing/test.rst:133
+msgid ""
+"Commonly this is because the nosetests isn't running in the python "
+"environment. You need to have nose actually installed in the python "
+"environment. To see which you are running, do this::"
+msgstr ""
+
+#: ../../contributing/test.rst:137
+msgid ""
+"If you have activated the environment and this still reports "
+"``/usr/bin/nosetests`` then you need to::"
+msgstr ""
+
+#: ../../contributing/test.rst:141
+msgid ""
+"If ``nose --version`` still fails, ensure that ckan is installed in your "
+"environment:"
+msgstr ""
+
+#: ../../contributing/test.rst:148
+msgid ""
+"One final check - the version of nose should be at least 1.0. Check with::"
+msgstr ""
+
+#: ../../contributing/test.rst:155
+msgid "Front-end Testing"
+msgstr ""
+
+#: ../../contributing/test.rst:157
+msgid ""
+"All new CKAN features should be coded so that they work in the following "
+"browsers:"
+msgstr ""
+
+#: ../../contributing/test.rst:160
+msgid "Internet Explorer: 9, 8 and 7"
+msgstr ""
+
+#: ../../contributing/test.rst:161
+msgid "Firefox: Latest + previous version"
+msgstr ""
+
+#: ../../contributing/test.rst:162
+msgid "Chrome: Latest + previous version"
+msgstr ""
+
+#: ../../contributing/test.rst:164
+msgid ""
+"These browsers are determined by whatever has >= 1% share with the latest "
+"months data from: http://data.gov.uk/data/site-usage"
+msgstr ""
+
+#: ../../contributing/test.rst:168
+msgid "Install browser virtual machines"
+msgstr ""
+
+#: ../../contributing/test.rst:170
+msgid ""
+"In order to test in all the needed browsers you'll need access to all the "
+"above browser versions. Firefox and Chrome should be easy whatever platform "
+"you are on. Internet Explorer is a little trickier. You'll need Virtual "
+"Machines."
+msgstr ""
+
+#: ../../contributing/test.rst:175
+msgid ""
+"We suggest you use https://github.com/xdissent/ievms to get your Internet "
+"Explorer virtual machines."
+msgstr ""
+
+#: ../../contributing/test.rst:179
+msgid "Testing methodology"
+msgstr ""
+
+#: ../../contributing/test.rst:181
+msgid ""
+"Firstly we have a primer page. If you've touched any of the core front-end "
+"code you'll need to check if the primer is rendering correctly. The primer "
+"is located at: http://localhost:5000/testing/primer"
+msgstr ""
+
+#: ../../contributing/test.rst:186
+msgid ""
+"Secondly whilst writing a new feature you should endeavour to test in at "
+"least in your core browser and an alternative browser as often as you can."
+msgstr ""
+
+#: ../../contributing/test.rst:190
+msgid ""
+"Thirdly you should fully test all new features that have a front-end element"
+" in all browsers before making your pull request into CKAN master."
+msgstr ""
+
+#: ../../contributing/test.rst:195
+msgid "Common pitfalls & their fixes"
+msgstr ""
+
+#: ../../contributing/test.rst:197
+msgid ""
+"Here's a few of the most common front end bugs and a list of their fixes."
+msgstr ""
+
+#: ../../contributing/test.rst:201
+msgid "Reserved JS keywords"
+msgstr ""
+
+#: ../../contributing/test.rst:203
+msgid ""
+"Since IE has a stricter language definition in JS it really doesn't like you"
+" using JS reserved keywords method names, variables, etc... This is a good "
+"list of keywords not to use in your JavaScript:"
+msgstr ""
+
+#: ../../contributing/test.rst:207
+msgid ""
+"https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Reserved_Words"
+msgstr ""
+
+#: ../../contributing/test.rst:224
+msgid "Unclosed JS arrays / objects"
+msgstr ""
+
+#: ../../contributing/test.rst:226
+msgid ""
+"Internet Explorer doesn't like it's JS to have unclosed JS objects and "
+"arrays. For example:"
+msgstr ""

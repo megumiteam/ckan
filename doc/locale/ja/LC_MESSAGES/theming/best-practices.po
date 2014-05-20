@@ -1,0 +1,153 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/best-practices.rst:3
+msgid "Best practices for writing CKAN themes"
+msgstr ""
+
+#: ../../theming/best-practices.rst:9
+msgid "Don't use ``c``"
+msgstr ""
+
+#: ../../theming/best-practices.rst:11
+msgid ""
+"As much as possible, avoid accessing the Pylons template context "
+":py:data:`c` (or :py:data:`tmpl_context`). Use :doc:`template helper "
+"functions <template-helper-functions>` instead. You can use the "
+":py:class:`~ckan.plugins.interfaces.ITemplateHelpers` plugin interface to "
+"add custom helper functions, see :ref:`custom template helper functions`."
+msgstr ""
+
+#: ../../theming/best-practices.rst:21
+msgid "Use ``url_for()``"
+msgstr ""
+
+#: ../../theming/best-practices.rst:23
+msgid ""
+"Always use :py:func:`~ckan.lib.helpers.url_for` (available to templates as "
+"``h.url_for()``) when linking to other CKAN pages, instead of hardcoding "
+"URLs like ``<a href=\"/dataset\">``. Links created with "
+":py:func:`~ckan.lib.helpers.url_for` will update themselves if the URL "
+"routing changes in a new version of CKAN, or if a plugin changes the URL "
+"routing."
+msgstr ""
+
+#: ../../theming/best-practices.rst:32
+msgid "Use ``{% trans %}``, ``{% pluralize %}``, ``_()`` and ``ungettext()``"
+msgstr ""
+
+#: ../../theming/best-practices.rst:34
+msgid ""
+"All user-visible strings should be internationalized, see "
+":doc:`/contributing/string-i18n`."
+msgstr ""
+
+#: ../../theming/best-practices.rst:40
+msgid "Helper function names should begin with the name of the extension"
+msgstr ""
+
+#: ../../theming/best-practices.rst:42
+msgid ""
+"Namespacing helper functions in this way avoids accidentally overriding, or "
+"being overriden by, a core helper function, or a helper function from "
+"another extension. For example:"
+msgstr ""
+
+#: ../../theming/best-practices.rst:54
+msgid "Snippet filenames should begin with the name of the extension"
+msgstr ""
+
+#: ../../theming/best-practices.rst:56
+msgid ""
+"Namespacing snippets in this way avoids accidentally overriding, or being "
+"overridden by, a core snippet, or a snippet from another extension. For "
+"example::"
+msgstr ""
+
+#: ../../theming/best-practices.rst:67
+msgid "|javascript| modules names should begin with the name of the extension"
+msgstr ""
+
+#: ../../theming/best-practices.rst:69
+msgid ""
+"Namespacing |javascript| modules in this way avoids accidentally overriding,"
+" or being overridden by, a core module, or a module from another extension."
+"  For example: ``fanstatic/example_theme_popover.js``:"
+msgstr ""
+
+#: ../../theming/best-practices.rst:79
+msgid "|javascript| modules should have docstrings"
+msgstr ""
+
+#: ../../theming/best-practices.rst:81
+msgid ""
+"A |javascript| module should have a docstring at the top of the file, "
+"briefly documentating what the module does and what options it takes. For "
+"example:"
+msgstr ""
+
+#: ../../theming/best-practices.rst:92
+msgid "JavaScript modules should unsubscribe from events in ``teardown()``"
+msgstr ""
+
+#: ../../theming/best-practices.rst:94
+msgid ""
+"Any JavaScript module that calls :js:func:`this.sandbox.client.subscribe` "
+"should have a ``teardown()`` function that calls "
+":js:func:`~this.sandbox.client.unsubscribe`, to prevent memory leaks. CKAN "
+"calls the ``teardown()`` functions of modules when those modules are removed"
+" from the page."
+msgstr ""
+
+#: ../../theming/best-practices.rst:104
+msgid "Don't overuse pubsub"
+msgstr ""
+
+#: ../../theming/best-practices.rst:106
+msgid ""
+"There shouldn't be very many cases where a JavaScript module really needs to"
+" use :ref:`Pubsub <pubsub>`, try to only use it when you really need to."
+msgstr ""
+
+#: ../../theming/best-practices.rst:109
+msgid ""
+"JavaScript modules in CKAN are designed to be small and loosely-coupled, for"
+" example modules don't share any global variables and don't call each "
+"other's functions. But pubsub offers a way to tightly couple JavaScript "
+"modules together, by making modules depend on multiple events published by "
+"other modules. This can make the code buggy and difficult to understand."
+msgstr ""
+
+#: ../../theming/best-practices.rst:118
+msgid "Use ``{% snippet %}``, not ``{% include %}``"
+msgstr ""
+
+#: ../../theming/best-practices.rst:120
+msgid ""
+"Always use CKAN's custom ``{% snippet %}`` tag instead of Jinja's default "
+"``{% include %}`` tag. Snippets can only access certain global variables, "
+"and any variables explicitly passed to them by the calling template. They "
+"don't have access to the full context of the calling template, as included "
+"files do. This makes snippets more reusable, and much easier to debug."
+msgstr ""
+
+#: ../../theming/best-practices.rst:131
+msgid "Snippets should have docstrings"
+msgstr ""
+
+#: ../../theming/best-practices.rst:133
+msgid ""
+"A snippet should have a docstring comment at the top of the file that "
+"briefly documents what the snippet does and what parameters it requires. For"
+" example:"
+msgstr ""

@@ -1,0 +1,192 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:3
+msgid "Building a JavaScript Module"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:5
+msgid ""
+"CKAN makes heavy use of modules to add additional functionality to the page."
+" Essentially all a module consists of is an object with an ``.initialize()``"
+" and ``.teardown()`` method."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:9
+msgid ""
+"Here we will go through the basic functionality of building a simple module "
+"that sends a \"favourite\" request to the server when the user clicks a "
+"button."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:14
+msgid "HTML"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:16
+msgid ""
+"The idea behind modules is that the element should already be in the "
+"document when the page loads. For example our favourite button will work "
+"just fine without our module JavaScript loaded."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:26
+msgid ""
+"Here it's the ``data-module=\"favorite\"`` that tells the CKAN module loader"
+" to create a new instance for this element."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:30
+msgid "JavaScript"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:32
+msgid ""
+"Modules reside in the *javascript/modules* directory and should share the "
+"same name as the module. We use hyphens to delimit spaces in both filenames "
+"and modules."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:40
+msgid "A module can be created by calling ``ckan.module()``:"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:48
+msgid ""
+"We pass in the module name and a factory function that should return our "
+"module object. This factory gets passed a local jQuery object and a "
+"translation object."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:53
+msgid ""
+"In order to include a module for page render inclusion within an extension "
+"it is recommended that you use ``{% resource %}`` within your templates. See"
+" the `Resource Documentation <./resources.html>`_"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:58
+msgid "Initialisation"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:60
+msgid ""
+"Once ckan has found an element on the page it creates a new instance of your"
+" module and if present calls the ``.initialize()`` method."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:73
+msgid "Here we can set up event listeners and other setup functions."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:87
+msgid "Event Handling"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:89
+msgid "Now we create our click handler for the button:"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:98
+msgid ""
+"And this calls a ``.favorite()`` method. It's generally best not to do too "
+"much in event handlers it means that you can't use the same functionality "
+"elsewhere."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:110
+msgid "Notifications and Internationalisation"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:112
+msgid ""
+"This submits the dataset to the API but ideally we want to tell the user "
+"what we're doing."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:140
+msgid "Options"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:142
+msgid ""
+"Displaying an id to the user isn't very friendly. We can use the ``data-"
+"module`` attributes to pass options through to the module."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:149
+msgid "This will override the defaults in the options object."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:167
+msgid "Error handling"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:169
+msgid ""
+"When ever we make an Ajax request we want to make sure that we notify the "
+"user if the request fails. Again we can use ``this.sandbox.notify()`` to do "
+"this."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:189
+msgid "Module Scope"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:191
+msgid ""
+"You may have noticed we keep making calls to ``jQuery.proxy()`` within these"
+" methods. This is to ensure that ``this`` when the callback is called is the"
+" module it belongs to."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:195
+msgid ""
+"We have a shortcut method called ``jQuery.proxyAll()`` that can be used in "
+"the ``.initialize()`` method to do all the binding at once. It can accept "
+"method names or simply a regexp."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:212
+msgid "Publish/Subscribe"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:214
+msgid ""
+"Sometimes we want modules to be able to talk to each other in order to keep "
+"the page state up to date. The sandbox has the ``.publish()`` and "
+"``.subscribe()`` methods for just this cause."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:218
+msgid ""
+"For example say we had a counter up in the header that showed how many "
+"favourite datasets the user had. This would be incorrect when the user "
+"clicked the ajax button. We can publish an event when the favorite button is"
+" successful."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:233
+msgid ""
+"Now in our other module 'user-favorite-counter' we can listen for this."
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:258
+msgid "Unit Tests"
+msgstr ""
+
+#: ../../contributing/frontend/javascript-module-tutorial.rst:260
+msgid ""
+"Every module has unit tests. These use Mocha, Chai and Sinon to assert the "
+"expected functionality of the module."
+msgstr ""

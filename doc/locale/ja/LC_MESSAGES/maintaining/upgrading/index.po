@@ -1,0 +1,202 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/upgrading/index.rst:3
+#: ../../maintaining/upgrading/index.rst:80
+msgid "Upgrading CKAN"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:5
+msgid ""
+"This document describes the different types of CKAN release, and explains "
+"how to upgrade a site to a newer version of CKAN."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:12
+msgid ":doc:`/changelog`"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:11
+msgid ""
+"The changelog lists all CKAN releases and the main changes introduced in "
+"each release."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:15
+msgid ":doc:`/contributing/release-process`"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:15
+msgid ""
+"Documentation of the process that the CKAN developers follow to do a CKAN "
+"release."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:23
+msgid "CKAN releases"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:25
+msgid ""
+"CKAN follows a predictable release cycle so that users can depend on stable "
+"releases of CKAN, and can plan their upgrades to new releases."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:28
+msgid ""
+"Each release has a version number of the form ``M.m`` (eg. 2.1) or ``M.m.p``"
+" (eg. 1.8.2), where ``M`` is the **major version**, ``m`` is the **minor "
+"version** and ``p`` is the **patch version** number. There are three types "
+"of release:"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:37
+msgid "Major Releases"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:34
+msgid ""
+"Major releases, such as CKAN 1.0 and CKAN 2.0, increment the major version "
+"number.  These releases contain major changes in the CKAN code base, with "
+"significant refactorings and breaking changes, for instance in the API or "
+"the templates.  These releases are very infrequent."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:44
+msgid "Minor Releases"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:40
+msgid ""
+"Minor releases, such as CKAN 1.8 and CKAN 2.1, increment the minor version "
+"number. These releases are not as disruptive as major releases, but "
+"backwards-incompatible changes *may* be introduced in minor releases. The "
+":doc:`/changelog` will document any breaking changes. We aim to release a "
+"minor version of CKAN roughly every three months."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:56
+msgid "Patch Releases"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:47
+msgid ""
+"Patch releases, such as CKAN 1.8.1 or CKAN 2.0.1, increment the patch "
+"version number. These releases do not break backwards-compatibility, they "
+"include only bug fixes and non-breaking optimizations and features. Patch "
+"releases do not contain:"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:52
+msgid "Database schema changes or migrations"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:53
+msgid "Function interface changes"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:54
+msgid "Plugin interface changes"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:55
+msgid "New dependencies"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:56
+msgid "Big refactorings or new features in critical parts of the code"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:60
+msgid ""
+"Users should always run the latest patch release for the minor release they "
+"are on, as patch releases contain important bug fixes and security updates. "
+"Because patch releases don't include backwards incompatible changes, the "
+"upgrade process (as described in :doc:`upgrade-package-to-patch-release`) "
+"should be straightforward."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:66
+msgid ""
+"Outdated patch releases will no longer be supported after a newer patch "
+"release has been released. For example once CKAN 2.0.2 has been released, "
+"CKAN 2.0.1 will no longer be supported."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:70
+msgid ""
+"Releases are announced on the `ckan-announce mailing list "
+"<http://lists.okfn.org/mailman/listinfo/ckan-announce>`_, a low-volume list "
+"that CKAN instance maintainers can subscribe to in order to be up to date "
+"with upcoming releases."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:82
+msgid ""
+"This section will walk you through the steps to upgrade your CKAN site to a "
+"newer version of CKAN."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:87
+msgid ""
+"Before upgrading your version of CKAN you should check that any custom "
+"templates or extensions you're using work with the new version of CKAN. For "
+"example, you could install the new version of CKAN in a new virtual "
+"environment and use that to test your templates and extensions."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:94
+msgid ""
+"You should also read the :doc:`/changelog` to see if there are any extra "
+"notes to be aware of when upgrading to the new version."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:99
+msgid "1. Backup your database"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:101
+msgid ""
+"You should always backup your CKAN database before upgrading CKAN. If "
+"something goes wrong with the CKAN upgrade you can use the backup to restore"
+" the database to its pre-upgrade state."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:105
+msgid ""
+"Activate your virtualenv and switch to the ckan source directory, e.g.:"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:112
+msgid "Backup your CKAN database using the ``db dump`` command, for example:"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:119
+msgid ""
+"This will create a file called ``my_ckan_database.pg_dump``, you can use the"
+" the ``db load`` command to restore your database to the state recorded in "
+"this file. See :ref:`paster db` for details of the ``db dump`` and ``db "
+"load`` commands."
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:126
+msgid "2. Upgrade CKAN"
+msgstr ""
+
+#: ../../maintaining/upgrading/index.rst:128
+msgid ""
+"The process of upgrading CKAN differs depending on whether you have a "
+"package install or a source install of CKAN, and whether you're upgrading to"
+" a :ref:`major, minor or patch release <releases>` of CKAN. Follow the "
+"appropriate one of these documents:"
+msgstr ""

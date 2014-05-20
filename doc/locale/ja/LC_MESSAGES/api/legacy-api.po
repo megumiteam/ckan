@@ -1,0 +1,1194 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/legacy-api.rst:3
+msgid "Legacy APIs"
+msgstr ""
+
+#: ../../api/legacy-api.rst:7
+msgid ""
+"The legacy APIs documented in this section are provided for backwards-"
+"compatibility, but support for new CKAN features will not be added to these "
+"APIs."
+msgstr ""
+
+#: ../../api/legacy-api.rst:13
+msgid "API Versions"
+msgstr ""
+
+#: ../../api/legacy-api.rst:15
+msgid ""
+"There are two versions of the legacy APIs. When the API returns a reference "
+"to an object, version 1 of the API will return the name of the object (e.g. "
+"``\"river-pollution\"``), whereas version 2 will return the ID of the object"
+" (e.g.  ``\"a3dd8f64-9078-4f04-845c-e3f047125028\"``). Tag objects are an "
+"exception, tag names are immutable so tags are always referred to with their"
+" name."
+msgstr ""
+
+#: ../../api/legacy-api.rst:22
+msgid ""
+"You can specify which version of the API to use in the URL. For example, "
+"opening this URL in your web browser will list demo.ckan.org's datasets "
+"using API version 1:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:26
+msgid "http://demo.ckan.org/api/1/rest/dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:28
+msgid "Opening this URL calls the same function using API version 2:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:30
+msgid "http://demo.ckan.org/api/2/rest/dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:32
+msgid ""
+"If no version number is given in the URL then the API defaults to version 1,"
+" so this URL will list the site's datasets using API version 1:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:35
+msgid "http://demo.ckan.org/api/rest/dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:37
+msgid ""
+"Dataset names can change, so to reliably refer to the same dataset over "
+"time, you will want to use the dataset's ID and therefore use API v2. "
+"Alternatively, many people prefer to deal with Names, so API v1 suits them."
+msgstr ""
+
+#: ../../api/legacy-api.rst:41
+msgid ""
+"When posting parameters with your API requests, you can refer to objects by "
+"either their name or ID, interchangeably."
+msgstr ""
+
+#: ../../api/legacy-api.rst:46
+msgid "Model API"
+msgstr ""
+
+#: ../../api/legacy-api.rst:48
+msgid ""
+"Model resources are available at published locations. They are represented "
+"with a variety of data formats. Each resource location supports a number of "
+"methods."
+msgstr ""
+
+#: ../../api/legacy-api.rst:51 ../../api/legacy-api.rst:260
+msgid "The data formats of the requests and the responses are defined below."
+msgstr ""
+
+#: ../../api/legacy-api.rst:54
+msgid "Model Resources"
+msgstr ""
+
+#: ../../api/legacy-api.rst:56
+msgid "Here are the resources of the Model API."
+msgstr ""
+
+#: ../../api/legacy-api.rst:60
+msgid "Model Resource"
+msgstr ""
+
+#: ../../api/legacy-api.rst:60 ../../api/legacy-api.rst:268
+msgid "Location"
+msgstr ""
+
+#: ../../api/legacy-api.rst:62 ../../api/legacy-api.rst:106
+#: ../../api/legacy-api.rst:108
+msgid "Dataset Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:62
+msgid "``/rest/dataset``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:64 ../../api/legacy-api.rst:110
+#: ../../api/legacy-api.rst:112
+msgid "Dataset Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:64
+msgid "``/rest/dataset/DATASET-REF``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:66 ../../api/legacy-api.rst:114
+#: ../../api/legacy-api.rst:116
+msgid "Group Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:66
+msgid "``/rest/group``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:68 ../../api/legacy-api.rst:118
+#: ../../api/legacy-api.rst:120
+msgid "Group Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:68
+msgid "``/rest/group/GROUP-REF``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:70 ../../api/legacy-api.rst:122
+msgid "Tag Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:70
+msgid "``/rest/tag``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:72 ../../api/legacy-api.rst:124
+msgid "Tag Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:72
+msgid "``/rest/tag/TAG-NAME``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:74 ../../api/legacy-api.rst:126
+msgid "Rating Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:74
+msgid "``/rest/rating``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:76 ../../api/legacy-api.rst:78
+#: ../../api/legacy-api.rst:80 ../../api/legacy-api.rst:130
+#: ../../api/legacy-api.rst:134
+msgid "Dataset Relationships Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:76
+msgid "``/rest/dataset/DATASET-REF/relationships``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:78
+msgid "``/rest/dataset/DATASET-REF/RELATIONSHIP-TYPE``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:80
+msgid "``/rest/dataset/DATASET-REF/relationships/DATASET-REF``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:82 ../../api/legacy-api.rst:132
+#: ../../api/legacy-api.rst:136
+msgid "Dataset Relationship Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:82
+msgid "``/rest/dataset/DATASET-REF/RELATIONSHIP-TYPE/DATASET-REF``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:84 ../../api/legacy-api.rst:138
+msgid "Dataset\\'s Revisions Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:84
+msgid "``/rest/dataset/DATASET-REF/revisions``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:86
+msgid "Revision Register"
+msgstr ""
+
+#: ../../api/legacy-api.rst:86
+msgid "``/rest/revision``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:88 ../../api/legacy-api.rst:142
+msgid "Revision Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:88
+msgid "``/rest/revision/REVISION-ID``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:90 ../../api/legacy-api.rst:144
+msgid "License List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:90
+msgid "``/rest/licenses``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:93
+msgid ""
+"Possible values for DATASET-REF are the dataset id, or the current dataset "
+"name."
+msgstr ""
+
+#: ../../api/legacy-api.rst:95
+msgid ""
+"Possible values for RELATIONSHIP-TYPE are described in the Relationship-Type"
+" data format."
+msgstr ""
+
+#: ../../api/legacy-api.rst:99
+msgid "Model Methods"
+msgstr ""
+
+#: ../../api/legacy-api.rst:101
+msgid "Here are the methods of the Model API."
+msgstr ""
+
+#: ../../api/legacy-api.rst:104 ../../api/legacy-api.rst:190
+#: ../../api/legacy-api.rst:287
+msgid "Resource"
+msgstr ""
+
+#: ../../api/legacy-api.rst:104 ../../api/legacy-api.rst:287
+msgid "Method"
+msgstr ""
+
+#: ../../api/legacy-api.rst:104 ../../api/legacy-api.rst:287
+msgid "Request"
+msgstr ""
+
+#: ../../api/legacy-api.rst:104 ../../api/legacy-api.rst:287
+msgid "Response"
+msgstr ""
+
+#: ../../api/legacy-api.rst:106 ../../api/legacy-api.rst:110
+#: ../../api/legacy-api.rst:114 ../../api/legacy-api.rst:118
+#: ../../api/legacy-api.rst:122 ../../api/legacy-api.rst:124
+#: ../../api/legacy-api.rst:128 ../../api/legacy-api.rst:130
+#: ../../api/legacy-api.rst:132 ../../api/legacy-api.rst:138
+#: ../../api/legacy-api.rst:140 ../../api/legacy-api.rst:142
+#: ../../api/legacy-api.rst:144 ../../api/legacy-api.rst:295
+msgid "GET"
+msgstr ""
+
+#: ../../api/legacy-api.rst:106 ../../api/legacy-api.rst:124
+#: ../../api/legacy-api.rst:169
+msgid "Dataset-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:108 ../../api/legacy-api.rst:116
+#: ../../api/legacy-api.rst:126 ../../api/legacy-api.rst:134
+#: ../../api/legacy-api.rst:289 ../../api/legacy-api.rst:291
+#: ../../api/legacy-api.rst:293
+msgid "POST"
+msgstr ""
+
+#: ../../api/legacy-api.rst:108 ../../api/legacy-api.rst:110
+#: ../../api/legacy-api.rst:112 ../../api/legacy-api.rst:171
+msgid "Dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:112 ../../api/legacy-api.rst:120
+#: ../../api/legacy-api.rst:136
+msgid "PUT"
+msgstr ""
+
+#: ../../api/legacy-api.rst:114 ../../api/legacy-api.rst:181
+msgid "Group-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:116 ../../api/legacy-api.rst:118
+#: ../../api/legacy-api.rst:120 ../../api/legacy-api.rst:183
+msgid "Group"
+msgstr ""
+
+#: ../../api/legacy-api.rst:122 ../../api/legacy-api.rst:186
+msgid "Tag-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:126 ../../api/legacy-api.rst:128
+#: ../../api/legacy-api.rst:193
+msgid "Rating"
+msgstr ""
+
+#: ../../api/legacy-api.rst:128
+msgid "Rating Entity"
+msgstr ""
+
+#: ../../api/legacy-api.rst:130 ../../api/legacy-api.rst:195
+msgid "Pkg-Relationships"
+msgstr ""
+
+#: ../../api/legacy-api.rst:132 ../../api/legacy-api.rst:134
+#: ../../api/legacy-api.rst:136 ../../api/legacy-api.rst:197
+msgid "Pkg-Relationship"
+msgstr ""
+
+#: ../../api/legacy-api.rst:138 ../../api/legacy-api.rst:201
+msgid "Pkg-Revisions"
+msgstr ""
+
+#: ../../api/legacy-api.rst:140
+msgid "Revision List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:140 ../../api/legacy-api.rst:211
+#: ../../api/legacy-api.rst:293 ../../api/legacy-api.rst:317
+msgid "Revision-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:142 ../../api/legacy-api.rst:213
+msgid "Revision"
+msgstr ""
+
+#: ../../api/legacy-api.rst:144 ../../api/legacy-api.rst:216
+msgid "License-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:147
+msgid "In general:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:149
+msgid "GET to a register resource will *list* the entities of that type."
+msgstr ""
+
+#: ../../api/legacy-api.rst:151
+msgid "GET of an entity resource will *show* the entity's properties."
+msgstr ""
+
+#: ../../api/legacy-api.rst:153
+msgid ""
+"POST of entity data to a register resource will *create* the new entity."
+msgstr ""
+
+#: ../../api/legacy-api.rst:155
+msgid "PUT of entity data to an existing entity resource will *update* it."
+msgstr ""
+
+#: ../../api/legacy-api.rst:157
+msgid ""
+"It is usually clear whether you are trying to create or update, so in these "
+"cases, HTTP POST and PUT methods are accepted by CKAN interchangeably."
+msgstr ""
+
+#: ../../api/legacy-api.rst:160
+msgid "Model Formats"
+msgstr ""
+
+#: ../../api/legacy-api.rst:162
+msgid "Here are the data formats for the Model API:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:165 ../../api/legacy-api.rst:307
+#: ../../api/legacy-api.rst:557
+msgid "Name"
+msgstr ""
+
+#: ../../api/legacy-api.rst:165 ../../api/legacy-api.rst:307
+msgid "Format"
+msgstr ""
+
+#: ../../api/legacy-api.rst:167
+msgid "Dataset-Ref"
+msgstr ""
+
+#: ../../api/legacy-api.rst:167
+msgid "Dataset-Name-String (API v1) OR Dataset-Id-Uuid (API v2)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:169
+msgid "[ Dataset-Ref, Dataset-Ref, Dataset-Ref, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:171
+msgid ""
+"{ id: Uuid, name: Name-String, title: String, version: String, url: String, "
+"resources: [ Resource, Resource, ...], author: String, author_email: String,"
+" maintainer: String, maintainer_email: String, license_id: String, tags: "
+"Tag-List, notes: String, extras: { Name-String: String, ... } } See note "
+"below on additional fields upon GET of a dataset."
+msgstr ""
+
+#: ../../api/legacy-api.rst:179
+msgid "Group-Ref"
+msgstr ""
+
+#: ../../api/legacy-api.rst:179
+msgid "Group-Name-String (API v1) OR Group-Id-Uuid (API v2)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:181
+msgid "[ Group-Ref, Group-Ref, Group-Ref, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:183
+msgid ""
+"{ name: Group-Name-String, title: String, description: String, packages: "
+"Dataset-List }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:186
+msgid "[ Name-String, Name-String, Name-String, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:188
+msgid "Tag"
+msgstr ""
+
+#: ../../api/legacy-api.rst:188
+msgid "{ name: Name-String }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:190
+msgid "{ url: String, format: String, description: String, hash: String }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:193
+msgid "{ dataset: Name-String, rating: int }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:195
+msgid "[ Pkg-Relationship, Pkg-Relationship, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:197
+msgid ""
+"{ subject: Dataset-Name-String, object: Dataset-Name-String, type: "
+"Relationship-Type, comment: String }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:201
+msgid "[ Pkg-Revision, Pkg-Revision, Pkg-Revision, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:203
+msgid "Pkg-Revision"
+msgstr ""
+
+#: ../../api/legacy-api.rst:203
+msgid "{ id: Uuid, message: String, author: String, timestamp: Date-Time }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:206
+msgid "Relationship-Type"
+msgstr ""
+
+#: ../../api/legacy-api.rst:206
+msgid ""
+"One of: 'depends_on', 'dependency_of', 'derives_from', 'has_derivation', "
+"'child_of', 'parent_of', 'links_to', 'linked_from'."
+msgstr ""
+
+#: ../../api/legacy-api.rst:211
+msgid "[ revision_id, revision_id, revision_id, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:213
+msgid ""
+"{ id: Uuid, message: String, author: String, timestamp: Date-Time, datasets:"
+" Dataset-List }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:216
+msgid "[ License, License, License, ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:218
+msgid "License"
+msgstr ""
+
+#: ../../api/legacy-api.rst:218
+msgid ""
+"{ id: Name-String, title: String, is_okd_compliant: Boolean, "
+"is_osi_compliant: Boolean, tags: Tag-List, family: String, url: String, "
+"maintainer: String, date_created: Date-Time, status: String }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:224
+msgid ""
+"To send request data, create the JSON-format string (encode in UTF8) put it "
+"in the request body and send it using PUT or POST."
+msgstr ""
+
+#: ../../api/legacy-api.rst:226
+msgid "Response data will be in the response body in JSON format."
+msgstr ""
+
+#: ../../api/legacy-api.rst:228
+msgid "Notes:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:230
+msgid ""
+"When you update an object, fields that you don't supply will remain as they "
+"were before."
+msgstr ""
+
+#: ../../api/legacy-api.rst:232
+msgid ""
+"To delete an 'extra' key-value pair, supply the key with JSON value: "
+"``null``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:234
+msgid ""
+"When you read a dataset, some additional information is supplied that you "
+"cannot modify and POST back to the CKAN API. These 'read-only' fields are "
+"provided only on the Dataset GET. This is a convenience to clients, to save "
+"further requests. This applies to the following fields:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:237
+msgid "Key"
+msgstr ""
+
+#: ../../api/legacy-api.rst:237
+msgid "Description"
+msgstr ""
+
+#: ../../api/legacy-api.rst:239
+msgid "id"
+msgstr ""
+
+#: ../../api/legacy-api.rst:239
+msgid "Unique Uuid for the Dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:240
+msgid "revision_id"
+msgstr ""
+
+#: ../../api/legacy-api.rst:240
+msgid ""
+"Latest revision ID for the core Package data (but is not affected by changes"
+" to tags, groups, extras, relationships etc)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:241
+msgid "metadata_created"
+msgstr ""
+
+#: ../../api/legacy-api.rst:241
+msgid "Date the Dataset (record) was created"
+msgstr ""
+
+#: ../../api/legacy-api.rst:242
+msgid "metadata_modified"
+msgstr ""
+
+#: ../../api/legacy-api.rst:242
+msgid "Date the Dataset (record) was last modified"
+msgstr ""
+
+#: ../../api/legacy-api.rst:243
+msgid "relationships"
+msgstr ""
+
+#: ../../api/legacy-api.rst:243
+msgid "info on Dataset Relationships"
+msgstr ""
+
+#: ../../api/legacy-api.rst:244
+msgid "ratings_average"
+msgstr ""
+
+#: ../../api/legacy-api.rst:245
+msgid "ratings_count"
+msgstr ""
+
+#: ../../api/legacy-api.rst:246
+msgid "ckan_url"
+msgstr ""
+
+#: ../../api/legacy-api.rst:246
+msgid "full URL of the Dataset"
+msgstr ""
+
+#: ../../api/legacy-api.rst:247
+msgid "download_url (API v1)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:247
+msgid "URL of the first Resource"
+msgstr ""
+
+#: ../../api/legacy-api.rst:248
+msgid "isopen"
+msgstr ""
+
+#: ../../api/legacy-api.rst:248
+msgid ""
+"boolean indication of whether dataset is open according to Open Knowledge "
+"Definition, based on other fields"
+msgstr ""
+
+#: ../../api/legacy-api.rst:249
+msgid "notes_rendered"
+msgstr ""
+
+#: ../../api/legacy-api.rst:249
+msgid "HTML rendered version of the Notes field (which may contain Markdown)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:255
+msgid "Search API"
+msgstr ""
+
+#: ../../api/legacy-api.rst:257
+msgid ""
+"Search resources are available at published locations. They are represented "
+"with a variety of data formats. Each resource location supports a number of "
+"methods."
+msgstr ""
+
+#: ../../api/legacy-api.rst:263
+msgid "Search Resources"
+msgstr ""
+
+#: ../../api/legacy-api.rst:265
+msgid "Here are the published resources of the Search API."
+msgstr ""
+
+#: ../../api/legacy-api.rst:268
+msgid "Search Resource"
+msgstr ""
+
+#: ../../api/legacy-api.rst:270 ../../api/legacy-api.rst:289
+msgid "Dataset Search"
+msgstr ""
+
+#: ../../api/legacy-api.rst:270
+msgid "``/search/dataset``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:272 ../../api/legacy-api.rst:291
+msgid "Resource Search"
+msgstr ""
+
+#: ../../api/legacy-api.rst:272
+msgid "``/search/resource``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:274 ../../api/legacy-api.rst:293
+msgid "Revision Search"
+msgstr ""
+
+#: ../../api/legacy-api.rst:274
+msgid "``/search/revision``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:276 ../../api/legacy-api.rst:295
+msgid "Tag Counts"
+msgstr ""
+
+#: ../../api/legacy-api.rst:276
+msgid "``/tag_counts``"
+msgstr ""
+
+#: ../../api/legacy-api.rst:279
+msgid ""
+"See below for more information about dataset and revision search parameters."
+msgstr ""
+
+#: ../../api/legacy-api.rst:282
+msgid "Search Methods"
+msgstr ""
+
+#: ../../api/legacy-api.rst:284
+msgid "Here are the methods of the Search API."
+msgstr ""
+
+#: ../../api/legacy-api.rst:289
+msgid "Dataset-Search-Params"
+msgstr ""
+
+#: ../../api/legacy-api.rst:289 ../../api/legacy-api.rst:313
+msgid "Dataset-Search-Response"
+msgstr ""
+
+#: ../../api/legacy-api.rst:291
+msgid "Resource-Search-Params"
+msgstr ""
+
+#: ../../api/legacy-api.rst:291 ../../api/legacy-api.rst:315
+msgid "Resource-Search-Response"
+msgstr ""
+
+#: ../../api/legacy-api.rst:293
+msgid "Revision-Search-Params"
+msgstr ""
+
+#: ../../api/legacy-api.rst:295 ../../api/legacy-api.rst:320
+msgid "Tag-Count-List"
+msgstr ""
+
+#: ../../api/legacy-api.rst:298
+msgid ""
+"It is also possible to supply the search parameters in the URL of a GET "
+"request, for example ``/api/search/dataset?q=geodata&amp;allfields=1``."
+msgstr ""
+
+#: ../../api/legacy-api.rst:302
+msgid "Search Formats"
+msgstr ""
+
+#: ../../api/legacy-api.rst:304
+msgid "Here are the data formats for the Search API."
+msgstr ""
+
+#: ../../api/legacy-api.rst:309
+msgid "Dataset-Search-Params Resource-Search-Params Revision-Search-Params"
+msgstr ""
+
+#: ../../api/legacy-api.rst:309
+msgid ""
+"{ Param-Key: Param-Value, Param-Key: Param-Value, ... } See below for full "
+"details of search parameters across the various domain objects."
+msgstr ""
+
+#: ../../api/legacy-api.rst:313
+msgid "{ count: Count-int, results: [Dataset, Dataset, ... ] }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:315
+msgid "{ count: Count-int, results: [Resource, Resource, ... ] }"
+msgstr ""
+
+#: ../../api/legacy-api.rst:317
+msgid ""
+"[ Revision-Id, Revision-Id, Revision-Id, ... ] NB: Ordered with youngest "
+"revision first"
+msgstr ""
+
+#: ../../api/legacy-api.rst:320
+msgid "[ [Name-String, Integer], [Name-String, Integer], ... ]"
+msgstr ""
+
+#: ../../api/legacy-api.rst:323
+msgid ""
+"The ``Dataset`` and ``Revision`` data formats are as defined in `Model "
+"Formats`_."
+msgstr ""
+
+#: ../../api/legacy-api.rst:325
+msgid "**Dataset Parameters**"
+msgstr ""
+
+#: ../../api/legacy-api.rst:328 ../../api/legacy-api.rst:379
+#: ../../api/legacy-api.rst:418
+msgid "Param-Key"
+msgstr ""
+
+#: ../../api/legacy-api.rst:328 ../../api/legacy-api.rst:379
+#: ../../api/legacy-api.rst:418
+msgid "Param-Value"
+msgstr ""
+
+#: ../../api/legacy-api.rst:328
+msgid "Examples"
+msgstr ""
+
+#: ../../api/legacy-api.rst:328 ../../api/legacy-api.rst:379
+#: ../../api/legacy-api.rst:418
+msgid "Notes"
+msgstr ""
+
+#: ../../api/legacy-api.rst:330
+msgid "q"
+msgstr ""
+
+#: ../../api/legacy-api.rst:330 ../../api/legacy-api.rst:344
+#: ../../api/legacy-api.rst:381 ../../api/legacy-api.rst:393
+msgid "Search-String"
+msgstr ""
+
+#: ../../api/legacy-api.rst:330
+msgid ""
+"Criteria to search the dataset fields for. URL-encoded search text. (You can"
+" also concatenate words with a '+' symbol in a URL.) Search results must "
+"contain all the specified words.  You can also search within specific "
+"fields."
+msgstr ""
+
+#: ../../api/legacy-api.rst:339 ../../api/legacy-api.rst:388
+msgid "qjson"
+msgstr ""
+
+#: ../../api/legacy-api.rst:339 ../../api/legacy-api.rst:388
+msgid "JSON encoded options"
+msgstr ""
+
+#: ../../api/legacy-api.rst:339
+msgid "['q':'geodata']"
+msgstr ""
+
+#: ../../api/legacy-api.rst:339 ../../api/legacy-api.rst:388
+msgid ""
+"All search parameters can be json-encoded and supplied to this parameter as "
+"a more flexible alternative in GET requests."
+msgstr ""
+
+#: ../../api/legacy-api.rst:344
+msgid ""
+"title, tags, notes, groups, author, maintainer, update_frequency, or any "
+"'extra' field name e.g. department"
+msgstr ""
+
+#: ../../api/legacy-api.rst:344
+msgid "Search in a particular a field."
+msgstr ""
+
+#: ../../api/legacy-api.rst:351
+msgid "order_by"
+msgstr ""
+
+#: ../../api/legacy-api.rst:351
+msgid "field-name (default=rank)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:351
+msgid "order_by=name"
+msgstr ""
+
+#: ../../api/legacy-api.rst:351
+msgid "Specify either rank or the field to sort the results by"
+msgstr ""
+
+#: ../../api/legacy-api.rst:354 ../../api/legacy-api.rst:402
+msgid "offset, limit"
+msgstr ""
+
+#: ../../api/legacy-api.rst:354 ../../api/legacy-api.rst:402
+msgid "result-int (defaults: offset=0, limit=20)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:354 ../../api/legacy-api.rst:402
+msgid "offset=40&amp;limit=20"
+msgstr ""
+
+#: ../../api/legacy-api.rst:354 ../../api/legacy-api.rst:402
+msgid ""
+"Pagination options. Offset is the number of the first result and limit is "
+"the number of results to return."
+msgstr ""
+
+#: ../../api/legacy-api.rst:359 ../../api/legacy-api.rst:398
+msgid "all_fields"
+msgstr ""
+
+#: ../../api/legacy-api.rst:359 ../../api/legacy-api.rst:398
+msgid "0 (default) or 1"
+msgstr ""
+
+#: ../../api/legacy-api.rst:359 ../../api/legacy-api.rst:398
+msgid "all_fields=1"
+msgstr ""
+
+#: ../../api/legacy-api.rst:359
+msgid ""
+"Each matching search result is given as either a dataset name (0) or the "
+"full dataset record (1)."
+msgstr ""
+
+#: ../../api/legacy-api.rst:367
+msgid ""
+"filter_by_openness and filter_by_downloadable were dropped from CKAN version"
+" 1.5 onwards."
+msgstr ""
+
+#: ../../api/legacy-api.rst:371
+msgid ""
+"Only public datasets can be accessed via the legacy search API, regardless "
+"of the provided authorization. If you need to access private datasets via "
+"the API you will need to use the `package_search` method of the "
+":doc:`index`."
+msgstr ""
+
+#: ../../api/legacy-api.rst:376
+msgid "**Resource Parameters**"
+msgstr ""
+
+#: ../../api/legacy-api.rst:379 ../../api/legacy-api.rst:418
+msgid "Example"
+msgstr ""
+
+#: ../../api/legacy-api.rst:381
+msgid "url, format, description"
+msgstr ""
+
+#: ../../api/legacy-api.rst:381
+msgid ""
+"Criteria to search the dataset fields for. URL-encoded search text. This "
+"search string must be found somewhere within the field to match. Case "
+"insensitive."
+msgstr ""
+
+#: ../../api/legacy-api.rst:388
+msgid "['url':'www.statistics.org']"
+msgstr ""
+
+#: ../../api/legacy-api.rst:393
+msgid "hash"
+msgstr ""
+
+#: ../../api/legacy-api.rst:393
+msgid "hash=b0d7c260-35d4-42ab-9e3d-c1f4db9bc2f0"
+msgstr ""
+
+#: ../../api/legacy-api.rst:393
+msgid ""
+"Searches for an match of the hash field. An exact match or match up to the "
+"length of the hash given."
+msgstr ""
+
+#: ../../api/legacy-api.rst:398
+msgid ""
+"Each matching search result is given as either an ID (0) or the full "
+"resource record"
+msgstr ""
+
+#: ../../api/legacy-api.rst:410
+msgid ""
+"Powerful searching from the command-line can be achieved with curl and the "
+"qjson parameter. In this case you need to remember to escapt the curly "
+"braces and use url encoding (e.g. spaces become ``%20``). For example::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:415
+msgid "**Revision Parameters**"
+msgstr ""
+
+#: ../../api/legacy-api.rst:420
+msgid "since_time"
+msgstr ""
+
+#: ../../api/legacy-api.rst:420
+msgid "Date-Time"
+msgstr ""
+
+#: ../../api/legacy-api.rst:420
+msgid "since_time=2010-05-05T19:42:45.854533"
+msgstr ""
+
+#: ../../api/legacy-api.rst:420
+msgid "The time can be less precisely stated (e.g 2010-05-05)."
+msgstr ""
+
+#: ../../api/legacy-api.rst:423
+msgid "since_id"
+msgstr ""
+
+#: ../../api/legacy-api.rst:423
+msgid "Uuid"
+msgstr ""
+
+#: ../../api/legacy-api.rst:423
+msgid "since_id=6c9f32ef-1f93-4b2f-891b-fd01924ebe08"
+msgstr ""
+
+#: ../../api/legacy-api.rst:423
+msgid "The stated id will not be included in the results."
+msgstr ""
+
+#: ../../api/legacy-api.rst:429
+msgid "Util API"
+msgstr ""
+
+#: ../../api/legacy-api.rst:431
+msgid ""
+"The Util API provides various utility APIs -- e.g. auto-completion APIs used"
+" by front-end javascript."
+msgstr ""
+
+#: ../../api/legacy-api.rst:434
+msgid ""
+"All Util APIs are read-only. The response format is JSON. Javascript calls "
+"may want to use the JSONP formatting."
+msgstr ""
+
+#: ../../api/legacy-api.rst:439
+msgid "dataset autocomplete"
+msgstr ""
+
+#: ../../api/legacy-api.rst:441
+msgid ""
+"There an autocomplete API for package names which matches on name or title."
+msgstr ""
+
+#: ../../api/legacy-api.rst:443 ../../api/legacy-api.rst:461
+msgid "This URL:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:449 ../../api/legacy-api.rst:467
+msgid "Returns:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:457
+msgid "tag autocomplete"
+msgstr ""
+
+#: ../../api/legacy-api.rst:459
+msgid "There is also an autocomplete API for tags which looks like this:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:474
+msgid "resource format autocomplete"
+msgstr ""
+
+#: ../../api/legacy-api.rst:476
+msgid ""
+"Similarly, there is an autocomplete API for the resource format field which "
+"is available at:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:483
+msgid "This returns:"
+msgstr ""
+
+#: ../../api/legacy-api.rst:490
+msgid "markdown"
+msgstr ""
+
+#: ../../api/legacy-api.rst:492
+msgid ""
+"Takes a raw markdown string and returns a corresponding chunk of HTML. CKAN "
+"uses the basic Markdown format with some modifications (for security) and "
+"useful additions (e.g. auto links to datasets etc. e.g. ``dataset:river-"
+"quality``)."
+msgstr ""
+
+#: ../../api/legacy-api.rst:494 ../../api/legacy-api.rst:507
+msgid "Example::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:498 ../../api/legacy-api.rst:522
+#: ../../api/legacy-api.rst:533 ../../api/legacy-api.rst:545
+msgid "Returns::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:503
+msgid "is slug valid"
+msgstr ""
+
+#: ../../api/legacy-api.rst:505
+msgid ""
+"Checks a name is valid for a new dataset (package) or group, with respect to"
+" it being used already."
+msgstr ""
+
+#: ../../api/legacy-api.rst:511
+msgid "Response::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:516
+msgid "munge package name"
+msgstr ""
+
+#: ../../api/legacy-api.rst:518
+msgid ""
+"For taking an readable identifier and munging it to ensure it is a valid "
+"dataset id. Symbols and whitespeace are converted into dashes. Example::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:527
+msgid "munge title to package name"
+msgstr ""
+
+#: ../../api/legacy-api.rst:529
+msgid ""
+"For taking a title of a package and munging it to a readable and valid "
+"dataset id. Symbols and whitespeace are converted into dashes, with multiple"
+" dashes collapsed. Ensures that long titles with a year at the end preserves"
+" the year should it need to be shortened. Example::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:539
+msgid "munge tag"
+msgstr ""
+
+#: ../../api/legacy-api.rst:541
+msgid ""
+"For taking a readable word/phrase and munging it to a valid tag (name). "
+"Symbols and whitespeace are converted into dashes. Example::"
+msgstr ""
+
+#: ../../api/legacy-api.rst:552
+msgid "Status Codes"
+msgstr ""
+
+#: ../../api/legacy-api.rst:554
+msgid "Standard HTTP status codes are used to signal method outcomes."
+msgstr ""
+
+#: ../../api/legacy-api.rst:557
+msgid "Code"
+msgstr ""
+
+#: ../../api/legacy-api.rst:559
+msgid "200"
+msgstr ""
+
+#: ../../api/legacy-api.rst:559
+msgid "OK"
+msgstr ""
+
+#: ../../api/legacy-api.rst:560
+msgid "201"
+msgstr ""
+
+#: ../../api/legacy-api.rst:560
+msgid "OK and new object created (referred to in the Location header)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:561
+msgid "301"
+msgstr ""
+
+#: ../../api/legacy-api.rst:561
+msgid "Moved Permanently"
+msgstr ""
+
+#: ../../api/legacy-api.rst:562
+msgid "400"
+msgstr ""
+
+#: ../../api/legacy-api.rst:562
+msgid "Bad Request"
+msgstr ""
+
+#: ../../api/legacy-api.rst:563
+msgid "403"
+msgstr ""
+
+#: ../../api/legacy-api.rst:563
+msgid "Not Authorized"
+msgstr ""
+
+#: ../../api/legacy-api.rst:564
+msgid "404"
+msgstr ""
+
+#: ../../api/legacy-api.rst:564
+msgid "Not Found"
+msgstr ""
+
+#: ../../api/legacy-api.rst:565
+msgid "409"
+msgstr ""
+
+#: ../../api/legacy-api.rst:565
+msgid "Conflict (e.g. name already exists)"
+msgstr ""
+
+#: ../../api/legacy-api.rst:566
+msgid "500"
+msgstr ""
+
+#: ../../api/legacy-api.rst:566
+msgid "Service Error"
+msgstr ""

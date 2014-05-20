@@ -1,0 +1,151 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/html.rst:3
+msgid "HTML coding standards"
+msgstr ""
+
+#: ../../contributing/html.rst:7
+msgid ":doc:`string-i18n`"
+msgstr ""
+
+#: ../../contributing/html.rst:8
+msgid "How to mark strings for translation."
+msgstr ""
+
+#: ../../contributing/html.rst:12
+msgid "Formatting"
+msgstr ""
+
+#: ../../contributing/html.rst:14
+msgid ""
+"All HTML documents must use **two spaces** for indentation and there should "
+"be no trailing whitespace. XHTML syntax must be used (this is more a Genshi "
+"requirement) and all attributes must use double quotes around attributes. ::"
+msgstr ""
+
+#: ../../contributing/html.rst:23
+msgid ""
+"HTML5 elements should be used where appropriate reserving ``<div>`` and "
+"``<span>`` elements for situations where there is no semantic value (such as"
+" wrapping elements to provide styling hooks)."
+msgstr ""
+
+#: ../../contributing/html.rst:29
+msgid "Doctype and layout"
+msgstr ""
+
+#: ../../contributing/html.rst:31
+msgid ""
+"All documents must be using the HTML5 doctype and the ``<html>`` element "
+"should have a ``\"lang\"`` attribute. The ``<head>`` should also at a "
+"minimum include ``\"viewport\"`` and ``\"charset\"`` meta tags. ::"
+msgstr ""
+
+#: ../../contributing/html.rst:47
+msgid "Forms"
+msgstr ""
+
+#: ../../contributing/html.rst:49
+msgid ""
+"Form fields must always include a ``<label>`` element with a ``\"for\"`` "
+"attribute matching the ``\"id\"`` on the input. This helps accessibility by "
+"focusing the input when the label is clicked, it also helps screen readers "
+"match labels to their respective inputs. ::"
+msgstr ""
+
+#: ../../contributing/html.rst:57
+msgid ""
+"Each ``<input>`` should have an ``\"id\"`` that is unique to the page. It "
+"does not have to match the ``\"name\"`` attribute."
+msgstr ""
+
+#: ../../contributing/html.rst:60
+msgid ""
+"Forms should take advantage of the new HTML5 input types where they make "
+"sense to do so, placeholder attributes should also be included where "
+"relevant. Including these can provided enhancements in browsers that support"
+" them such as tailored inputs and keyboards. ::"
+msgstr ""
+
+#: ../../contributing/html.rst:78
+msgid "Wufoo provides an `excellent reference`_ for these attributes."
+msgstr ""
+
+#: ../../contributing/html.rst:84
+msgid "Including meta data"
+msgstr ""
+
+#: ../../contributing/html.rst:86
+msgid ""
+"Classes should ideally only be used as styling hooks. If you need to include"
+" additional data in the html document, for example to pass data to "
+"JavaScript, then the HTML5 ``data-`` attributes should be used. ::"
+msgstr ""
+
+#: ../../contributing/html.rst:92
+msgid ""
+"These can then be accessed easily via jQuery using the ``.data()`` method. "
+"::"
+msgstr ""
+
+#: ../../contributing/html.rst:99
+msgid ""
+"One thing to note is that the JavaScript API for datasets will convert all "
+"attribute names into camelCase. So ``\"data-file-format\"`` will become "
+"``fileFormat``."
+msgstr ""
+
+#: ../../contributing/html.rst:102
+msgid "For example: ::"
+msgstr ""
+
+#: ../../contributing/html.rst:106
+msgid "Will become: ::"
+msgstr ""
+
+#: ../../contributing/html.rst:113
+msgid "Targeting Internet Explorer"
+msgstr ""
+
+#: ../../contributing/html.rst:115
+msgid ""
+"Targeting lower versions of Internet Explorer (IE), those below version 9, "
+"should be handled by the stylesheets. Small fixes should be provided inline "
+"using the ``.ie`` specific class names. Larger fixes may require a separate "
+"stylesheet but try to avoid this if at all possible."
+msgstr ""
+
+#: ../../contributing/html.rst:120
+msgid "Adding IE specific classes: ::"
+msgstr ""
+
+#: ../../contributing/html.rst:128
+msgid "Only add lines for classes that are actually being used."
+msgstr ""
+
+#: ../../contributing/html.rst:130
+msgid "These can then be used within the CSS: ::"
+msgstr ""
+
+#: ../../contributing/html.rst:148
+msgid "i18n"
+msgstr ""
+
+#: ../../contributing/html.rst:150
+msgid "Don't include line breaks within ``<p>`` blocks.  ie do this: ::"
+msgstr ""
+
+#: ../../contributing/html.rst:155
+msgid "And **not**: ::"
+msgstr ""

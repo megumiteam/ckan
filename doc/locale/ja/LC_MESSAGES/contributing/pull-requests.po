@@ -1,0 +1,129 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/pull-requests.rst:3
+msgid "Making a pull request"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:5
+msgid ""
+"Once you've written some CKAN code or documentation, you can submit it for "
+"review and merge into the central CKAN git repository by making a pull "
+"request. This section will walk you through the steps for making a pull "
+"request."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:10
+msgid "Create a git branch"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:12
+msgid ""
+"Each logically separate piece of work (e.g. a new feature, a bug fix, a new "
+"docs page, or a set of improvements to a docs page) should be developed on "
+"its own branch forked from the master branch."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:16
+msgid ""
+"The name of the branch should include the issue number (if this work has an "
+"issue in the `CKAN issue tracker`_), and a brief one-line synopsis of the "
+"work, for example::"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:23
+msgid "Fork CKAN on GitHub"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:25
+msgid ""
+"Sign up for a free account on GitHub and `fork CKAN "
+"<https://help.github.com/articles/fork-a-repo>`_, so that you have somewhere"
+" to publish your work."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:29
+msgid ""
+"Add your CKAN fork to your local CKAN git repo as a git remote. Replace "
+"``USERNAME`` with  your GitHub username::"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:35
+msgid "Commit and push your changes"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:37
+msgid ""
+"Commit your changes on your feature branch, and push your branch to GitHub. "
+"For example, make sure you're currently on your feature branch then run "
+"these commands::"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:45
+msgid ""
+"When writing your git commit messages, try to follow the :doc:`commit-"
+"messages` guidelines."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:49
+msgid "Send a pull request"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:51
+msgid ""
+"Once your work on a branch is complete and is ready to be merged into the "
+"master branch, `create a pull request on GitHub`_.  A member of the CKAN "
+"team will review your work and provide feedback on the pull request page. "
+"The reviewer may ask you to make some changes. Once your pull request has "
+"passed the review, the reviewer will merge your code into the master branch "
+"and it will become part of CKAN!"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:58
+msgid "When submitting a pull request:"
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:60
+msgid ""
+"Your branch should contain one logically separate piece of work, and not any"
+" unrelated changes."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:63
+msgid "You should have good commit messages, see :doc:`commit-messages`."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:65
+msgid ""
+"Your branch should contain new or changed tests for any new or changed code,"
+" and all the CKAN tests should pass on your branch, see :doc:`test`."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:69
+msgid ""
+"Your branch should contain new or updated documentation for any new or "
+"updated code, see :doc:`documentation`."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:72
+msgid ""
+"Your branch should be up to date with the master branch of the central CKAN "
+"repo, so pull the central master branch into your feature branch before "
+"submitting your pull request."
+msgstr ""
+
+#: ../../contributing/pull-requests.rst:76
+msgid ""
+"For long-running feature branches, it's a good idea to pull master into the "
+"feature branch periodically so that the two branches don't diverge too much."
+msgstr ""

@@ -1,0 +1,78 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/multilingual.rst:3
+msgid "Multilingual Extension"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:5
+msgid ""
+"For translating CKAN's web interface see :doc:`/contributing/i18n`. In "
+"addition to user interface internationalization, a CKAN administrator can "
+"also enter translations into CKAN's database for terms that may appear in "
+"the contents of datasets, groups or tags created by users. When a user is "
+"viewing the CKAN site, if the translation terms database contains a "
+"translation in the user's language for the name or description of a dataset "
+"or resource, the name of a tag or group, etc. then the translated term will "
+"be shown to the user in place of the original."
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:8
+msgid "Setup and Configuration"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:10
+msgid ""
+"By default term translations are disabled. To enable them, you have to "
+"specify the multilingual plugins using the ``ckan.plugins`` setting in your "
+"CKAN configuration file, for example:"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:17
+msgid ""
+"Of course, you won't see any terms getting translated until you load some "
+"term translations into the database. You can do this using the "
+"``term_translation_update`` and ``term_translation_update_many`` actions of "
+"the CKAN API, See :doc:`/api/index` for more details."
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:20
+msgid "Loading Test Translations"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:22
+msgid ""
+"If you want to quickly test the term translation feature without having to "
+"provide your own translations, you can load CKAN's test translations into "
+"the database by running this command from your shell:"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:28
+msgid "See :doc:`/maintaining/paster` for more details."
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:31
+msgid "Testing The Multilingual Extension"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:33
+msgid ""
+"If you have a source installation of CKAN you can test the multilingual "
+"extension by running the tests located in ``ckanext/multilingual/tests``. "
+"You must first install the packages needed for running CKAN tests into your "
+"virtual environment, and then run this command from your shell:"
+msgstr ""
+
+#: ../../maintaining/multilingual.rst:39
+msgid "See :doc:`/contributing/test` for more information."
+msgstr ""

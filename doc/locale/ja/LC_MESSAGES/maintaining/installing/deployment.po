@@ -1,0 +1,305 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/installing/deployment.rst:3
+msgid "Deploying a source install"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:5
+msgid ""
+"Once you've installed CKAN from source by following the instructions in :doc"
+":`install-from-source`, you can follow these instructions to deploy your "
+"CKAN site using a production web server (Apache), so that it's available to "
+"the Internet."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:12
+msgid ""
+"If you installed CKAN from package you don't need to follow this section, "
+"your site is already deployed using Apache and modwsgi as described below."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:15
+msgid ""
+"Because CKAN uses WSGI, a standard interface between web servers and Python "
+"web applications, CKAN can be used with a number of different web server and"
+" deployment configurations including:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:19
+msgid "Apache_ with the modwsgi Apache module proxied with Nginx_ for caching"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:20
+msgid "Apache_ with the modwsgi Apache module"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:21
+msgid "Apache_ with paster and reverse proxy"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:22
+msgid "Nginx_ with paster and reverse proxy"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:23
+msgid "Nginx_ with uwsgi"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:28
+msgid ""
+"This guide explains how to deploy CKAN using Apache and modwsgi and proxied "
+"with Nginx on an Ubuntu server. These instructions have been tested on "
+"Ubuntu 12.04."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:32
+msgid ""
+"If run into any problems following these instructions, see "
+"`Troubleshooting`_ below."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:37
+msgid "1. Create a ``production.ini`` File"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:39
+msgid ""
+"Create your site's ``production.ini`` file, by copying the "
+"``development.ini`` file you created in :doc:`install-from-source` earlier:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:49
+msgid "2. Install Apache and modwsgi"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:51
+msgid ""
+"Install Apache_ (a web server) and modwsgi_ (an Apache module that adds WSGI"
+" support to Apache)::"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:61
+msgid "3. Install Nginx"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:63
+msgid ""
+"Install Nginx_ (a web server) which will proxy the content from Apache_ and "
+"add a layer of caching::"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:70
+msgid "4. Install an email server"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:72
+msgid ""
+"If one isn't installed already, install an email server to enable CKAN's "
+"email features (such as sending traceback emails to sysadmins when crashes "
+"occur, or sending new activity :doc:`email notifications </maintaining"
+"/email-notifications>` to users). For example, to install the `Postfix "
+"<http://www.postfix.org/>`_ email server, do::"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:80
+msgid ""
+"When asked to choose a Postfix configuration, choose *Internet Site* and "
+"press return."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:86
+msgid "5. Create the WSGI script file"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:88
+msgid ""
+"Create your site's WSGI script file |apache.wsgi| with the following "
+"contents:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:103
+msgid ""
+"The modwsgi Apache module will redirect requests to your web server to this "
+"WSGI script file. The script file then handles those requests by directing "
+"them on to your CKAN instance (after first configuring the Python "
+"environment for CKAN to run in)."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:111
+msgid "6. Create the Apache config file"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:113
+msgid ""
+"Create your site's Apache config file at |apache_config_file|, with the "
+"following contents:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:135
+msgid ""
+"Replace ``default.ckanhosted.com`` and ``www.default.ckanhosted.com`` with "
+"the domain name for your site."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:138
+msgid ""
+"This tells the Apache modwsgi module to redirect any requests to the web "
+"server to the WSGI script that you created above. Your WSGI script in turn "
+"directs the requests to your CKAN instance."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:144
+msgid "7. Modify the Apache ports.conf file"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:146
+msgid ""
+"Open ``/etc/apache2/ports.conf``. Look in the file for the following lines:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:153
+msgid "Change the entries from ``80`` to ``8080`` to look like the following:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:161
+msgid "8. Create the Nginx config file"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:163
+msgid ""
+"Create your site's Nginx config file at |nginx_config_file|, with the "
+"following contents:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:190
+msgid "9. Enable your CKAN site"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:192
+msgid "Finally, enable your CKAN site in Apache:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:201
+msgid ""
+"You should now be able to visit your server in a web browser and see your "
+"new CKAN instance."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:207
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:210
+msgid "Default Apache welcome page"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:212
+msgid ""
+"If you see a default Apache welcome page where your CKAN front page should "
+"be, it may be because the default Apache config file is overriding your CKAN"
+" config file (both use port 80), so disable it and restart Apache:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:222
+msgid "403 Forbidden and 500 Internal Server Error"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:224
+msgid ""
+"If you see a 403 Forbidden or 500 Internal Server Error page where your CKAN"
+" front page should be, you may have a problem with your unix file "
+"permissions. The Apache web server needs to have permission to access your "
+"WSGI script file and all of its parent directories. The permissions of the "
+"file should look like ``-rw-r--r--`` and the permissions of each of its "
+"parent directories should look like ``drwxr-xr-x``."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:232
+msgid "IOError: sys.stdout access restricted by mod_wsgi"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:234
+msgid ""
+"If you're getting 500 Internal Server Error pages and you see ``IOError: "
+"sys.stdout access restricted by mod_wsgi`` in your log files, it means that "
+"something in your WSGI application (e.g. your WSGI script file, your CKAN "
+"instance, or one of your CKAN extensions) is trying to print to stdout, for "
+"example by using standard Python ``print`` statements. WSGI applications are"
+" not allowed to write to stdout. Possible solutions include:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:241
+msgid ""
+"Remove the offending print statements. One option is to replace print "
+"statements with statements like ``print >> sys.stderr, \"...\"``"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:244
+msgid "Redirect all print statements to stderr::"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:249
+msgid ""
+"Allow your application to print to stdout by putting ``WSGIRestrictStdout "
+"Off`` in your Apache config file (not recommended)."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:251
+msgid "Also see https://code.google.com/p/modwsgi/wiki/ApplicationIssues"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:254
+msgid "Log files"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:256
+msgid ""
+"In general, if it's not working look in the log files in "
+"``/var/log/apache2`` for error messages. ``ckan_default.error.log`` should "
+"be particularly interesting."
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:261
+msgid "modwsgi wiki"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:263
+msgid ""
+"Some pages on the modwsgi wiki have some useful information for "
+"troubleshooting modwsgi problems:"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:265
+msgid "https://code.google.com/p/modwsgi/wiki/ApplicationIssues"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:266
+msgid "http://code.google.com/p/modwsgi/wiki/DebuggingTechniques"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:267
+msgid "http://code.google.com/p/modwsgi/wiki/QuickConfigurationGuide"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:268
+msgid "http://code.google.com/p/modwsgi/wiki/ConfigurationGuidelines"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:269
+msgid "http://code.google.com/p/modwsgi/wiki/FrequentlyAskedQuestions"
+msgstr ""
+
+#: ../../maintaining/installing/deployment.rst:270
+msgid "http://code.google.com/p/modwsgi/wiki/ConfigurationIssues"
+msgstr ""

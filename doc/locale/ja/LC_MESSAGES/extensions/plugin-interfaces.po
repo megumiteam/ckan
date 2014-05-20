@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../extensions/plugin-interfaces.rst:2
+msgid "Plugin interfaces reference"
+msgstr ""
+
+#: ../../extensions/plugin-interfaces.rst:4
+msgid ""
+":py:mod:`ckan.plugins` contains a few core classes and functions for plugins"
+" to use:"
+msgstr ""
+
+#: ../../extensions/plugin-interfaces.rst:8
+msgid "``ckan.plugins``"
+msgstr ""
+
+#: ../../extensions/plugin-interfaces.rst:16
+msgid "``ckan.plugins.interfaces``"
+msgstr ""

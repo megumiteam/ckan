@@ -1,0 +1,92 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../maintaining/stats.rst:5
+msgid "Stats Extension"
+msgstr ""
+
+#: ../../maintaining/stats.rst:7
+msgid ""
+"CKAN's stats extension analyzes your CKAN database and displays several "
+"tables and graphs with statistics about your site, including:"
+msgstr ""
+
+#: ../../maintaining/stats.rst:10
+msgid "Total number of datasets"
+msgstr ""
+
+#: ../../maintaining/stats.rst:11
+msgid "Dataset revisions per week"
+msgstr ""
+
+#: ../../maintaining/stats.rst:12
+msgid "Top-rated datasets"
+msgstr ""
+
+#: ../../maintaining/stats.rst:13
+msgid "Most-edited Datasets"
+msgstr ""
+
+#: ../../maintaining/stats.rst:14
+msgid "Largest groups"
+msgstr ""
+
+#: ../../maintaining/stats.rst:15
+msgid "Top tags"
+msgstr ""
+
+#: ../../maintaining/stats.rst:16
+msgid "Users owning most datasets"
+msgstr ""
+
+#: ../../maintaining/stats.rst:20
+msgid ""
+"CKAN's :ref:`built-in page view tracking feature <tracking>`, which tracks "
+"visits to pages."
+msgstr ""
+
+#: ../../maintaining/stats.rst:25
+msgid ""
+"`ckanext-googleanalytics <https://github.com/ckan/ckanext-googleanalytics>`_"
+msgstr ""
+
+#: ../../maintaining/stats.rst:26
+msgid "A CKAN extension that integrates Google Analytics into CKAN."
+msgstr ""
+
+#: ../../maintaining/stats.rst:30
+msgid "Enabling the Stats Extension"
+msgstr ""
+
+#: ../../maintaining/stats.rst:32
+msgid ""
+"To enable the stats extensions add ``stats`` to the :ref:`ckan.plugins` "
+"option in your CKAN config file, for example::"
+msgstr ""
+
+#: ../../maintaining/stats.rst:37
+msgid ""
+"If you also set the :ref:`ckanext.stats.cache_enabled` option to ``true``, "
+"CKAN will cache the stats for one day instead of calculating them each time "
+"a user visits the stats page."
+msgstr ""
+
+#: ../../maintaining/stats.rst:42
+msgid "Viewing the Statistics"
+msgstr ""
+
+#: ../../maintaining/stats.rst:44
+msgid ""
+"To view the statistics reported by the stats extension, visit the ``/stats``"
+" page, for example: http://demo.ckan.org/stats"
+msgstr ""

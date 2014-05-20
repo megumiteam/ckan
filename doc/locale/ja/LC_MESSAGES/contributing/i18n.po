@@ -1,0 +1,385 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/i18n.rst:3
+msgid "Translating CKAN"
+msgstr ""
+
+#: ../../contributing/i18n.rst:5
+msgid ""
+"CKAN is used in many countries, and adding a new language to the web "
+"interface is a simple process."
+msgstr ""
+
+#: ../../contributing/i18n.rst:7
+msgid ""
+"CKAN uses the url to determine which language is used. An example would be "
+"``/fr/dataset`` would be shown in french.  If CKAN is running under a "
+"directory then an example would be ``/root/fr/dataset``.  For custom paths "
+"check the :ref:`ckan.root_path` config option."
+msgstr ""
+
+#: ../../contributing/i18n.rst:11
+msgid ""
+"Developers, see :doc:`string-i18n` for how to mark strings for translation "
+"in CKAN code."
+msgstr ""
+
+#: ../../contributing/i18n.rst:18
+msgid "Supported languages"
+msgstr ""
+
+#: ../../contributing/i18n.rst:20
+msgid ""
+"CKAN already supports numerous languages. To check whether your language is "
+"supported, look in the source at ``ckan/i18n`` for translation files. "
+"Languages are named using two-letter ISO language codes (e.g. ``es``, "
+"``de``)."
+msgstr ""
+
+#: ../../contributing/i18n.rst:22
+msgid ""
+"If your language is present, you can switch the default language simply by "
+"setting the ``ckan.locale_default`` option in your CKAN config file, as "
+"described in :ref:`config-i18n`. For example, to switch to German::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:26
+msgid ":ref:`config-i18n`"
+msgstr ""
+
+#: ../../contributing/i18n.rst:28
+msgid ""
+"If your language is not supported yet, the remainder of this section section"
+" provides instructions on how to prepare a translation file and add it to "
+"CKAN."
+msgstr ""
+
+#: ../../contributing/i18n.rst:33
+msgid "Adding a new language"
+msgstr ""
+
+#: ../../contributing/i18n.rst:35
+msgid ""
+"If you want to add an entirely new language to CKAN, you have two options."
+msgstr ""
+
+#: ../../contributing/i18n.rst:37
+msgid ""
+":ref:`i18n-transifex`. Creating translation files using Transifex, the open "
+"source translation software."
+msgstr ""
+
+#: ../../contributing/i18n.rst:38
+msgid ""
+":ref:`i18n-manual`. Creating translation files manually in your own branch."
+msgstr ""
+
+#: ../../contributing/i18n.rst:40
+msgid ""
+"Translating CKAN in Transifex is only enabled when a 'call for translations'"
+" is issued."
+msgstr ""
+
+#: ../../contributing/i18n.rst:46
+msgid "Transifex setup"
+msgstr ""
+
+#: ../../contributing/i18n.rst:48
+msgid ""
+"Transifex, the open translation platform, provides a simple web interface "
+"for writing translations and is widely used for CKAN internationalization."
+msgstr ""
+
+#: ../../contributing/i18n.rst:50
+msgid ""
+"Using Transifex makes it easier to handle collaboration, with an online "
+"editor that makes the process more accessible."
+msgstr ""
+
+#: ../../contributing/i18n.rst:52
+msgid ""
+"Existing CKAN translation projects can be found at: "
+"https://www.transifex.net/projects/p/ckan/teams/"
+msgstr ""
+
+#: ../../contributing/i18n.rst:54
+msgid ""
+"When leading up to a CKAN release, the strings are loaded onto Transifex and"
+" ckan-discuss list is emailed to encourage translation work. When the "
+"release is done, the latest translations on Transifex are checked back into "
+"CKAN."
+msgstr ""
+
+#: ../../contributing/i18n.rst:58
+msgid "Transifex administration"
+msgstr ""
+
+#: ../../contributing/i18n.rst:60
+msgid "The Transifex workflow is as follows:"
+msgstr ""
+
+#: ../../contributing/i18n.rst:62
+msgid "Install transifex command-line utilities"
+msgstr ""
+
+#: ../../contributing/i18n.rst:63
+msgid "``tx init`` in CKAN to connect to Transifex"
+msgstr ""
+
+#: ../../contributing/i18n.rst:64
+msgid "Run ``python setup.py extract_messages`` on the CKAN source"
+msgstr ""
+
+#: ../../contributing/i18n.rst:65
+msgid "Upload the local .pot file via command-line ``tx push``"
+msgstr ""
+
+#: ../../contributing/i18n.rst:66
+msgid "Get people to complete translations on Transifex"
+msgstr ""
+
+#: ../../contributing/i18n.rst:67
+msgid "Pull locale .po files via ``tx pull``"
+msgstr ""
+
+#: ../../contributing/i18n.rst:68
+msgid "``python setup.py compile_catalog``"
+msgstr ""
+
+#: ../../contributing/i18n.rst:69
+msgid "Git Commit and push po and mo files"
+msgstr ""
+
+#: ../../contributing/i18n.rst:75
+msgid "Manual setup"
+msgstr ""
+
+#: ../../contributing/i18n.rst:77
+msgid ""
+"Please keep the CKAN core developers aware of new languages created in this "
+"way."
+msgstr ""
+
+#: ../../contributing/i18n.rst:79
+msgid ""
+"All the English strings in CKAN are extracted into the ``ckan.pot`` file, "
+"which can be found in ``ckan/i18n``."
+msgstr ""
+
+#: ../../contributing/i18n.rst:81
+msgid ""
+"For information, the pot file was created with the ``babel`` command "
+"``python setup.py extract_messages``."
+msgstr ""
+
+#: ../../contributing/i18n.rst:84
+msgid "0. Install Babel"
+msgstr ""
+
+#: ../../contributing/i18n.rst:86
+msgid ""
+"You need Python's ``babel`` library (Debian package ``python-pybabel``). "
+"Install it as follows with pip::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:91
+msgid "1. Create a 'po' file for your language"
+msgstr ""
+
+#: ../../contributing/i18n.rst:93
+msgid "First, grab the CKAN i18n repository::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:97
+msgid ""
+"Then create a translation file for your language (a po file) using the pot "
+"file::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:101
+msgid ""
+"Replace ``YOUR_LANGUAGE`` with the two-letter ISO language code (e.g. "
+"``es``, ``de``)."
+msgstr ""
+
+#: ../../contributing/i18n.rst:103
+msgid ""
+"In future, when the pot file is updated, you can update the strings in your "
+"po file, while preserving your po edits, by doing::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:108
+msgid "2. Do the translation"
+msgstr ""
+
+#: ../../contributing/i18n.rst:110
+msgid ""
+"Edit the po file and translate the strings. For more information on how to "
+"do this, see `the Pylons book <http://pylonsbook.com/en/1.1"
+"/internationalization-and-localization.html>`_."
+msgstr ""
+
+#: ../../contributing/i18n.rst:112
+msgid ""
+"We recommend using a translation tool, such as `poedit "
+"<http://www.poedit.net/>`_, to check the syntax is correct. There are also "
+"extensions for editors such as emacs."
+msgstr ""
+
+#: ../../contributing/i18n.rst:115
+msgid "3. Commit the translation"
+msgstr ""
+
+#: ../../contributing/i18n.rst:117
+msgid ""
+"When the po is complete, create a branch in your source, then commit it to "
+"the CKAN i18n repo::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:126
+msgid "4. Compile a translation"
+msgstr ""
+
+#: ../../contributing/i18n.rst:128
+msgid ""
+"Once you have created a translation (either with Transifex or manually) you "
+"can build the po file into a ``mo`` file, ready for deployment."
+msgstr ""
+
+#: ../../contributing/i18n.rst:130
+msgid ""
+"With either method of creating the po file, it should be found in the CKAN "
+"i18n repository: ``ckan/i18n/YOUR_LANGUAGE/LC_MESSAGES/ckan.po``"
+msgstr ""
+
+#: ../../contributing/i18n.rst:132
+msgid "In this repo, compile the po file like this::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:136
+msgid ""
+"As before, replace ``YOUR_LANGUAGE`` with your language short code, e.g. "
+"``es``, ``de``."
+msgstr ""
+
+#: ../../contributing/i18n.rst:138
+msgid ""
+"This will result in a binary 'mo' file of your translation at "
+"``ckan/i18n/YOUR_LANGUAGE/LC_MESSAGES/ckan.mo``."
+msgstr ""
+
+#: ../../contributing/i18n.rst:141
+msgid "5. (optional) Deploy the translation"
+msgstr ""
+
+#: ../../contributing/i18n.rst:143
+msgid ""
+"This section explains how to deploy your translation automatically to your "
+"host, if you are using a remote host."
+msgstr ""
+
+#: ../../contributing/i18n.rst:145
+msgid ""
+"It assumes a standard layout on the server (you may want to check before you"
+" upload!) and that you are deploying to ``hu.ckan.net`` for language ``hu``."
+msgstr ""
+
+#: ../../contributing/i18n.rst:147
+msgid ""
+"Once you have a compiled translation file, for automated deployment to your "
+"host do::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:151
+msgid ""
+"See the ``config_0`` options if more configuration is needed e.g. of host or"
+" location."
+msgstr ""
+
+#: ../../contributing/i18n.rst:153
+msgid "Alternatively, if you do not want to use fab, you can just scp::"
+msgstr ""
+
+#: ../../contributing/i18n.rst:158
+msgid "6. Configure the language"
+msgstr ""
+
+#: ../../contributing/i18n.rst:160
+msgid ""
+"Finally, once the mo file is in place, you can switch between the installed "
+"languages using the ``ckan.locale`` option in the CKAN config file, as "
+"described in :ref:`config-i18n`."
+msgstr ""
+
+#: ../../contributing/i18n.rst:164
+msgid "Translations management policy"
+msgstr ""
+
+#: ../../contributing/i18n.rst:166
+msgid ""
+"One of the aims of CKAN is to be accessible to the greatest number of users."
+" Translating the user interface to as many languages as possible plays a "
+"huge part in this, and users are encouraged to contribute to the existing "
+"translations or submit a new one. At the same time we need to ensure the "
+"stability between CKAN releases, so the following guidelines apply when "
+"managing translations:"
+msgstr ""
+
+#: ../../contributing/i18n.rst:173
+msgid ""
+"Translations are open on Transifex as soon as a release branch for a minor "
+"version is created. At this point the strings are not yet freezed and can "
+"still change, but hopefully not too much. An announcement email will be sent"
+" to the mailing list and via Transifex."
+msgstr ""
+
+#: ../../contributing/i18n.rst:178
+msgid ""
+"2-3 weeks before the actual release the strings are frozen. This means that "
+"no new strings will be added on this release line. A second announce email "
+"is sent at this point."
+msgstr ""
+
+#: ../../contributing/i18n.rst:182
+msgid ""
+"The translations will be kept open on Transifex after the release, and will "
+"be updated on each patch release, provided that:"
+msgstr ""
+
+#: ../../contributing/i18n.rst:185
+msgid ""
+"They pass a review like any other change merged into a patch release (ie "
+"they must not introducde backwards incompatible changes)."
+msgstr ""
+
+#: ../../contributing/i18n.rst:187
+msgid ""
+"Big changes like whole new languages (specially ones that introduce new "
+"features like RTL supporti, etc) should be tested and reviewed on a separate"
+" branch first."
+msgstr ""
+
+#: ../../contributing/i18n.rst:190
+msgid ""
+"Ultimately is up to the commiters and the release manager to decide if a new"
+" or updated translation is included in a patch release or needs to wait "
+"until the next minor release."
+msgstr ""
+
+#: ../../contributing/i18n.rst:194
+msgid ""
+"The *master* branch is not currently translated. Translations from the "
+"latest stable line (see :ref:`ckan-releases`) are cherry-picked into master "
+"after each minor or patch release."
+msgstr ""

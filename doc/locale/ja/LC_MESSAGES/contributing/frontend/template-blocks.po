@@ -1,0 +1,247 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/frontend/template-blocks.rst:3
+msgid "Template Blocks"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:5
+msgid ""
+"These blocks can be extended by child templates to replace or extend common "
+"CKAN functionality."
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:9
+msgid "Usage"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:11
+msgid ""
+"There are currently two base templates *base.html* which provides the bare "
+"HTML structure such as title, head and body tags as well as hooks for adding"
+" links, stylesheets and scripts. *page.html* defines the content structure "
+"and is the template that you'll likely want to use."
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:16
+msgid ""
+"To extend a template simply create a new template file and call ``{% extend "
+"%}`` then define the blocks that you wish to override."
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:21
+msgid "Blocks in page.html"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:23
+msgid ""
+"*page.html* extends the \"page\" block in *base.html* and provides the basic"
+" page structure for primary and secondary content."
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:27
+msgid "header"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:29
+msgid ""
+"Override the header on a page by page basis by extending this block. If "
+"making site wide header changes it is preferable to override the header.html"
+" file::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:38
+msgid "content"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:40
+msgid ""
+"The content block allows you to replace the entire content section of the "
+"page with your own markup if needed::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:50
+msgid "toolbar"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:52
+msgid ""
+"The toolbar is for content to be added at the top of the page such as the "
+"breadcrumb navigation. You can remove/replace this by extending this block::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:59
+msgid "breadcrumb"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:61
+msgid "Add a breadcrumb to the page by extending this element::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:68
+msgid "actions"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:70
+msgid "Add actions to the page by extending this element::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:77
+msgid "primary"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:79
+msgid "This block can be used to remove the entire primary content element::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:84
+msgid "primary_content"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:86
+msgid ""
+"The primary_content block can be used to add content to the page.  This is "
+"the main block that is likely to be used within a template::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:95
+msgid "secondary"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:97
+msgid ""
+"This block can be used to remove the entire secondary content element::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:102
+msgid "secondary_content"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:104
+msgid ""
+"The secondary_content block can be used to add content to the sidebar of the"
+" page. This is the main block that is likely to be used within a template::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:113
+msgid "footer"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:115
+msgid "Override the footer on a page by page basis by extending this block::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:121
+msgid ""
+"If making site wide header changes it is preferable to override the "
+"*footer.html*. Adding scripts should use the \"scripts\" block instead."
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:126
+msgid "Blocks in base.html"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:129
+msgid "doctype"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:131
+msgid "Allows the DOCTYPE to be set on a page by page basis::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:136
+msgid "htmltag"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:138
+msgid "Allows custom attributes to be added to the <html> tag::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:143
+msgid "headtag"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:145
+msgid "Allows custom attributes to be added to the <head> tag::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:150
+msgid "bodytag"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:152
+msgid "Allows custom attributes to be added to the <body> tag::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:157
+msgid "meta"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:159
+msgid ""
+"Add custom meta tags to the page. Call ``super()`` to get the default tags "
+"such as charset, viewport and generator::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:169
+msgid "title"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:171
+msgid ""
+"Add a custom title to the page by extending the title block. Call "
+"``super()`` to get the default page title::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:177
+msgid "links"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:179
+msgid ""
+"The links block allows you to add additional content before the stylesheets "
+"such as rss feeds and favicons in the same way as the meta block::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:187
+msgid "styles"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:189
+msgid ""
+"The styles block allows you to add additional stylesheets to the page in the"
+" same way as the meta block. Use `` super() `` to include the default "
+"stylesheets before or after your own::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:199
+msgid "page"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:201
+msgid ""
+"The page block allows you to add content to the page. Most of the time it is"
+" recommended that you extend one of the page.html templates in order to get "
+"the site header and footer. If you need a clean page then this is the block "
+"to use::"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:211
+msgid "scripts"
+msgstr ""
+
+#: ../../contributing/frontend/template-blocks.rst:213
+msgid ""
+"The scripts block allows you to add additonal scripts to the page. Use the "
+"``super()`` function to load the default scripts before/after your own::"
+msgstr ""

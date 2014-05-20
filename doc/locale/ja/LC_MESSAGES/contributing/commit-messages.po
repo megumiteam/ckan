@@ -1,0 +1,58 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/commit-messages.rst:3
+msgid "Writing commit messages"
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:5
+msgid ""
+"We use the version control system `git <http://git-scm.com/>`_ for our code "
+"and documentation, so when contributing code or docs you'll have to commit "
+"your changes to git and write a git commit message. Generally, follow the "
+"`commit guidelines from the Pro Git book`_:"
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:10
+msgid "Try to make each commit a logically separate, digestible changeset."
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:12
+msgid ""
+"The first line of the commit message should concisely summarise the "
+"changeset."
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:15
+msgid ""
+"Optionally, follow with a blank line and then a more detailed explanation of"
+" the changeset."
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:18
+msgid ""
+"Use the imperative present tense as if you were giving commands to the "
+"codebase to change its behaviour, e.g. *Add tests for...*, *make xyzzy do "
+"frotz...*, this helps to make the commit message easy to read."
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:24
+msgid ""
+"If your commit has an issue in the `CKAN issue tracker`_ put the issue "
+"number at the start of the first line of the commit message like this: "
+"``[#123]``. This makes the CKAN release manager's job much easier!"
+msgstr ""
+
+#: ../../contributing/commit-messages.rst:28
+msgid "Here's an example of a good CKAN commit message::"
+msgstr ""

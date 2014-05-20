@@ -1,0 +1,372 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/index.rst:3
+msgid "API guide"
+msgstr ""
+
+#: ../../api/index.rst:5
+msgid ""
+"This section documents CKAN's API, for developers who want to write code "
+"that interacts with CKAN sites and their data."
+msgstr ""
+
+#: ../../api/index.rst:8
+msgid ""
+"CKAN's **Action API** is a powerful, RPC-style API that exposes all of "
+"CKAN's core features to API clients. All of a CKAN website's core "
+"functionality (everything you can do with the web interface and more) can be"
+" used by external code that calls the CKAN API.  For example, using the CKAN"
+" API your app can:"
+msgstr ""
+
+#: ../../api/index.rst:13
+msgid ""
+"Get JSON-formatted lists of a site's datasets, groups or other CKAN objects:"
+msgstr ""
+
+#: ../../api/index.rst:15 ../../api/index.rst:281
+msgid "http://demo.ckan.org/api/3/action/package_list"
+msgstr ""
+
+#: ../../api/index.rst:17
+msgid "http://demo.ckan.org/api/3/action/group_list"
+msgstr ""
+
+#: ../../api/index.rst:19
+msgid "http://demo.ckan.org/api/3/action/tag_list"
+msgstr ""
+
+#: ../../api/index.rst:21
+msgid "Get a full JSON representation of a dataset, resource or other object:"
+msgstr ""
+
+#: ../../api/index.rst:23
+msgid ""
+"http://demo.ckan.org/api/3/action/package_show?id=adur_district_spending"
+msgstr ""
+
+#: ../../api/index.rst:25
+msgid "http://demo.ckan.org/api/3/action/tag_show?id=gold"
+msgstr ""
+
+#: ../../api/index.rst:27
+msgid "http://demo.ckan.org/api/3/action/group_show?id=data-explorer"
+msgstr ""
+
+#: ../../api/index.rst:29
+msgid "Search for packages or resources matching a query:"
+msgstr ""
+
+#: ../../api/index.rst:31 ../../api/index.rst:286
+msgid "http://demo.ckan.org/api/3/action/package_search?q=spending"
+msgstr ""
+
+#: ../../api/index.rst:33
+msgid ""
+"http://demo.ckan.org/api/3/action/resource_search?query=name:District%20Names"
+msgstr ""
+
+#: ../../api/index.rst:35
+msgid "Create, update and delete datasets, resources and other objects"
+msgstr ""
+
+#: ../../api/index.rst:37
+msgid "Get an activity stream of recently changed datasets on a site:"
+msgstr ""
+
+#: ../../api/index.rst:39
+msgid ""
+"http://demo.ckan.org/api/3/action/recently_changed_packages_activity_list"
+msgstr ""
+
+#: ../../api/index.rst:43
+msgid "CKAN's FileStore and DataStore have their own APIs, see:"
+msgstr ""
+
+#: ../../api/index.rst:45
+msgid ":doc:`/maintaining/filestore`"
+msgstr ""
+
+#: ../../api/index.rst:46
+msgid ":doc:`/maintaining/datastore`"
+msgstr ""
+
+#: ../../api/index.rst:50
+msgid "For documentation of CKAN's legacy API's, see :doc:`legacy-api`."
+msgstr ""
+
+#: ../../api/index.rst:63
+msgid "Making an API request"
+msgstr ""
+
+#: ../../api/index.rst:65
+msgid ""
+"To call the CKAN API, post a JSON dictionary in an HTTP POST request to one "
+"of CKAN's API URLs. The parameters for the API function should be given in "
+"the JSON dictionary. CKAN will also return its response in a JSON "
+"dictionary."
+msgstr ""
+
+#: ../../api/index.rst:69
+msgid ""
+"One way to post a JSON dictionary to a URL is using the command-line HTTP "
+"client `HTTPie <http://httpie.org/>`_.  For example, to get a list of the "
+"names of all the datasets in the ``data-explorer`` group on demo.ckan.org, "
+"install HTTPie and then call the ``group_list`` API function by running this"
+" command in a terminal::"
+msgstr ""
+
+#: ../../api/index.rst:77
+msgid "The response from CKAN will look like this::"
+msgstr ""
+
+#: ../../api/index.rst:92
+msgid "The response is a JSON dictionary with three keys:"
+msgstr ""
+
+#: ../../api/index.rst:94
+msgid "``\"sucess\"``: ``true`` or ``false``."
+msgstr ""
+
+#: ../../api/index.rst:96
+msgid ""
+"The API aims to always return ``200 OK`` as the status code of its HTTP "
+"response, whether there were errors with the request or not, so it's "
+"important to always check the value of the ``\"success\"`` key in the "
+"response dictionary and (if success is ``false``) check the value of the "
+"``\"error\"`` key."
+msgstr ""
+
+#: ../../api/index.rst:104
+msgid ""
+"If there are major formatting problems with a request to the API, CKAN may "
+"still return an HTTP response with a ``409``, ``400`` or ``500`` status code"
+" (in increasing order of severity). In future CKAN versions we intend to "
+"remove these responses, and instead send a ``200 OK`` response and use the "
+"``\"success\"`` and ``\"error\"`` items."
+msgstr ""
+
+#: ../../api/index.rst:110
+msgid ""
+"``\"result\"``: the returned result from the function you called. The type "
+"and value of the result depend on which function you called. In the case of "
+"the ``group_list`` function it's a list of strings, the names of all the "
+"datasets that belong to the group."
+msgstr ""
+
+#: ../../api/index.rst:115
+msgid ""
+"If there was an error responding to your request, the dictionary will "
+"contain an ``\"error\"`` key with details of the error instead of the "
+"``\"result\"`` key. A response dictionary containing an error will look like"
+" this::"
+msgstr ""
+
+#: ../../api/index.rst:129
+msgid "``\"help\"``: the documentation string for the function you called."
+msgstr ""
+
+#: ../../api/index.rst:131
+msgid ""
+"The same HTTP request can be made using Python's standard ``urllib2`` "
+"module, with this Python code::"
+msgstr ""
+
+#: ../../api/index.rst:159
+msgid "Example: Importing datasets with the CKAN API"
+msgstr ""
+
+#: ../../api/index.rst:161
+msgid ""
+"You can add datasets using CKAN's web interface, but when importing many "
+"datasets it's usually more efficient to automate the process in some way.  "
+"In this example, we'll show you how to use the CKAN API to write a Python "
+"script to import datasets into CKAN."
+msgstr ""
+
+#: ../../api/index.rst:214
+msgid "API versions"
+msgstr ""
+
+#: ../../api/index.rst:216
+msgid ""
+"The CKAN APIs are versioned. If you make a request to an API URL without a "
+"version number, CKAN will choose the latest version of the API::"
+msgstr ""
+
+#: ../../api/index.rst:221
+msgid ""
+"Alternatively, you can specify the desired API version number in the URL "
+"that you request::"
+msgstr ""
+
+#: ../../api/index.rst:226
+msgid "Version 3 is currently the only version of the Action API."
+msgstr ""
+
+#: ../../api/index.rst:228
+msgid ""
+"We recommend that you specify the API number in your requests, because this "
+"ensures that your API client will work across different sites running "
+"different version of CKAN (and will keep working on the same sites, when "
+"those sites upgrade to new versions of CKAN). Because the latest version of "
+"the API may change when a site is upgraded to a new version of CKAN, or may "
+"differ on different sites running different versions of CKAN, the result of "
+"an API request that doesn't specify the API version number cannot be relied "
+"on."
+msgstr ""
+
+#: ../../api/index.rst:241
+msgid "Authentication and API keys"
+msgstr ""
+
+#: ../../api/index.rst:243
+msgid ""
+"Some API functions require authorization. The API uses the same "
+"authorization functions and configuration as the web interface, so if a user"
+" is authorized to do something in the web interface they'll be authorized to"
+" do it via the API as well."
+msgstr ""
+
+#: ../../api/index.rst:248
+msgid ""
+"When calling an API function that requires authorization, you must "
+"authenticate yourself by providing your API key with your HTTP request. To "
+"find your API key, login to the CKAN site using its web interface and visit "
+"your user profile page."
+msgstr ""
+
+#: ../../api/index.rst:253
+msgid ""
+"To provide your API key in an HTTP request, include it in either an "
+"``Authorization`` or ``X-CKAN-API-Key`` header.  (The name of the HTTP "
+"header can be configured with the ``apikey_header_name`` option in your CKAN"
+" configuration file.)"
+msgstr ""
+
+#: ../../api/index.rst:258
+msgid ""
+"For example, to ask whether or not you're currently following the user "
+"``markw`` on demo.ckan.org using HTTPie, run this command::"
+msgstr ""
+
+#: ../../api/index.rst:263
+msgid "(Replacing ``XXX`` with your API key.)"
+msgstr ""
+
+#: ../../api/index.rst:265
+msgid ""
+"Or, to get the list of activities from your user dashboard on demo.ckan.org,"
+" run this Python code::"
+msgstr ""
+
+#: ../../api/index.rst:275
+msgid "GET-able API functions"
+msgstr ""
+
+#: ../../api/index.rst:277
+msgid ""
+"Functions defined in `ckan.logic.action.get`_ can also be called with an "
+"HTTP GET request.  For example, to get the list of datasets (packages) from "
+"demo.ckan.org, open this URL in your browser:"
+msgstr ""
+
+#: ../../api/index.rst:283
+msgid ""
+"Or, to search for datasets (packages) matching the search query "
+"``spending``, on demo.ckan.org, open this URL in your browser:"
+msgstr ""
+
+#: ../../api/index.rst:290
+msgid ""
+"Browser plugins like `JSONView for Firefox <https://addons.mozilla.org/en-"
+"us/firefox/addon/jsonview/>`_ or `Chrome "
+"<https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc>`_"
+" will format and color CKAN's JSON response nicely in your browser."
+msgstr ""
+
+#: ../../api/index.rst:294
+msgid ""
+"The search query is given as a URL parameter ``?q=spending``. Multiple URL "
+"parameters can be appended, separated by ``&`` characters, for example to "
+"get only the first 10 matching datasets open this URL:"
+msgstr ""
+
+#: ../../api/index.rst:298
+msgid "http://demo.ckan.org/api/3/action/package_search?q=spending&rows=10"
+msgstr ""
+
+#: ../../api/index.rst:300
+msgid ""
+"When an action requires a list of strings as the value of a parameter, the "
+"value can be sent by giving the parameter multiple times in the URL:"
+msgstr ""
+
+#: ../../api/index.rst:303
+msgid ""
+"http://demo.ckan.org/api/3/action/term_translation_show?terms=russian&terms=romantic%20novel"
+msgstr ""
+
+#: ../../api/index.rst:308
+msgid "JSONP support"
+msgstr ""
+
+#: ../../api/index.rst:310
+msgid ""
+"To cater for scripts from other sites that wish to access the API, the data "
+"can be returned in JSONP format, where the JSON data is 'padded' with a "
+"function call. The function is named in the 'callback' parameter. For "
+"example:"
+msgstr ""
+
+#: ../../api/index.rst:314
+msgid ""
+"http://demo.ckan.org/api/3/action/package_show?id=adur_district_spending&callback=myfunction"
+msgstr ""
+
+#: ../../api/index.rst:322
+msgid "Action API reference"
+msgstr ""
+
+#: ../../api/index.rst:326
+msgid ""
+"If you call one of the action functions listed below and the function raises"
+" an exception, the API will return a JSON dictionary with keys "
+"``\"success\": false`` and and an ``\"error\"`` key indicating the exception"
+" that was raised."
+msgstr ""
+
+#: ../../api/index.rst:331
+msgid ""
+"For example :py:func:`~ckan.logic.action.get.member_list` (which returns a "
+"list of the members of a group) raises :py:class:`~ckan.logic.NotFound` if "
+"the group doesn't exist. If you called it over the API, you'd get back a "
+"JSON dict like this::"
+msgstr ""
+
+#: ../../api/index.rst:347
+msgid "ckan.logic.action.get"
+msgstr ""
+
+#: ../../api/index.rst:353
+msgid "ckan.logic.action.create"
+msgstr ""
+
+#: ../../api/index.rst:359
+msgid "ckan.logic.action.update"
+msgstr ""
+
+#: ../../api/index.rst:365
+msgid "ckan.logic.action.delete"
+msgstr ""

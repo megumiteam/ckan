@@ -1,0 +1,22 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theming/jquery-plugins.rst:3
+msgid "CKAN jQuery plugins reference"
+msgstr ""
+
+#: ../../theming/jquery-plugins.rst:5
+msgid ""
+"CKAN adds a number of custom plugins that can be accessed by JavaScript "
+"modules via :js:data:`this.sandbox.jQuery`."
+msgstr ""

@@ -1,0 +1,205 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/architecture.rst:3
+msgid "CKAN code architecture"
+msgstr ""
+
+#: ../../contributing/architecture.rst:5
+msgid ""
+"This section documents our CKAN-specific coding standards, which are "
+"guidelines for writing code that is consistent with the intended design and "
+"architecture of CKAN."
+msgstr ""
+
+#: ../../contributing/architecture.rst:12
+msgid "Encapsulate SQLAlchemy in ``ckan.model``"
+msgstr ""
+
+#: ../../contributing/architecture.rst:14
+msgid ""
+"Ideally SQLAlchemy should only be used within ``ckan.model`` and not from "
+"other packages such as ``ckan.logic``.  For example instead of using an "
+"SQLAlchemy query from the logic package to retrieve a particular user from "
+"the database, we add a ``get()`` method to ``ckan.model.user.User``::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:27
+msgid "Now we can call this method from the logic package."
+msgstr ""
+
+#: ../../contributing/architecture.rst:31
+msgid "Always go through the action functions"
+msgstr ""
+
+#: ../../contributing/architecture.rst:33
+msgid ""
+"Whenever some code, for example in ``ckan.lib`` or ``ckan.controllers``, "
+"wants to get, create, update or delete an object from CKAN's model it should"
+" do so by calling a function from the ``ckan.logic.action`` package, and "
+"*not* by accessing ``ckan.model`` directly."
+msgstr ""
+
+#: ../../contributing/architecture.rst:41
+msgid "Action functions are exposed in the API"
+msgstr ""
+
+#: ../../contributing/architecture.rst:43
+msgid ""
+"The functions in ``ckan.logic.action`` are exposed to the world as the "
+":doc:`/api/index`.  The API URL for an action function is automatically "
+"generated from the function name, for example "
+"``ckan.logic.action.create.package_create()`` is exposed at "
+"``/api/action/package_create``. See `Steve Yegge's Google platforms rant "
+"<https://plus.google.com/112678702228711889851/posts/eVeouesvaVX>`_ for some"
+" interesting discussion about APIs."
+msgstr ""
+
+#: ../../contributing/architecture.rst:51
+msgid ""
+"**All** publicly visible functions in the "
+"``ckan.logic.action.{create,delete,get,update}`` namespaces will be exposed "
+"through the :doc:`/api/index`. **This includes functions imported** by those"
+" modules, **as well as any helper functions** defined within those modules."
+"  To prevent inadvertent exposure of non-action functions through the action"
+" api, care should be taken to:"
+msgstr ""
+
+#: ../../contributing/architecture.rst:58
+msgid "Import modules correctly (see :ref:`imports`).  For example::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:64
+msgid "Hide any locally defined helper functions: ::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:70
+msgid ""
+"Bring imported convenience functions into the module namespace as private "
+"members: ::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:78
+msgid "Use ``get_action()``"
+msgstr ""
+
+#: ../../contributing/architecture.rst:80
+msgid ""
+"Don't call ``logic.action`` functions directly, instead use "
+"``get_action()``. This allows plugins to override action functions using the"
+" ``IActions`` plugin interface. For example::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:86
+msgid "Instead of ::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:93
+msgid "Auth functions and ``check_access()``"
+msgstr ""
+
+#: ../../contributing/architecture.rst:95
+msgid ""
+"Each action function defined in ``ckan.logic.action`` should use its own "
+"corresponding auth function defined in ``ckan.logic.auth``. Instead of "
+"calling its auth function directly, an action function should go through "
+"``ckan.logic.check_access`` (which is aliased ``_check_access`` in the "
+"action modules) because this allows plugins to override auth functions using"
+" the ``IAuthFunctions`` plugin interface. For example::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:105
+msgid ""
+"``check_access`` will raise an exception if the user is not authorized, "
+"which the action function should not catch. When this happens the user will "
+"be shown an authorization error in their browser (or will receive one in "
+"their response from the API)."
+msgstr ""
+
+#: ../../contributing/architecture.rst:113
+msgid "``logic.get_or_bust()``"
+msgstr ""
+
+#: ../../contributing/architecture.rst:115
+msgid ""
+"The ``data_dict`` parameter of logic action functions may be user provided, "
+"so required files may be invalid or absent. Naive Code like::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:120
+msgid ""
+"may raise a ``KeyError`` and cause CKAN to crash with a 500 Server Error and"
+" no message to explain what went wrong. Instead do::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:125
+msgid ""
+"which will raise ``ValidationError`` if ``\"id\"`` is not in ``data_dict``. "
+"The ``ValidationError`` will be caught and the user will get a 400 Bad "
+"Request response and an error message explaining the problem."
+msgstr ""
+
+#: ../../contributing/architecture.rst:132
+msgid "Validation and ``ckan.logic.schema``"
+msgstr ""
+
+#: ../../contributing/architecture.rst:134
+msgid ""
+"Logic action functions can use schema defined in ``ckan.logic.schema`` to "
+"validate the contents of the ``data_dict`` parameters that users pass to "
+"them."
+msgstr ""
+
+#: ../../contributing/architecture.rst:137
+msgid ""
+"An action function should first check for a custom schema provided in the "
+"context, and failing that should retrieve its default schema directly, and "
+"then call ``_validate()`` to validate and convert the data. For example, "
+"here is the validation code from the ``user_create()`` action function::"
+msgstr ""
+
+#: ../../contributing/architecture.rst:152
+msgid "Controller & template helper functions"
+msgstr ""
+
+#: ../../contributing/architecture.rst:154
+msgid ""
+"``ckan.lib.helpers`` contains helper functions that can be used from "
+"``ckan.controllers`` or from templates. When developing for ckan core, only "
+"use the helper functions found in "
+"``ckan.lib.helpers.__allowed_functions__``."
+msgstr ""
+
+#: ../../contributing/architecture.rst:161
+msgid "Deprecation"
+msgstr ""
+
+#: ../../contributing/architecture.rst:163
+msgid ""
+"Anything that may be used by extensions (see :doc:`/extensions/index`) needs"
+" to maintain backward compatibility at call-site.  ie - template helper "
+"functions and functions defined in the plugins toolkit."
+msgstr ""
+
+#: ../../contributing/architecture.rst:167
+msgid ""
+"The length of time of deprecation is evaluated on a function-by-function "
+"basis.  At minimum, a function should be marked as deprecated during a point"
+" release."
+msgstr ""
+
+#: ../../contributing/architecture.rst:171
+msgid ""
+"To mark a helper function, use the ``deprecated`` decorator found in "
+"``ckan.lib.maintain`` eg: ::"
+msgstr ""

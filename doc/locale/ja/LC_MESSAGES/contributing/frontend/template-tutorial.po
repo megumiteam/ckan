@@ -1,0 +1,115 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sphinx test 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-19 15:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing/frontend/template-tutorial.rst:3
+msgid "Creating a new template"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:5
+msgid ""
+"This is a brief tutorial covering the basics of building a common template."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:9
+msgid "Extending a base template"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:11
+msgid ""
+"Firstly we need to extend a parent template to provide us with some basic "
+"page structure. This can be any other HTML page however the most common one "
+"is ``page.html`` which provides the full CKAN theme including header and "
+"footer."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:20
+msgid ""
+"The ``page.html`` template provides numerous blocks that can be extended. "
+"It’s worth spending a few minutes getting familiar with what’s available. "
+"The most common blocks that we’ll be using are those ending with “content”."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:25
+msgid "``primary_content``: The main content area of the page."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:26
+msgid "``secondary_content``: The secondary content (sidebar) of the page."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:27
+msgid "``breadcrumb_content``: The contents of the breadcrumb navigation."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:28
+msgid ""
+"``actions_content``: The content of the actions bar to the left of the "
+"breadcrumb."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:32
+msgid "Primary Content"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:34
+msgid "For now we’ll add some content to the main content area of the page."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:47
+msgid ""
+"Notice we’ve wrapped our own content in a block. This allows other templates"
+" to extend and possibly override this one and is extremely useful for making"
+" a them more customisable."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:52
+msgid "Secondary Content"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:54
+msgid ""
+"Secondary content usually compromises of reusable modules which are pulled "
+"in as snippets. Snippets are also very useful for keeping the templates "
+"clean and allowing theme extensions to override them."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:69
+msgid "Breadcrumb and Actions"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:71
+msgid ""
+"There is a consistent breadcrumb running through all the pages and often it "
+"is useful to provide additional actions that a related to the page."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:86
+msgid "Scripts and Stylesheets"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:88
+msgid ""
+"Currently scripts and stylesheets can be added by extending the ``styles`` "
+"and ``scripts`` blocks. This is soon to be replaced with the ``{% resource "
+"%}`` tag which manages script loading for us."
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:105
+msgid "Summary"
+msgstr ""
+
+#: ../../contributing/frontend/template-tutorial.rst:107
+msgid ""
+"And that’s about all there is to it be sure to check out ``base.html`` and "
+"``page.html`` to see all the tags available for extension."
+msgstr ""
